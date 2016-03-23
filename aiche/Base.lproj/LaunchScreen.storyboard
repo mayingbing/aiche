@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10102" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +17,64 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch.png" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-o1-y71">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uK6-o1-y71" secondAttribute="height" multiplier="1:2" id="ZJS-bg-8Tl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZJS-bg-8Tl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                    <mask key="constraints">
+                                        <include reference="ZJS-bg-8Tl"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uK6-o1-y71" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="1fm-DO-enf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uK6-o1-y71" secondAttribute="trailing" constant="-20" id="2jV-eM-4fN">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="uK6-o1-y71" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="CfZ-2i-zs2"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="uK6-o1-y71" secondAttribute="bottom" id="wuu-pI-59b"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uK6-o1-y71"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1fm-DO-enf"/>
+                                <exclude reference="2jV-eM-4fN"/>
+                                <exclude reference="CfZ-2i-zs2"/>
+                                <exclude reference="wuu-pI-59b"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uK6-o1-y71"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1fm-DO-enf"/>
+                                <include reference="2jV-eM-4fN"/>
+                                <include reference="CfZ-2i-zs2"/>
+                                <include reference="wuu-pI-59b"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="399" y="314.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch.png" width="650" height="1155"/>
+    </resources>
 </document>

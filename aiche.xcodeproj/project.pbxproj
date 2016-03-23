@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79FA2EBC1CA2F23F00D8B518 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FA2EBB1CA2F23F00D8B518 /* launch.png */; };
 		79FF64EF1CA2D7D700CB4FB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF64EE1CA2D7D700CB4FB6 /* main.m */; };
 		79FF64F21CA2D7D700CB4FB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF64F11CA2D7D700CB4FB6 /* AppDelegate.m */; };
 		79FF64FA1CA2D7D700CB4FB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64F91CA2D7D700CB4FB6 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79FA2EBB1CA2F23F00D8B518 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		79FF64EA1CA2D7D700CB4FB6 /* aiche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aiche.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FF64EE1CA2D7D700CB4FB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79FF64F01CA2D7D700CB4FB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				79FF64EE1CA2D7D700CB4FB6 /* main.m */,
+				79FA2EBB1CA2F23F00D8B518 /* launch.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FA2EBC1CA2F23F00D8B518 /* launch.png in Resources */,
 				79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */,
 				79FF64FA1CA2D7D700CB4FB6 /* Assets.xcassets in Resources */,
 			);
