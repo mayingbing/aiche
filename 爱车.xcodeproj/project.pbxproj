@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE88082086B1DBAD18ECB0D9 /* libPods.a */; };
 		791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 791E44B81CA422AC0050DC34 /* earth@3x.png */; };
-		791E44BB1CA439ED0050DC34 /* newFeature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 791E44BA1CA439ED0050DC34 /* newFeature.jpg */; };
 		792BC9281CA3FCFB005B22E3 /* DGAaimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792BC9261CA3FCFB005B22E3 /* DGAaimaView.m */; };
 		792BC9291CA3FCFB005B22E3 /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792BC9271CA3FCFB005B22E3 /* DGEarthView.m */; };
 		79AF00A01CA38C72009DF7BC /* zjy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 79AF009F1CA38C72009DF7BC /* zjy.jpeg */; };
@@ -44,7 +43,6 @@
 /* Begin PBXFileReference section */
 		7640220824F1D9B0B8AA67E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		791E44B81CA422AC0050DC34 /* earth@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth@3x.png"; sourceTree = "<group>"; };
-		791E44BA1CA439ED0050DC34 /* newFeature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newFeature.jpg; sourceTree = "<group>"; };
 		792BC9261CA3FCFB005B22E3 /* DGAaimaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAaimaView.m; sourceTree = "<group>"; };
 		792BC9271CA3FCFB005B22E3 /* DGEarthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEarthView.m; sourceTree = "<group>"; };
 		792BC92A1CA3FD0A005B22E3 /* DGAaimaView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGAaimaView.h; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				79FF64EE1CA2D7D700CB4FB6 /* main.m */,
 				79AF009F1CA38C72009DF7BC /* zjy.jpeg */,
 				791E44B81CA422AC0050DC34 /* earth@3x.png */,
-				791E44BA1CA439ED0050DC34 /* newFeature.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -301,7 +298,6 @@
 				79FF64FA1CA2D7D700CB4FB6 /* Assets.xcassets in Resources */,
 				791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */,
 				79AF00A01CA38C72009DF7BC /* zjy.jpeg in Resources */,
-				791E44BB1CA439ED0050DC34 /* newFeature.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

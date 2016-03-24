@@ -11,7 +11,8 @@
 #import "MABaseNavigationController.h"
 #import "DGAaimaView.h"
 
-@interface MANewFeatureViewController ()
+@interface MANewFeatureViewController ()<DGAaimaViewDelegate>
+@property(nonatomic ,strong) UIImageView *imgView;
 
 @end
 
@@ -20,10 +21,45 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.view.backgroundColor = [UIColor greenColor];
     
     DGAaimaView *animaView = [[DGAaimaView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:animaView];
+    
+    animaView.delegate = self;
+    
+}
+
+
+-(void)stopAnimateViewWith:(DGAaimaView *)animateView{
+    if (self.imgView==nil) {
+        self.imgView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+        [self.view addSubview:self.imgView];
+    }
+    [self.imgView setImage:[UIImage imageNamed:@"newFeature"]];
+    
+    self.imgView.alpha=0;
+    
+
+    
+    [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState  animations:^{
+        animateView.alpha = 0.2;
+        
+        [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            
+            self.imgView.alpha=1;
+        } completion:^(BOOL finished) {
+            
+            
+        }];
+        
+    } completion:^(BOOL finished) {
+        
+        if (finished) {
+            [animateView removeFromSuperview];
+        }
+        
+    }];
     
 }
 

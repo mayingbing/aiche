@@ -15,7 +15,8 @@
 @property (nonatomic, assign) CGFloat changeCarX;
 @property (nonatomic, assign) NSInteger i;
 @property (nonatomic, strong) UILabel *textLable;
-@property (nonatomic, strong) UIImageView *imageView;
+
+@property (nonatomic, strong) CADisplayLink *link;
 @end
 
 
@@ -32,19 +33,30 @@
 }
 -(void)animaInit
 {
+    CGSize windowSize = [UIScreen mainScreen].bounds.size;
     self.backgroundColor = [UIColor blackColor];
    
     CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(setNeedsDisplay)];
+    _link = link;
     [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     
     DGEarthView * ainmeView =[[DGEarthView alloc]initWithFrame:self.bounds];
     [self addSubview:ainmeView];
     
     
+    UIButton *jumpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:jumpBtn];
+    jumpBtn.frame = CGRectMake(windowSize.width-80, windowSize.height-20, 80, 20);
+    [jumpBtn setTitle:@"跳过动画" forState:UIControlStateNormal];
+    [jumpBtn setTintColor:[UIColor whiteColor]];
+    [jumpBtn addTarget:self action:@selector(willJumpToMainView) forControlEvents:UIControlEventTouchUpInside];
+    
     self.carX=[UIScreen mainScreen].bounds.size.width;
     self.changeCarX = 3;
     _i = 1;
 }
+
+
 
 - (void)drawRect:(CGRect)rect
 {
@@ -81,24 +93,17 @@
     if (_i==7 && (self.carX+60==maxX/2||self.carX+61==maxX/2||self.carX+62==maxX/2)) {
         self.changeCarX = 0;
         [self willJumpToMainView];
+        [self.link removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     }
     
 
 }
-
-
 -(void)willJumpToMainView{
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:self.bounds];
-    [self addSubview:imageView];
-    imageView.image = [UIImage imageNamed:@"newFeature"];
-    imageView.alpha = 0;
-    
-    [UIView animateWithDuration:0.25 animations:^{
         
-        imageView.alpha =1;
-        
-    }];
+        if ([self.delegate respondsToSelector:@selector(stopAnimateViewWith:)]) {
+            
+            [self.delegate stopAnimateViewWith:self];
+            
+        }
 }
-
-
 @end

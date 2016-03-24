@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class DGAaimaView;
 
+@protocol DGAaimaViewDelegate <NSObject>
+
+@optional
+
+-(void)stopAnimateViewWith:(DGAaimaView *)animateView;
+
+@end
 
 @interface DGAaimaView : UIView
 
-
+@property(nonatomic ,weak)id<DGAaimaViewDelegate> delegate;
 
 
 @end

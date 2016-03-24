@@ -17,7 +17,7 @@
     UIImageView *imageViewEarth;
     NSMutableArray *imageArray;
     NSInteger value;
-    
+    NSInteger num;
 }
 - (id)initWithFrame:(CGRect)frame
 {
@@ -26,6 +26,7 @@
         
         
         value=1;
+        num = 1;
         self.backgroundColor=[UIColor clearColor];
         imageArray = [[NSMutableArray alloc]init];
         CGSize screenSize = [UIScreen mainScreen].bounds.size ;
@@ -62,6 +63,7 @@
     
     imageView.image = [UIImage imageNamed:imageName];
     value++;
+    num++;
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.1];
@@ -70,9 +72,9 @@
     
     imageView.transform = CGAffineTransformMakeRotation(angle * (M_PI / 180.0f));
     
-    CGFloat sss= [UIScreen mainScreen].bounds.size.width/60;
+    CGFloat sss= [UIScreen mainScreen].bounds.size.width/55;
     
-    imageView.layer.anchorPoint=CGPointMake(sss, 0.5);
+    imageView.layer.anchorPoint=CGPointMake(sss-num*0.02, 0.5);
     [UIView commitAnimations];
     
     
