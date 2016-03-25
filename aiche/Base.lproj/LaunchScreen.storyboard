@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zjy.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-o1-y71">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tsl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-o1-y71">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uK6-o1-y71" secondAttribute="height" multiplier="1:2" id="ZJS-bg-8Tl"/>
@@ -76,6 +76,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="zjy.jpeg" width="640" height="1136"/>
+        <image name="tsl.jpg" width="800" height="1200"/>
     </resources>
 </document>

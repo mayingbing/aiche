@@ -36,7 +36,7 @@
         self.imgView = [[UIImageView alloc]initWithFrame:self.view.bounds];
         [self.view addSubview:self.imgView];
     }
-    [self.imgView setImage:[UIImage imageNamed:@"newFeature"]];
+    [self.imgView setImage:[UIImage imageNamed:@"zjy"]];
     
     self.imgView.alpha=0;
     

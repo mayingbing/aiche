@@ -9,14 +9,8 @@
 /* Begin PBXBuildFile section */
 		1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE88082086B1DBAD18ECB0D9 /* libPods.a */; };
 		791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 791E44B81CA422AC0050DC34 /* earth@3x.png */; };
-		792BC9281CA3FCFB005B22E3 /* DGAaimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792BC9261CA3FCFB005B22E3 /* DGAaimaView.m */; };
-		792BC9291CA3FCFB005B22E3 /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792BC9271CA3FCFB005B22E3 /* DGEarthView.m */; };
-		79AF00A01CA38C72009DF7BC /* zjy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 79AF009F1CA38C72009DF7BC /* zjy.jpeg */; };
-		79AF00A31CA38F18009DF7BC /* MABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF00A21CA38F18009DF7BC /* MABaseTableViewController.m */; };
-		79AF00A61CA38F44009DF7BC /* MABaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF00A51CA38F44009DF7BC /* MABaseNavigationController.m */; };
-		79AF00A91CA3920C009DF7BC /* MANewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF00A81CA3920C009DF7BC /* MANewFeatureViewController.m */; };
-		79FF64EF1CA2D7D700CB4FB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF64EE1CA2D7D700CB4FB6 /* main.m */; };
-		79FF64F21CA2D7D700CB4FB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF64F11CA2D7D700CB4FB6 /* AppDelegate.m */; };
+		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
+		79B908721CA4D8470079B34B /* class in Resources */ = {isa = PBXBuildFile; fileRef = 79B908711CA4D8470079B34B /* class */; };
 		79FF64FA1CA2D7D700CB4FB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64F91CA2D7D700CB4FB6 /* Assets.xcassets */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
 		79FF65081CA2D7D700CB4FB6 /* aicheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65071CA2D7D700CB4FB6 /* aicheTests.m */; };
@@ -43,21 +37,9 @@
 /* Begin PBXFileReference section */
 		7640220824F1D9B0B8AA67E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		791E44B81CA422AC0050DC34 /* earth@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth@3x.png"; sourceTree = "<group>"; };
-		792BC9261CA3FCFB005B22E3 /* DGAaimaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAaimaView.m; sourceTree = "<group>"; };
-		792BC9271CA3FCFB005B22E3 /* DGEarthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEarthView.m; sourceTree = "<group>"; };
-		792BC92A1CA3FD0A005B22E3 /* DGAaimaView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGAaimaView.h; sourceTree = "<group>"; };
-		792BC92B1CA3FD0A005B22E3 /* DGEarthView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGEarthView.h; sourceTree = "<group>"; };
-		79AF009F1CA38C72009DF7BC /* zjy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zjy.jpeg; sourceTree = "<group>"; };
-		79AF00A11CA38F18009DF7BC /* MABaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseTableViewController.h; sourceTree = "<group>"; };
-		79AF00A21CA38F18009DF7BC /* MABaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseTableViewController.m; sourceTree = "<group>"; };
-		79AF00A41CA38F44009DF7BC /* MABaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseNavigationController.h; sourceTree = "<group>"; };
-		79AF00A51CA38F44009DF7BC /* MABaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseNavigationController.m; sourceTree = "<group>"; };
-		79AF00A71CA3920C009DF7BC /* MANewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANewFeatureViewController.h; sourceTree = "<group>"; };
-		79AF00A81CA3920C009DF7BC /* MANewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANewFeatureViewController.m; sourceTree = "<group>"; };
+		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
+		79B908711CA4D8470079B34B /* class */ = {isa = PBXFileReference; lastKnownFileType = folder; path = class; sourceTree = "<group>"; };
 		79FF64EA1CA2D7D700CB4FB6 /* 爱车.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱车.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		79FF64EE1CA2D7D700CB4FB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		79FF64F01CA2D7D700CB4FB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		79FF64F11CA2D7D700CB4FB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		79FF64F91CA2D7D700CB4FB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FF64FC1CA2D7D700CB4FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79FF64FE1CA2D7D700CB4FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,21 +112,9 @@
 		79FF64EC1CA2D7D700CB4FB6 /* aiche */ = {
 			isa = PBXGroup;
 			children = (
-				79FF64F01CA2D7D700CB4FB6 /* AppDelegate.h */,
-				79FF64F11CA2D7D700CB4FB6 /* AppDelegate.m */,
-				79AF00A71CA3920C009DF7BC /* MANewFeatureViewController.h */,
-				79AF00A81CA3920C009DF7BC /* MANewFeatureViewController.m */,
-				792BC92A1CA3FD0A005B22E3 /* DGAaimaView.h */,
-				792BC9261CA3FCFB005B22E3 /* DGAaimaView.m */,
-				792BC92B1CA3FD0A005B22E3 /* DGEarthView.h */,
-				792BC9271CA3FCFB005B22E3 /* DGEarthView.m */,
-				79AF00A11CA38F18009DF7BC /* MABaseTableViewController.h */,
-				79AF00A21CA38F18009DF7BC /* MABaseTableViewController.m */,
-				79AF00A41CA38F44009DF7BC /* MABaseNavigationController.h */,
-				79AF00A51CA38F44009DF7BC /* MABaseNavigationController.m */,
+				79B908711CA4D8470079B34B /* class */,
 				79FF64F91CA2D7D700CB4FB6 /* Assets.xcassets */,
 				79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */,
-				79FF64FE1CA2D7D700CB4FB6 /* Info.plist */,
 				79FF64ED1CA2D7D700CB4FB6 /* Supporting Files */,
 			);
 			path = aiche;
@@ -153,8 +123,8 @@
 		79FF64ED1CA2D7D700CB4FB6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				79FF64EE1CA2D7D700CB4FB6 /* main.m */,
-				79AF009F1CA38C72009DF7BC /* zjy.jpeg */,
+				79FF64FE1CA2D7D700CB4FB6 /* Info.plist */,
+				79687E731CA4572100988C5C /* tsl.jpg */,
 				791E44B81CA422AC0050DC34 /* earth@3x.png */,
 			);
 			name = "Supporting Files";
@@ -297,7 +267,8 @@
 				79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */,
 				79FF64FA1CA2D7D700CB4FB6 /* Assets.xcassets in Resources */,
 				791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */,
-				79AF00A01CA38C72009DF7BC /* zjy.jpeg in Resources */,
+				79B908721CA4D8470079B34B /* class in Resources */,
+				79687E741CA4572100988C5C /* tsl.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,13 +341,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79AF00A91CA3920C009DF7BC /* MANewFeatureViewController.m in Sources */,
-				79AF00A61CA38F44009DF7BC /* MABaseNavigationController.m in Sources */,
-				792BC9291CA3FCFB005B22E3 /* DGEarthView.m in Sources */,
-				79FF64F21CA2D7D700CB4FB6 /* AppDelegate.m in Sources */,
-				792BC9281CA3FCFB005B22E3 /* DGAaimaView.m in Sources */,
-				79FF64EF1CA2D7D700CB4FB6 /* main.m in Sources */,
-				79AF00A31CA38F18009DF7BC /* MABaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
