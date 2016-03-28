@@ -39,6 +39,15 @@
         [self addSubview:imageViewEarth];
         
         
+        UILabel *start = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 50, 20)];
+        start.center =imageViewEarth.center;
+        self.start = start;
+        start.text = @"出发咯";
+        start.font = [UIFont systemFontOfSize:15];
+        start.textColor = [UIColor cyanColor];
+        [self addSubview:start];
+        
+        
         imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, earthY, 30, 60)];
         imageView.center = imageViewEarth.center;
         [self addSubview:imageView];
@@ -73,16 +82,22 @@
     imageView.transform = CGAffineTransformMakeRotation(angle * (M_PI / 180.0f));
     
     CGFloat sss= [UIScreen mainScreen].bounds.size.width/55;
+    CGFloat aaa = 0.6 + num*0.04;
     
-    imageView.layer.anchorPoint=CGPointMake(sss-num*0.02, 0.5);
+    if (aaa>=sss) {
+        aaa=sss;
+    }
+    if (aaa==2) {
+         [self.start removeFromSuperview];
+    }
+    imageView.layer.anchorPoint=CGPointMake(aaa, 0.5);
     [UIView commitAnimations];
-    
     
     
 }
 -(void)endAnimation
 {
-    CGFloat huojiansepped=1.0;
+    CGFloat huojiansepped=2.5;
     angle += 5*huojiansepped;
     [self startAnimation];
     
@@ -90,6 +105,8 @@
     
     
 }
+
+
 
 -(void) startAnimationEarth
 {

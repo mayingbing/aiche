@@ -7,6 +7,7 @@
 //
 
 #import "MASafeViewController.h"
+#import "UIImage+Image.h"
 
 @interface MASafeViewController ()
 
@@ -16,22 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tabBarItem.image = [UIImage imageNamed:@"tab2"];
+    
+    self.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tab2_press"];
+    
+    
+    
+    self.title = @"平安";
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

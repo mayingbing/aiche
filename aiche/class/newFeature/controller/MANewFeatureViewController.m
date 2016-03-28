@@ -7,9 +7,10 @@
 //
 
 #import "MANewFeatureViewController.h"
-#import "MABaseTableViewController.h"
-#import "MABaseNavigationController.h"
+#import "MAChooseRootViewController.h"
 #import "DGAaimaView.h"
+
+#define CZKeyWindow [UIApplication sharedApplication].keyWindow
 
 @interface MANewFeatureViewController ()<DGAaimaViewDelegate>
 @property(nonatomic ,strong) UIImageView *imgView;
@@ -36,7 +37,7 @@
         self.imgView = [[UIImageView alloc]initWithFrame:self.view.bounds];
         [self.view addSubview:self.imgView];
     }
-    [self.imgView setImage:[UIImage imageNamed:@"zjy"]];
+    [self.imgView setImage:[UIImage imageNamed:@"spring"]];
     
     self.imgView.alpha=0;
     
@@ -57,6 +58,7 @@
         
         if (finished) {
             [animateView removeFromSuperview];
+            [self   jumpToMainViewController];
         }
         
     }];
@@ -66,10 +68,8 @@
 
 -(void)jumpToMainViewController{
     
-    MABaseTableViewController *baseTableVc = [[MABaseTableViewController alloc]init];
     
-    MABaseNavigationController *baseNavigationVc = [[MABaseNavigationController alloc]initWithRootViewController:baseTableVc];
-    
+    CZKeyWindow.rootViewController = (UIViewController *)[MAChooseRootViewController chooseRootVcWithWindow];
 }
 
 @end

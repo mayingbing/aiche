@@ -10,6 +10,6 @@
 
 @interface DGEarthView : UIView
 
-
+@property(nonatomic ,strong)UILabel *start;
 
 @end

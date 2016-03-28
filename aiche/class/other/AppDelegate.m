@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 #import "MANewFeatureViewController.h"
+#import "DGAaimaView.h"
+#import "MAChooseRootViewController.h"
+#import "MABaseTabBarController.h"
+
+#import "DSNavigationBar.h"
 
 
 @interface AppDelegate ()
@@ -20,11 +25,32 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor lightGrayColor];
+    
+    //设置nav背景色
+    UIColor * color = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0];
+    [[DSNavigationBar appearance] setNavigationBarWithColor:color];
+    UIColor *topColor = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0];
+    UIColor *bottomColor = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0];
+    [[DSNavigationBar appearance] setNavigationBarWithColors:@[topColor,bottomColor]];
     
     
-    MANewFeatureViewController *newFeature = [[MANewFeatureViewController alloc]init];
     
-    self.window.rootViewController = newFeature;
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSNumber *num = [defaults objectForKey:@"number"];
+    
+    
+    if (num == nil) {
+        MANewFeatureViewController *newFeature = [[MANewFeatureViewController alloc]init];
+        
+        self.window.rootViewController = newFeature;
+    }else{
+        MABaseTabBarController *baseTabBarVC = [MAChooseRootViewController chooseRootVcWithWindow];
+        self.window.rootViewController = baseTabBarVC;
+       
+    }
+    
+    
     
     [self.window makeKeyAndVisible];
     

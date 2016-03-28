@@ -9,6 +9,9 @@
 #import "DGAaimaView.h"
 #import "DGEarthView.h"
 
+
+
+
 @interface DGAaimaView ()
 
 @property (nonatomic, assign) CGFloat carX;
@@ -44,12 +47,22 @@
     [self addSubview:ainmeView];
     
     
+    //跳过动画
     UIButton *jumpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:jumpBtn];
     jumpBtn.frame = CGRectMake(windowSize.width-80, windowSize.height-20, 80, 20);
     [jumpBtn setTitle:@"跳过动画" forState:UIControlStateNormal];
     [jumpBtn setTintColor:[UIColor whiteColor]];
     [jumpBtn addTarget:self action:@selector(willJumpToMainView) forControlEvents:UIControlEventTouchUpInside];
+    
+    //永不显示动画
+    UIButton *neverShowBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:neverShowBtn];
+    neverShowBtn.frame = CGRectMake(0, windowSize.height-20, 120, 20);
+    [neverShowBtn setTitle:@"永不显示动画" forState:UIControlStateNormal];
+    [neverShowBtn setTintColor:[UIColor whiteColor]];
+    [neverShowBtn addTarget:self action:@selector(neverShowDidClicked) forControlEvents:UIControlEventTouchUpInside];
+    
     
     self.carX=[UIScreen mainScreen].bounds.size.width;
     self.changeCarX = 3;
@@ -98,6 +111,23 @@
     
 
 }
+
+-(void)neverShowDidClicked{
+    
+    
+    
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    
+    NSNumber *num = [[NSNumber alloc]initWithInt:1000];
+    
+    [defaults setObject:num forKey:@"number"];
+    
+    
+//    [defaults synchronize];
+    
+    [self willJumpToMainView];
+}
+
 -(void)willJumpToMainView{
         
         if ([self.delegate respondsToSelector:@selector(stopAnimateViewWith:)]) {

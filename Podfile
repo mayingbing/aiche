@@ -8,4 +8,4 @@ pod 'SDWebImage', '3.7.3'
 pod 'ReactiveCocoa','2.5'
 pod 'UIColor-Utilities','1.0.1'
 pod 'Masonry','0.6.2'
-
+pod 'MJExtension'

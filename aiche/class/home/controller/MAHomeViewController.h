@@ -6,8 +6,8 @@
 //  Copyright © 2016年 aiche. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MABaseViewController.h"
 
-@interface MAHomeViewController : UIViewController
+@interface MAHomeViewController : MABaseViewController
 
 @end
