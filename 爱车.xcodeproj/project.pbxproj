@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE88082086B1DBAD18ECB0D9 /* libPods.a */; };
 		791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 791E44B81CA422AC0050DC34 /* earth@3x.png */; };
+		7924E8F21CA9563C00393956 /* MACellMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7924E8F11CA9563C00393956 /* MACellMapView.m */; };
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
+		7969C8E21CA95B8500C22DAA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969C8E11CA95B8500C22DAA /* MapKit.framework */; };
 		79DDC8C31CA9472F00291B71 /* DSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8791CA9472F00291B71 /* DSNavigationBar.m */; };
 		79DDC8C41CA9472F00291B71 /* MABaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC87B1CA9472F00291B71 /* MABaseNavigationController.m */; };
 		79DDC8C51CA9472F00291B71 /* MABaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC87D1CA9472F00291B71 /* MABaseTabBarController.m */; };
@@ -17,7 +19,6 @@
 		79DDC8C71CA9472F00291B71 /* MABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8811CA9472F00291B71 /* MABaseViewController.m */; };
 		79DDC8C81CA9472F00291B71 /* MAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8851CA9472F00291B71 /* MAHomeViewController.m */; };
 		79DDC8C91CA9472F00291B71 /* MAJourneyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC88B1CA9472F00291B71 /* MAJourneyTableViewController.m */; };
-		79DDC8CA1CA9472F00291B71 /* MAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8901CA9472F00291B71 /* MAMapView.m */; };
 		79DDC8CB1CA9472F00291B71 /* MATwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8921CA9472F00291B71 /* MATwoTableViewCell.m */; };
 		79DDC8CC1CA9472F00291B71 /* SYScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8951CA9472F00291B71 /* SYScrollerView.m */; };
 		79DDC8CD1CA9472F00291B71 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79DDC8981CA9472F00291B71 /* citydict.plist */; };
@@ -66,7 +67,10 @@
 /* Begin PBXFileReference section */
 		7640220824F1D9B0B8AA67E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		791E44B81CA422AC0050DC34 /* earth@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth@3x.png"; sourceTree = "<group>"; };
+		7924E8F01CA9563C00393956 /* MACellMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACellMapView.h; sourceTree = "<group>"; };
+		7924E8F11CA9563C00393956 /* MACellMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACellMapView.m; sourceTree = "<group>"; };
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
+		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		79DDC8781CA9472F00291B71 /* DSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNavigationBar.h; sourceTree = "<group>"; };
 		79DDC8791CA9472F00291B71 /* DSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNavigationBar.m; sourceTree = "<group>"; };
 		79DDC87A1CA9472F00291B71 /* MABaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseNavigationController.h; sourceTree = "<group>"; };
@@ -81,8 +85,6 @@
 		79DDC8851CA9472F00291B71 /* MAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeViewController.m; sourceTree = "<group>"; };
 		79DDC88A1CA9472F00291B71 /* MAJourneyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAJourneyTableViewController.h; sourceTree = "<group>"; };
 		79DDC88B1CA9472F00291B71 /* MAJourneyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAJourneyTableViewController.m; sourceTree = "<group>"; };
-		79DDC88F1CA9472F00291B71 /* MAMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMapView.h; sourceTree = "<group>"; };
-		79DDC8901CA9472F00291B71 /* MAMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMapView.m; sourceTree = "<group>"; };
 		79DDC8911CA9472F00291B71 /* MATwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATwoTableViewCell.h; sourceTree = "<group>"; };
 		79DDC8921CA9472F00291B71 /* MATwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATwoTableViewCell.m; sourceTree = "<group>"; };
 		79DDC8941CA9472F00291B71 /* SYScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYScrollerView.h; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7969C8E21CA95B8500C22DAA /* MapKit.framework in Frameworks */,
 				1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +166,7 @@
 		6A713AD8E69BB4EFA35496DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7969C8E11CA95B8500C22DAA /* MapKit.framework */,
 				CE88082086B1DBAD18ECB0D9 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -279,10 +283,10 @@
 		79DDC88E1CA9472F00291B71 /* map */ = {
 			isa = PBXGroup;
 			children = (
-				79DDC88F1CA9472F00291B71 /* MAMapView.h */,
-				79DDC8901CA9472F00291B71 /* MAMapView.m */,
 				79DDC8911CA9472F00291B71 /* MATwoTableViewCell.h */,
 				79DDC8921CA9472F00291B71 /* MATwoTableViewCell.m */,
+				7924E8F01CA9563C00393956 /* MACellMapView.h */,
+				7924E8F11CA9563C00393956 /* MACellMapView.m */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -299,15 +303,15 @@
 		79DDC8961CA9472F00291B71 /* weather */ = {
 			isa = PBXGroup;
 			children = (
-				79DDC8981CA9472F00291B71 /* citydict.plist */,
-				79DDC8991CA9472F00291B71 /* CityListViewController.h */,
-				79DDC89A1CA9472F00291B71 /* CityListViewController.m */,
-				79DDC89B1CA9472F00291B71 /* MADataModel.h */,
-				79DDC89C1CA9472F00291B71 /* MADataModel.m */,
 				79DDC89D1CA9472F00291B71 /* MAOneTableViewCell.h */,
 				79DDC89E1CA9472F00291B71 /* MAOneTableViewCell.m */,
 				79DDC89F1CA9472F00291B71 /* MAWeatherView.h */,
 				79DDC8A01CA9472F00291B71 /* MAWeatherView.m */,
+				79DDC8991CA9472F00291B71 /* CityListViewController.h */,
+				79DDC89A1CA9472F00291B71 /* CityListViewController.m */,
+				79DDC8981CA9472F00291B71 /* citydict.plist */,
+				79DDC89B1CA9472F00291B71 /* MADataModel.h */,
+				79DDC89C1CA9472F00291B71 /* MADataModel.m */,
 			);
 			path = weather;
 			sourceTree = "<group>";
@@ -688,7 +692,7 @@
 				79DDC8CB1CA9472F00291B71 /* MATwoTableViewCell.m in Sources */,
 				79DDC8D51CA9472F00291B71 /* MAChooseRootViewController.m in Sources */,
 				79DDC8C61CA9472F00291B71 /* MABaseTableViewController.m in Sources */,
-				79DDC8CA1CA9472F00291B71 /* MAMapView.m in Sources */,
+				7924E8F21CA9563C00393956 /* MACellMapView.m in Sources */,
 				79DDC8C31CA9472F00291B71 /* DSNavigationBar.m in Sources */,
 				79DDC8D41CA9472F00291B71 /* UIView+Frame.m in Sources */,
 				79DDC8D91CA9472F00291B71 /* DGAaimaView.m in Sources */,

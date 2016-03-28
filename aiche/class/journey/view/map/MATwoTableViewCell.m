@@ -7,6 +7,7 @@
 //
 
 #import "MATwoTableViewCell.h"
+#import "MACellMapView.h"
 
 @interface MATwoTableViewCell ()
 
@@ -44,7 +45,7 @@ static NSString *twoID = @"twoCell";
 
 -(void)setUpChildView{
     
-    UIView *mapView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 158 - 100)];
+    MACellMapView *mapView = [[MACellMapView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 158 - 100)];
     _mapView = mapView;
    mapView.backgroundColor = [UIColor greenColor];
     [self addSubview:mapView];

@@ -9,3 +9,6 @@ pod 'ReactiveCocoa','2.5'
 pod 'UIColor-Utilities','1.0.1'
 pod 'Masonry','0.6.2'
 pod 'MJExtension'
+pod 'AMap2DMap', '~> 3.3.0'
+pod 'AMapSearch', '~> 3.3.0'
+
