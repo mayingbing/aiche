@@ -8,10 +8,9 @@
 
 #import "MAChooseRootViewController.h"
 
-#import "MAJourneyTableViewController.h"
+#import "MAJourneyViewController.h"
 #import "MASafeViewController.h"
 #import "MAHomeViewController.h"
-#import "DSNavigationBar.h"
 
 #import "MABaseTabBarController.h"
 
@@ -26,28 +25,32 @@
     MABaseTabBarController *baseVC = [[MABaseTabBarController alloc]init];
    
     
-
     //出行
-    MAJourneyTableViewController *journeyVc = [[MAJourneyTableViewController alloc]init];
- 
+    MAJourneyViewController *journeyVc = [[MAJourneyViewController alloc]init];
     journeyVc.view.backgroundColor = [UIColor clearColor];
-    MABaseNavigationController *journeyNavVc = [[MABaseNavigationController alloc]initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
-    journeyNavVc.viewControllers = @[journeyVc];
+    MABaseNavigationController *journeyNavVc = [[MABaseNavigationController alloc]initWithRootViewController:journeyVc];
+    
     //安全
     
     MASafeViewController *safeVc = [[MASafeViewController alloc]init];
-    safeVc.view.backgroundColor = [UIColor clearColor];
-    MABaseNavigationController *safeNavVc = [[MABaseNavigationController alloc]initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
-    safeNavVc.viewControllers = @[safeVc];
-    
+    safeVc.view.backgroundColor = [UIColor redColor];
+    MABaseNavigationController *safeNavVc = [[MABaseNavigationController alloc]initWithRootViewController:safeVc];
 
+    
+    
     
     // 到家
     
     MAHomeViewController *homeVc = [[MAHomeViewController alloc]init];
-    homeVc.view.backgroundColor = [UIColor clearColor];
-    MABaseNavigationController *homeNavVc = [[MABaseNavigationController alloc]initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
-    homeNavVc.viewControllers = @[homeVc];
+    homeVc.view.backgroundColor = [UIColor greenColor];
+    MABaseNavigationController *homeNavVc = [[MABaseNavigationController alloc]initWithRootViewController:homeVc];
+    
+
+
+    
+    
+    journeyNavVc.viewControllers = @[journeyVc];
+    
     
     
     baseVC.viewControllers = @[journeyNavVc,safeNavVc,homeNavVc];

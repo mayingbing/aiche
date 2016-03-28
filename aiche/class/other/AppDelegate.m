@@ -12,7 +12,7 @@
 #import "MAChooseRootViewController.h"
 #import "MABaseTabBarController.h"
 
-#import "DSNavigationBar.h"
+
 
 
 @interface AppDelegate ()
@@ -26,14 +26,6 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor lightGrayColor];
-    
-    //设置nav背景色
-    UIColor * color = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0];
-    [[DSNavigationBar appearance] setNavigationBarWithColor:color];
-    UIColor *topColor = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0];
-    UIColor *bottomColor = [UIColor colorWithRed:(190/255.0) green:(218/255.0) blue:(218/255) alpha:0];
-    [[DSNavigationBar appearance] setNavigationBarWithColors:@[topColor,bottomColor]];
-    
     
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
