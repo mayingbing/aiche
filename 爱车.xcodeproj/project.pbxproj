@@ -37,7 +37,7 @@
 		79DDC8DA1CA9472F00291B71 /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8B51CA9472F00291B71 /* DGEarthView.m */; };
 		79DDC8DB1CA9472F00291B71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8B81CA9472F00291B71 /* AppDelegate.m */; };
 		79DDC8E01CA9472F00291B71 /* MASafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8C01CA9472F00291B71 /* MASafeViewController.m */; };
-		79FF64FA1CA2D7D700CB4FB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64F91CA2D7D700CB4FB6 /* Assets.xcassets */; };
+		79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FB9BC71CAA35A80076C9DB /* Assets.xcassets */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
 		79FF65081CA2D7D700CB4FB6 /* aicheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65071CA2D7D700CB4FB6 /* aicheTests.m */; };
 		79FF65131CA2D7D700CB4FB6 /* aicheUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65121CA2D7D700CB4FB6 /* aicheUITests.m */; };
@@ -114,8 +114,8 @@
 		79DDC8B81CA9472F00291B71 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		79DDC8BF1CA9472F00291B71 /* MASafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASafeViewController.h; sourceTree = "<group>"; };
 		79DDC8C01CA9472F00291B71 /* MASafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASafeViewController.m; sourceTree = "<group>"; };
+		79FB9BC71CAA35A80076C9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FF64EA1CA2D7D700CB4FB6 /* 爱车.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱车.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		79FF64F91CA2D7D700CB4FB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FF64FC1CA2D7D700CB4FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79FF64FE1CA2D7D700CB4FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79FF65031CA2D7D700CB4FB6 /* 爱车.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "爱车.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,8 +437,8 @@
 			isa = PBXGroup;
 			children = (
 				79DDC8751CA9472F00291B71 /* class */,
-				79FF64F91CA2D7D700CB4FB6 /* Assets.xcassets */,
 				79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */,
+				79FB9BC71CAA35A80076C9DB /* Assets.xcassets */,
 				79FF64ED1CA2D7D700CB4FB6 /* Supporting Files */,
 			);
 			path = aiche;
@@ -553,6 +553,11 @@
 				TargetAttributes = {
 					79FF64E91CA2D7D700CB4FB6 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					79FF65021CA2D7D700CB4FB6 = {
 						CreatedOnToolsVersion = 7.3;
@@ -592,8 +597,8 @@
 				79DDC8CD1CA9472F00291B71 /* citydict.plist in Resources */,
 				7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */,
 				79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */,
-				79FF64FA1CA2D7D700CB4FB6 /* Assets.xcassets in Resources */,
 				791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */,
+				79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */,
 				79687E741CA4572100988C5C /* tsl.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
