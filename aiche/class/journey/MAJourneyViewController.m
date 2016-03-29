@@ -68,7 +68,7 @@
     [SYScrollerView initWithSourceArray:temp
                               addTarget:self
                                delegate:self
-                               withSize:CGRectMake(0, 0, self.view.frame.size.width, 114)
+                               withSize:CGRectMake(0, 0, self.view.frame.size.width, 134)
                        withTimeInterval:2.f];
     for (UIView *subView in self.view.subviews) {
         if ([subView isKindOfClass:[SYScrollerView class]]) {
@@ -108,9 +108,9 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section ==0) {
-        return 100;
+        return 50;
     }else{
-        return [UIScreen mainScreen].bounds.size.height -214-44;
+        return [UIScreen mainScreen].bounds.size.height -134-50-49;
     }
     
 }

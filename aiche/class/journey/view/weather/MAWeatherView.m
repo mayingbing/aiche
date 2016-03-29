@@ -35,9 +35,9 @@
 
 -(void)setupWeatherView{
     
-    UIImageView *imgView = [[UIImageView alloc]initWithFrame:self.bounds];
-    imgView.image = [UIImage imageNamed:@"weather"];
-    [self addSubview:imgView];
+    UIImageView *imgview = [[UIImageView alloc]initWithFrame:self.bounds];
+    imgview.image = [UIImage imageNamed:@"cellBackground.jpg"];
+    [self addSubview:imgview];
     
     //城市
     UILabel *cityNameLable = [[UILabel alloc]init];
@@ -72,7 +72,7 @@
     
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:addBtn];
-    addBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-30, 10, 30, 80);
+    addBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-30, 5, 30, 40);
     [addBtn setBackgroundImage:[UIImage imageNamed:@"hou"] forState:UIControlStateNormal];
     [addBtn setBackgroundImage:[UIImage imageNamed:@"hou_press"] forState:UIControlStateHighlighted];
     [addBtn addTarget:self action:@selector(jumpToCityList) forControlEvents:UIControlEventTouchUpInside];
@@ -99,7 +99,7 @@
     [self.cityNameLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
         make.left.equalTo(self.mas_left).with.offset(20);
-        make.top.equalTo(self.mas_top).with.offset(15);
+        make.top.equalTo(self.mas_top).with.offset(5);
         make.height.equalTo(@15);
     }];
     
@@ -107,8 +107,8 @@
     self.dateLable.text = [NSString stringWithFormat:@"20%@",weatherData.date];
     [self.dateLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.left.equalTo(self.cityNameLable.mas_right).with.offset(15);
-        make.top.equalTo(self.mas_top).with.offset(15);
+        make.left.equalTo(self.cityNameLable.mas_right).with.offset(20);
+        make.top.equalTo(self.mas_top).with.offset(5);
         make.height.equalTo(@15);
     }];
     
@@ -116,8 +116,8 @@
     self.weatherLable.text = weatherData.weather;
     [self.weatherLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.left.equalTo(self.mas_left).with.offset(20);
-        make.top.equalTo(self.cityNameLable.mas_bottom).with.offset(10);
+        make.left.equalTo(self.dateLable.mas_right).with.offset(20);
+        make.top.equalTo(self.mas_top).with.offset(5);
         make.height.equalTo(@15);
     }];
     
@@ -125,8 +125,8 @@
     self.tmpLable.text = [NSString stringWithFormat:@"%@℃~%@℃",weatherData.l_tmp,weatherData.h_tmp];
     [self.tmpLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.left.equalTo(self.weatherLable.mas_right).with.offset(20);
-        make.top.equalTo(self.dateLable.mas_bottom).with.offset(10);
+        make.left.equalTo(self.mas_left).with.offset(20);
+        make.top.equalTo(self.cityNameLable.mas_bottom).with.offset(10);
         make.height.equalTo(@15);
     }];
     
@@ -136,8 +136,8 @@
     self.WDLable.text = weatherData.WD;
     [self.WDLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.left.equalTo(self.mas_left).with.offset(20);
-        make.top.equalTo(self.tmpLable.mas_bottom).with.offset(10);
+        make.left.equalTo(self.tmpLable.mas_right).with.offset(20);
+        make.top.equalTo(self.cityNameLable.mas_bottom).with.offset(10);
         make.height.equalTo(@15);
     }];
     
@@ -146,7 +146,7 @@
     [self.WSLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
         make.left.equalTo(self.WDLable.mas_right).with.offset(10);
-        make.top.equalTo(self.tmpLable.mas_bottom).with.offset(10);
+        make.top.equalTo(self.cityNameLable.mas_bottom).with.offset(10);
         make.height.equalTo(@15);
     }];
     

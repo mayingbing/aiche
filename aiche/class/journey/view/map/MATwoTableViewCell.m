@@ -45,7 +45,7 @@ static NSString *twoID = @"twoCell";
 
 -(void)setUpChildView{
     
-    MACellMapView *mapView = [[MACellMapView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 158 - 100)];
+    MACellMapView *mapView = [[MACellMapView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 134 - 99)];
     _mapView = mapView;
    mapView.backgroundColor = [UIColor greenColor];
     [self addSubview:mapView];

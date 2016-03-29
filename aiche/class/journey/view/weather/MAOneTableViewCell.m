@@ -51,9 +51,9 @@ static NSString *oneID = @"oneCell";
 
 -(void)setUpChildView{
     
-    MAWeatherView *weatherView = [[MAWeatherView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 100)];
+    MAWeatherView *weatherView = [[MAWeatherView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 50)];
     _weatherView = weatherView;
-    weatherView.backgroundColor = [UIColor cyanColor];
+    weatherView.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:weatherView];
     
     NSString *urlStr = @"http://apis.baidu.com/apistore/weatherservice/weather?citypinyin=beijing";

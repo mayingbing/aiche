@@ -15,6 +15,7 @@
 		7969C8E61CA975C700C22DAA /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969C8E51CA975C700C22DAA /* UINavigationBar+Awesome.m */; };
 		7969C8E91CA9790800C22DAA /* MAJourneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969C8E81CA9790800C22DAA /* MAJourneyViewController.m */; };
 		7969C8EC1CA9855900C22DAA /* UIBarButtonItem+MaBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969C8EB1CA9855900C22DAA /* UIBarButtonItem+MaBarButtonItem.m */; };
+		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
 		79DDC8C41CA9472F00291B71 /* MABaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC87B1CA9472F00291B71 /* MABaseNavigationController.m */; };
 		79DDC8C51CA9472F00291B71 /* MABaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC87D1CA9472F00291B71 /* MABaseTabBarController.m */; };
 		79DDC8C61CA9472F00291B71 /* MABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC87F1CA9472F00291B71 /* MABaseTableViewController.m */; };
@@ -72,6 +73,7 @@
 		7969C8E81CA9790800C22DAA /* MAJourneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAJourneyViewController.m; sourceTree = "<group>"; };
 		7969C8EA1CA9855900C22DAA /* UIBarButtonItem+MaBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MaBarButtonItem.h"; sourceTree = "<group>"; };
 		7969C8EB1CA9855900C22DAA /* UIBarButtonItem+MaBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MaBarButtonItem.m"; sourceTree = "<group>"; };
+		7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellBackground.jpg; sourceTree = "<group>"; };
 		79DDC87A1CA9472F00291B71 /* MABaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseNavigationController.h; sourceTree = "<group>"; };
 		79DDC87B1CA9472F00291B71 /* MABaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseNavigationController.m; sourceTree = "<group>"; };
 		79DDC87C1CA9472F00291B71 /* MABaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseTabBarController.h; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				79FF64FE1CA2D7D700CB4FB6 /* Info.plist */,
+				7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */,
 				79687E731CA4572100988C5C /* tsl.jpg */,
 				791E44B81CA422AC0050DC34 /* earth@3x.png */,
 			);
@@ -587,6 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DDC8CD1CA9472F00291B71 /* citydict.plist in Resources */,
+				7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */,
 				79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */,
 				79FF64FA1CA2D7D700CB4FB6 /* Assets.xcassets in Resources */,
 				791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */,
