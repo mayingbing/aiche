@@ -13,13 +13,14 @@
 #import "MATwoTableViewCell.h"
 #import "MAWeatherView.h"
 #import "CityListViewController.h"
-
+#import "MAQuNaErViewController.h"
 #import "UINavigationBar+Awesome.h"
+#import "MACellMapView.h"
+#import <MAMapKit/MAMapKit.h>
+#define NEW_THEMECOLOR    [UIColor colorWithRed:0xff/255.0f green:0xff/255.0f blue:0xff/255.0f alpha:1]
 
-#define NEW_THEMECOLOR              [UIColor colorWithRed:0xff/255.0f green:0xff/255.0f blue:0xff/255.0f alpha:1]
 
-
-@interface MAJourneyViewController ()<MAWeatherViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface MAJourneyViewController ()<UITableViewDataSource,UITableViewDelegate,SYScrollerViewDeledage,MACellMapViewDelegate,MAOneTableViewCellDelegate,MAMapViewDelegate>
 
 @property(nonatomic,strong) MAOneTableViewCell *weatherCell;
 @property(nonatomic,strong)UITableView *tableView;
@@ -59,6 +60,8 @@
     //滚动广告
     [self setContentViews];
     
+
+    
 }
 //滚动广告
 -(void)setContentViews{
@@ -77,6 +80,15 @@
     }
     
 }
+//点击滚动图片
+-(void)SYScrollerView:(UIView *)bannerPlayer didSelectedIndex:(NSInteger)index{
+    
+    MAQuNaErViewController *quNaErVC = [[MAQuNaErViewController alloc]init];
+    [self.navigationController pushViewController:quNaErVC animated:YES];
+    
+    
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -94,13 +106,14 @@
     if (indexPath.section==0) {
         
         MAOneTableViewCell *weatherCell = [MAOneTableViewCell creatCellWithTableView:(UITableView *)tableView];
-        weatherCell.weatherView.delegate = self;
+        weatherCell.delegate = self;
+        
         _weatherCell = weatherCell;
         return weatherCell;
     }else{
         
         MATwoTableViewCell *cell = [MATwoTableViewCell creatCellWithTableView:(UITableView *)tableView];
-        
+        cell.mapView.delegate = self.weatherCell;
         return cell;
     }
 }
@@ -115,11 +128,7 @@
     
 }
 
--(void)maWeatherViewAddCityWithWeatherView:(MAWeatherView *)weatherView{
-    
-    CityListViewController *cityListVC = [[CityListViewController alloc]init];
-    cityListVC.delegate = (id<CityListVCDelegate>) self.weatherCell;
+-(void)jumpToVCWithCityListViewController:(CityListViewController *)cityListVC{
     [self.navigationController pushViewController:cityListVC animated:YES];
-    
 }
 @end

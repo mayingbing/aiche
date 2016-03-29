@@ -8,12 +8,16 @@
 
 #import "MACellMapView.h"
 #import <MAMapKit/MAMapKit.h>
-//#import <AMap2DMap/MAMapKit/MAMapView.h>
+#import <AMapSearchKit/AMapCommonObj.h>
+#import <AMapSearchKit/AMapSearchKit.h>
 
-@interface MACellMapView ()<MAMapViewDelegate>
+
+@interface MACellMapView ()<MAMapViewDelegate,AMapSearchDelegate,UISearchBarDelegate>
 
 @property(nonatomic ,strong) MAMapView *mapView;
-
+@property(nonatomic ,strong) AMapSearchAPI *search;
+@property(nonatomic ,strong) MAUserLocation *userLocation;
+@property(nonatomic ,copy) NSString *searchContent;
 
 @end
 
@@ -24,33 +28,73 @@
         
         //配置用户Key
         [MAMapServices sharedServices].apiKey = @"890210ecad379c78557ad10845ea319e";
+        [AMapSearchServices sharedServices].apiKey = @"890210ecad379c78557ad10845ea319e";
         
+        //创建地图层
         _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
         _mapView.delegate = self;
        
+        //创建search
+        _search = [[AMapSearchAPI alloc] init];
+        _search.delegate = self;
+
         
         [self addSubview:_mapView];
         
         [self setupMapModel];
+        
     }
     return self;
 }
 
+
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
 updatingLocation:(BOOL)updatingLocation
 {
+    _userLocation = userLocation;
     if(updatingLocation)
     {
         //取出当前位置的坐标
-        NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+        //  NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+        
+        //构造AMapReGeocodeSearchRequest对象
+        AMapReGeocodeSearchRequest *regeo = [[AMapReGeocodeSearchRequest alloc] init];
+        regeo.location = [AMapGeoPoint locationWithLatitude:userLocation.coordinate.latitude     longitude:userLocation.coordinate.longitude];
+        regeo.radius = 10000;
+        regeo.requireExtension = YES;
+        
+        //发起逆地理编码
+        [_search AMapReGoecodeSearch: regeo];
     }
 }
 
--(void)setupMapModel
+//实现逆地理编码的回调函数
+- (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest *)request response:(AMapReGeocodeSearchResponse *)response
 {
+    if(response.regeocode != nil)
+    {
+        //通过AMapReGeocodeSearchResponse对象处理搜索结果
+        NSString *result = [NSString stringWithFormat:@"ReGeocode: %@", response.regeocode.addressComponent.city];
+        if (!result) {
+            result = [NSString stringWithFormat:@"ReGeocode: %@", response.regeocode.addressComponent.province];
+            
+        }
+        
+        if ([self.delegate respondsToSelector:@selector(MACellMapViewWithLocationData:)]) {
+            [self.delegate MACellMapViewWithLocationData:result];
+        }
+    }
+}
+
+
+
+-(void)setupMapModel
+{   //交通路况
     _mapView.showTraffic= YES;
-//    _mapView.mapType = MAMapTypeSatellite;
+    
+    //位置展示
     _mapView.showsUserLocation = YES;
+    
     _mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
     
     [_mapView setZoomLevel:16.1 animated:YES];
@@ -58,6 +102,73 @@ updatingLocation:(BOOL)updatingLocation
     _mapView.pausesLocationUpdatesAutomatically = NO;
     
     _mapView.allowsBackgroundLocationUpdates = YES;
+    
+    // 创建搜索框
+
+    
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(3, 30, [UIScreen mainScreen].bounds.size.width/2, 35)];
+    searchBar.placeholder = @"目的地";
+    searchBar.delegate = self;
+    [self.mapView addSubview:searchBar];
+
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    
+        _searchContent = searchBar.text;
+        //构造AMapGeocodeSearchRequest对象，address为必选项，city为可选项
+        AMapGeocodeSearchRequest *geo = [[AMapGeocodeSearchRequest alloc] init];
+        geo.address = searchBar.text;
+    
+        //发起正向地理编码
+        [_search AMapGeocodeSearch: geo];
+    searchBar.text = @"";
+    
+    [searchBar resignFirstResponder];
+}
+//实现正向地理编码的回调函数
+- (void)onGeocodeSearchDone:(AMapGeocodeSearchRequest *)request response:(AMapGeocodeSearchResponse *)response
+{
+    if(response.geocodes.count == 0)
+    {
+        return;
+    }
+    
+    //通过AMapGeocodeSearchResponse对象处理搜索结果
+   // NSString *strCount = [NSString stringWithFormat:@"count: %ld", (long)response.count];
+    NSString *strGeocodes = @"";
+    for (AMapTip *p in response.geocodes) {
+        strGeocodes = [NSString stringWithFormat:@"%@\ngeocode: %@", strGeocodes, p.description];
+         [self searchMapWithData:(AMapTip *)p];
+    }
+    //NSString *result = [NSString stringWithFormat:@"%@ \n %@", strCount, strGeocodes];
+
+}
+-(void)searchMapWithData:(AMapTip *)p{
+    
+    //驾车路径规划
+    AMapDrivingRouteSearchRequest *request = [[AMapDrivingRouteSearchRequest alloc] init];
+    request.origin = [AMapGeoPoint locationWithLatitude:_userLocation.coordinate.latitude longitude:_userLocation.coordinate.longitude];
+    request.destination = p.location;
+    request.strategy = 2;//距离优先
+    request.requireExtension = YES;
+    //发起路径搜索
+    [_search AMapDrivingRouteSearch: request];
+    
+}
+
+//实现路径搜索的回调函数
+- (void)onRouteSearchDone:(AMapRouteSearchBaseRequest *)request response:(AMapRouteSearchResponse *)response
+{
+    if(response.route == nil)
+    {
+        return;
+    }
+    
+    //通过AMapNavigationSearchResponse对象处理搜索结果
+   // NSString *route = [NSString stringWithFormat:@"Navi: %@", response.route];
+   // NSLog(@"%@", route);
 }
 
 - (void)mapView:(MAMapView *)mapView didAddAnnotationViews:(NSArray *)views

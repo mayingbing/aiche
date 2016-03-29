@@ -75,12 +75,14 @@
         self.currentRect = frame;
         [self initScrollView];
         [self initImageView];
-        
+
     }
     
     return self;
     
 }
+
+
 
 //初始化主滑动视图
 -(void)initScrollView{
@@ -345,7 +347,7 @@
         
     }else{
         
-        NSLog(@"数据源错误，设置图片失败");
+       // NSLog(@"数据源错误，设置图片失败");
         
     }
     

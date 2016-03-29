@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MJBannnerPlayerDeledage <NSObject>
+@protocol SYScrollerViewDeledage <NSObject>
 
 -(void)SYScrollerView:(UIView *)bannerPlayer didSelectedIndex:(NSInteger)index;
 
@@ -19,7 +19,7 @@
 @property (nonatomic) CGFloat timeInterval;
 @property (strong, nonatomic) NSArray *sourceArray;
 @property (strong, nonatomic) NSArray *urlArray;
-@property (strong, nonatomic) id<MJBannnerPlayerDeledage> delegate;
+@property (strong, nonatomic) id<SYScrollerViewDeledage> delegate;
 
 //初始化一个本地图片播放器
 + (void)initWithSourceArray:(NSArray *)picArray

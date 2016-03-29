@@ -41,7 +41,7 @@ static void *UIControlEnabledDisposableKey = &UIControlEnabledDisposableKey;
 	SEL hijackSelector = @selector(rac_commandPerformAction:);
 	if (self.target == self && self.action == hijackSelector) return;
 	
-	if (self.target != nil) NSLog(@"WARNING: UIBarButtonItem.rac_command hijacks the control's existing target and action.");
+	if (self.target != nil)NSLog(@"WARNING: UIBarButtonItem.rac_command hijacks the control's existing target and action.");
 	
 	self.target = self;
 	self.action = hijackSelector;

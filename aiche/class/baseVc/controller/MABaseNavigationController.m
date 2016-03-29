@@ -27,7 +27,7 @@
 
 +(void)initialize{
     //title颜色
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]}];
     // 获取当前类下面的UIBarButtonItem
     UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[self]];
     
@@ -40,7 +40,7 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.childViewControllers.count) { // 不是根控制器
-        
+        //隐藏tabbar
         viewController.hidesBottomBarWhenPushed = YES;
         
         UIBarButtonItem *left = [UIBarButtonItem barButtonItemWithImage:nil highImage:nil target:self action:@selector(popToPre) title:@"返回" forControlEvents:UIControlEventTouchUpInside];

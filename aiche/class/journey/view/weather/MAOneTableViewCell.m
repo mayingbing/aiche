@@ -12,9 +12,10 @@
 #import "MADataModel.h"
 #import "MJExtension.h"
 #import "CityListViewController.h"
+#import "MACellMapView.h"
 
 
-@interface MAOneTableViewCell ()<CityListVCDelegate>
+@interface MAOneTableViewCell ()<CityListVCDelegate,MACellMapViewDelegate>
 
 @property(nonatomic ,strong)UILabel *resultText;
 @property(nonatomic ,copy)NSString *urlStr;
@@ -56,13 +57,33 @@ static NSString *oneID = @"oneCell";
     weatherView.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:weatherView];
     
+    //查看更多城市
+    UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.weatherView addSubview:addBtn];
+    addBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-30, 5, 30, 40);
+    [addBtn setBackgroundImage:[UIImage imageNamed:@"hou"] forState:UIControlStateNormal];
+    [addBtn setBackgroundImage:[UIImage imageNamed:@"hou_press"] forState:UIControlStateHighlighted];
+    [addBtn addTarget:self action:@selector(jumpToCityList) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
     NSString *urlStr = @"http://apis.baidu.com/apistore/weatherservice/weather?citypinyin=beijing";
     _urlStr = urlStr;
     
     [self doRequestWeatherData];
     
 }
+//
+-(void)jumpToCityList{
+    
+        CityListViewController *cityListVC = [[CityListViewController alloc]init];
+        cityListVC.delegate =  self;
+    
+    if ([self.delegate respondsToSelector:@selector(jumpToVCWithCityListViewController:)]) {
+        [self.delegate jumpToVCWithCityListViewController:cityListVC];
+    }
 
+}
 
 -(void)doRequestWeatherData{
     
@@ -73,8 +94,6 @@ static NSString *oneID = @"oneCell";
     session.responseSerializer = [AFHTTPResponseSerializer serializer];
     [session.requestSerializer setValue:apikey forHTTPHeaderField:@"apikey"];
 
-
-    
     [session GET:_urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
@@ -91,10 +110,14 @@ static NSString *oneID = @"oneCell";
         
         
     }];
-    
+
 
 }
-
+-(void)MACellMapViewWithLocationData:(NSString *)cityName{
+    
+    [self CityListVCGetNewCityweatherWithCityName:cityName];
+    
+}
     
 -(void)CityListVCGetNewCityweatherWithCityName:(NSString *)cityName{
      NSString *baseStr = @"http://apis.baidu.com/apistore/weatherservice/weather?citypinyin=";

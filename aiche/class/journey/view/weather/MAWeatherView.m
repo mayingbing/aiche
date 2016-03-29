@@ -70,23 +70,9 @@
     WSLable.font = [UIFont systemFontOfSize:15];
     _WSLable = WSLable;
     
-    UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self addSubview:addBtn];
-    addBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-30, 5, 30, 40);
-    [addBtn setBackgroundImage:[UIImage imageNamed:@"hou"] forState:UIControlStateNormal];
-    [addBtn setBackgroundImage:[UIImage imageNamed:@"hou_press"] forState:UIControlStateHighlighted];
-    [addBtn addTarget:self action:@selector(jumpToCityList) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(void)jumpToCityList{
-    
-    if ([self.delegate respondsToSelector:@selector(maWeatherViewAddCityWithWeatherView:)]) {
-        
-        [self.delegate maWeatherViewAddCityWithWeatherView:self];
-        
-    }
-    
-}
+
 
 -(void)setWeatherData:(MADataModel *)weatherData{
     
@@ -98,7 +84,7 @@
     self.cityNameLable.text = weatherData.city;
     [self.cityNameLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.left.equalTo(self.mas_left).with.offset(20);
+        make.left.equalTo(self.mas_left).with.offset(10);
         make.top.equalTo(self.mas_top).with.offset(5);
         make.height.equalTo(@15);
     }];
@@ -125,7 +111,7 @@
     self.tmpLable.text = [NSString stringWithFormat:@"%@℃~%@℃",weatherData.l_tmp,weatherData.h_tmp];
     [self.tmpLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.left.equalTo(self.mas_left).with.offset(20);
+        make.left.equalTo(self.mas_left).with.offset(10);
         make.top.equalTo(self.cityNameLable.mas_bottom).with.offset(10);
         make.height.equalTo(@15);
     }];

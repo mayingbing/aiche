@@ -10,6 +10,7 @@
 		1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE88082086B1DBAD18ECB0D9 /* libPods.a */; };
 		791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 791E44B81CA422AC0050DC34 /* earth@3x.png */; };
 		7924E8F21CA9563C00393956 /* MACellMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7924E8F11CA9563C00393956 /* MACellMapView.m */; };
+		792F659F1CAA9E6400AD7918 /* MATicketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792F659E1CAA9E6400AD7918 /* MATicketTableViewCell.m */; };
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
 		7969C8E21CA95B8500C22DAA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969C8E11CA95B8500C22DAA /* MapKit.framework */; };
 		7969C8E61CA975C700C22DAA /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969C8E51CA975C700C22DAA /* UINavigationBar+Awesome.m */; };
@@ -38,6 +39,9 @@
 		79DDC8DB1CA9472F00291B71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8B81CA9472F00291B71 /* AppDelegate.m */; };
 		79DDC8E01CA9472F00291B71 /* MASafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC8C01CA9472F00291B71 /* MASafeViewController.m */; };
 		79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FB9BC71CAA35A80076C9DB /* Assets.xcassets */; };
+		79FB9BD51CAA79F60076C9DB /* MAQuNaErViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FB9BD41CAA79F60076C9DB /* MAQuNaErViewController.m */; };
+		79FB9BE21CAA93F10076C9DB /* MATicketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FB9BE11CAA93F10076C9DB /* MATicketModel.m */; };
+		79FB9BE51CAA95D00076C9DB /* MAPriceListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FB9BE41CAA95D00076C9DB /* MAPriceListModel.m */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
 		79FF65081CA2D7D700CB4FB6 /* aicheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65071CA2D7D700CB4FB6 /* aicheTests.m */; };
 		79FF65131CA2D7D700CB4FB6 /* aicheUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65121CA2D7D700CB4FB6 /* aicheUITests.m */; };
@@ -65,6 +69,8 @@
 		791E44B81CA422AC0050DC34 /* earth@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth@3x.png"; sourceTree = "<group>"; };
 		7924E8F01CA9563C00393956 /* MACellMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACellMapView.h; sourceTree = "<group>"; };
 		7924E8F11CA9563C00393956 /* MACellMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACellMapView.m; sourceTree = "<group>"; };
+		792F659D1CAA9E6400AD7918 /* MATicketTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATicketTableViewCell.h; sourceTree = "<group>"; };
+		792F659E1CAA9E6400AD7918 /* MATicketTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATicketTableViewCell.m; sourceTree = "<group>"; };
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
 		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7969C8E41CA975C700C22DAA /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
@@ -115,6 +121,12 @@
 		79DDC8BF1CA9472F00291B71 /* MASafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASafeViewController.h; sourceTree = "<group>"; };
 		79DDC8C01CA9472F00291B71 /* MASafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASafeViewController.m; sourceTree = "<group>"; };
 		79FB9BC71CAA35A80076C9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79FB9BD31CAA79F60076C9DB /* MAQuNaErViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAQuNaErViewController.h; sourceTree = "<group>"; };
+		79FB9BD41CAA79F60076C9DB /* MAQuNaErViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAQuNaErViewController.m; sourceTree = "<group>"; };
+		79FB9BE01CAA93F10076C9DB /* MATicketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATicketModel.h; sourceTree = "<group>"; };
+		79FB9BE11CAA93F10076C9DB /* MATicketModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATicketModel.m; sourceTree = "<group>"; };
+		79FB9BE31CAA95D00076C9DB /* MAPriceListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPriceListModel.h; sourceTree = "<group>"; };
+		79FB9BE41CAA95D00076C9DB /* MAPriceListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPriceListModel.m; sourceTree = "<group>"; };
 		79FF64EA1CA2D7D700CB4FB6 /* 爱车.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱车.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FF64FC1CA2D7D700CB4FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79FF64FE1CA2D7D700CB4FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				79DDC8761CA9472F00291B71 /* baseVc */,
+				79FB9BD91CAA86870076C9DB /* tools */,
 				79DDC8AC1CA9472F00291B71 /* newFeature */,
 				79DDC8881CA9472F00291B71 /* journey */,
 				79DDC8BD1CA9472F00291B71 /* safe */,
@@ -198,13 +211,10 @@
 		79DDC8771CA9472F00291B71 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				79FB9BD71CAA7ACC0076C9DB /* tableView */,
+				79FB9BD61CAA7AB20076C9DB /* tabBar */,
+				79FB9BD81CAA7AE10076C9DB /* viewController */,
 				7969C8E31CA96F8F00C22DAA /* nav */,
-				79DDC87C1CA9472F00291B71 /* MABaseTabBarController.h */,
-				79DDC87D1CA9472F00291B71 /* MABaseTabBarController.m */,
-				79DDC87E1CA9472F00291B71 /* MABaseTableViewController.h */,
-				79DDC87F1CA9472F00291B71 /* MABaseTableViewController.m */,
-				79DDC8801CA9472F00291B71 /* MABaseViewController.h */,
-				79DDC8811CA9472F00291B71 /* MABaseViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -247,18 +257,11 @@
 			children = (
 				7969C8E71CA9790800C22DAA /* MAJourneyViewController.h */,
 				7969C8E81CA9790800C22DAA /* MAJourneyViewController.m */,
-				79DDC8891CA9472F00291B71 /* controller */,
+				79FB9BCF1CAA790F0076C9DB /* controller */,
 				79DDC88C1CA9472F00291B71 /* model */,
 				79DDC88D1CA9472F00291B71 /* view */,
 			);
 			path = journey;
-			sourceTree = "<group>";
-		};
-		79DDC8891CA9472F00291B71 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controller;
 			sourceTree = "<group>";
 		};
 		79DDC88C1CA9472F00291B71 /* model */ = {
@@ -409,6 +412,55 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		79FB9BCF1CAA790F0076C9DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				79FB9BD31CAA79F60076C9DB /* MAQuNaErViewController.h */,
+				79FB9BD41CAA79F60076C9DB /* MAQuNaErViewController.m */,
+				79FB9BE01CAA93F10076C9DB /* MATicketModel.h */,
+				79FB9BE11CAA93F10076C9DB /* MATicketModel.m */,
+				79FB9BE31CAA95D00076C9DB /* MAPriceListModel.h */,
+				79FB9BE41CAA95D00076C9DB /* MAPriceListModel.m */,
+				792F659D1CAA9E6400AD7918 /* MATicketTableViewCell.h */,
+				792F659E1CAA9E6400AD7918 /* MATicketTableViewCell.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		79FB9BD61CAA7AB20076C9DB /* tabBar */ = {
+			isa = PBXGroup;
+			children = (
+				79DDC87C1CA9472F00291B71 /* MABaseTabBarController.h */,
+				79DDC87D1CA9472F00291B71 /* MABaseTabBarController.m */,
+			);
+			name = tabBar;
+			sourceTree = "<group>";
+		};
+		79FB9BD71CAA7ACC0076C9DB /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				79DDC87E1CA9472F00291B71 /* MABaseTableViewController.h */,
+				79DDC87F1CA9472F00291B71 /* MABaseTableViewController.m */,
+			);
+			name = tableView;
+			sourceTree = "<group>";
+		};
+		79FB9BD81CAA7AE10076C9DB /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				79DDC8801CA9472F00291B71 /* MABaseViewController.h */,
+				79DDC8811CA9472F00291B71 /* MABaseViewController.m */,
+			);
+			name = viewController;
+			sourceTree = "<group>";
+		};
+		79FB9BD91CAA86870076C9DB /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 		79FF64E11CA2D7D700CB4FB6 = {
@@ -673,12 +725,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DDC8DB1CA9472F00291B71 /* AppDelegate.m in Sources */,
+				79FB9BE21CAA93F10076C9DB /* MATicketModel.m in Sources */,
 				79DDC8CE1CA9472F00291B71 /* CityListViewController.m in Sources */,
 				79DDC8CF1CA9472F00291B71 /* MADataModel.m in Sources */,
 				79DDC8D11CA9472F00291B71 /* MAWeatherView.m in Sources */,
 				79DDC8C51CA9472F00291B71 /* MABaseTabBarController.m in Sources */,
 				79DDC8CC1CA9472F00291B71 /* SYScrollerView.m in Sources */,
+				792F659F1CAA9E6400AD7918 /* MATicketTableViewCell.m in Sources */,
 				79DDC8C81CA9472F00291B71 /* MAHomeViewController.m in Sources */,
+				79FB9BE51CAA95D00076C9DB /* MAPriceListModel.m in Sources */,
 				79DDC8D61CA9472F00291B71 /* main.m in Sources */,
 				79DDC8C41CA9472F00291B71 /* MABaseNavigationController.m in Sources */,
 				7969C8E91CA9790800C22DAA /* MAJourneyViewController.m in Sources */,
@@ -694,6 +749,7 @@
 				79DDC8D41CA9472F00291B71 /* UIView+Frame.m in Sources */,
 				79DDC8D91CA9472F00291B71 /* DGAaimaView.m in Sources */,
 				79DDC8E01CA9472F00291B71 /* MASafeViewController.m in Sources */,
+				79FB9BD51CAA79F60076C9DB /* MAQuNaErViewController.m in Sources */,
 				79DDC8C71CA9472F00291B71 /* MABaseViewController.m in Sources */,
 				79DDC8D01CA9472F00291B71 /* MAOneTableViewCell.m in Sources */,
 			);

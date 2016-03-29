@@ -11,7 +11,7 @@
 
 @interface MATwoTableViewCell ()
 
-@property(nonatomic ,strong)UIView *mapView;
+
 
 @end
 

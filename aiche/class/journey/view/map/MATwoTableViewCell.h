@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MACellMapView.h"
 
 @interface MATwoTableViewCell : UITableViewCell
+
+@property(nonatomic ,strong)MACellMapView *mapView;
 
 +(instancetype)creatCellWithTableView:(UITableView *)tableView;
 
