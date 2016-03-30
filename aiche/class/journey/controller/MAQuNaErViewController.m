@@ -10,7 +10,10 @@
 #import <AFNetworking.h>
 #import "MATicketModel.h"
 #import "MJExtension.h"
-
+#import "MJRefresh.h"
+#import "MATicketTableViewCell.h"
+#import "MAWEBViewController.h"
+#import "MBProgressHUD.h"
 
 @interface MAQuNaErViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -52,23 +55,42 @@
     tableView.dataSource = self;
     tableView.delegate = self;
     
-//    // 添加下拉刷新控件
-//    [self.tableView addHeaderWithTarget:self action:@selector(loadNewStatus)];
-//    
-//    // 自动下拉刷新
-//    [self.tableView headerBeginRefreshing];
-//    
-//    // 添加上拉刷新控件
-//    [self.tableView addFooterWithTarget:self action:@selector(loadMoreStatus)];
-
-    
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    
     //获取景点
     [self getSpotName];
+    
+    //刷新页面
+    [self MJRefreshRun];
+    
 }
+
+-(void)MJRefreshRun{
+    
+    //下拉刷新
+    __unsafe_unretained UITableView *tableView = self.tableView;
+    
+    tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+            [tableView reloadData];
+           [tableView.mj_header endRefreshing];
+        });
+    }];
+    
+    tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    //上拉刷新
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+            [tableView reloadData];
+            [tableView.mj_footer endRefreshing];
+        });
+    }];
+    footer.hidden = YES;
+    tableView.mj_footer = footer;
+    
+}
+
 //获取多个景点名称
 -(void)getSpotName{
     
@@ -100,6 +122,8 @@
                     [self getQuNaErDataWithNumStr:numStr];
                 }
             }
+            [self.tableView.mj_header beginRefreshing];
+
         }
 
         
@@ -137,7 +161,10 @@
         
         MATicketModel *ticket = [MATicketModel mj_objectWithKeyValues:ticketContent];
         
-        [self.ticketArr addObject:ticket];
+        if (ticket) {
+            [self.ticketArr addObject:ticket];
+        }
+        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -162,14 +189,23 @@
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-     static NSString *ID = @"cell";
-     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
      
      
-     
-     return cell;
+     MATicketTableViewCell *ticketCell = [MATicketTableViewCell creatCellWithTableView:(UITableView *)tableView];
+     ticketCell.ticket = self.ticketArr[indexPath.row];
+
+     return ticketCell;
+
  }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSString *webUrl = [self.ticketArr[indexPath.row] detailUrl];
+    
+    MAWEBViewController *webVC = [[MAWEBViewController alloc]init];
+    [webVC loadWebViewWithWebUrl:webUrl];
+    [self.navigationController pushViewController:webVC animated:YES];
+    
+}
 
 @end

@@ -9,36 +9,38 @@
 /* Begin PBXBuildFile section */
 		1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE88082086B1DBAD18ECB0D9 /* libPods.a */; };
 		791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 791E44B81CA422AC0050DC34 /* earth@3x.png */; };
+		792A9B551CABF4C20026A29C /* MABaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B0E1CABF4C20026A29C /* MABaseNavigationController.m */; };
+		792A9B561CABF4C20026A29C /* MABaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B101CABF4C20026A29C /* MABaseTabBarController.m */; };
+		792A9B571CABF4C20026A29C /* MABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B121CABF4C20026A29C /* MABaseTableViewController.m */; };
+		792A9B581CABF4C20026A29C /* MABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B141CABF4C20026A29C /* MABaseViewController.m */; };
+		792A9B591CABF4C20026A29C /* MAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B181CABF4C20026A29C /* MAHomeViewController.m */; };
+		792A9B5A1CABF4C20026A29C /* MAQuNaErViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B1C1CABF4C20026A29C /* MAQuNaErViewController.m */; };
+		792A9B5B1CABF4C20026A29C /* MATicketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B1E1CABF4C20026A29C /* MATicketModel.m */; };
+		792A9B5C1CABF4C20026A29C /* MATicketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B201CABF4C20026A29C /* MATicketTableViewCell.m */; };
+		792A9B5D1CABF4C20026A29C /* MAWEBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B221CABF4C20026A29C /* MAWEBViewController.m */; };
+		792A9B5E1CABF4C20026A29C /* MAJourneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B241CABF4C20026A29C /* MAJourneyViewController.m */; };
+		792A9B5F1CABF4C20026A29C /* MACellMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B281CABF4C20026A29C /* MACellMapView.m */; };
+		792A9B601CABF4C20026A29C /* MATwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B2A1CABF4C20026A29C /* MATwoTableViewCell.m */; };
+		792A9B611CABF4C20026A29C /* SYScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B2D1CABF4C20026A29C /* SYScrollerView.m */; };
+		792A9B621CABF4C20026A29C /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A9B2F1CABF4C20026A29C /* citydict.plist */; };
+		792A9B631CABF4C20026A29C /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B311CABF4C20026A29C /* CityListViewController.m */; };
+		792A9B641CABF4C20026A29C /* MADataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B331CABF4C20026A29C /* MADataModel.m */; };
+		792A9B651CABF4C20026A29C /* MAOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B351CABF4C20026A29C /* MAOneTableViewCell.m */; };
+		792A9B661CABF4C20026A29C /* MAWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B371CABF4C20026A29C /* MAWeatherView.m */; };
+		792A9B671CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B3B1CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m */; };
+		792A9B681CABF4C20026A29C /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B3D1CABF4C20026A29C /* UIImage+Image.m */; };
+		792A9B691CABF4C20026A29C /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B3F1CABF4C20026A29C /* UINavigationBar+Awesome.m */; };
+		792A9B6A1CABF4C20026A29C /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B411CABF4C20026A29C /* UIView+Frame.m */; };
+		792A9B6B1CABF4C20026A29C /* MAChooseRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B431CABF4C20026A29C /* MAChooseRootViewController.m */; };
+		792A9B6C1CABF4C20026A29C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B441CABF4C20026A29C /* main.m */; };
+		792A9B6D1CABF4C20026A29C /* MANewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B481CABF4C20026A29C /* MANewFeatureViewController.m */; };
+		792A9B6E1CABF4C20026A29C /* DGAaimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B4B1CABF4C20026A29C /* DGAaimaView.m */; };
+		792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B4D1CABF4C20026A29C /* DGEarthView.m */; };
+		792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B501CABF4C20026A29C /* AppDelegate.m */; };
+		792A9B711CABF4C20026A29C /* MASafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B541CABF4C20026A29C /* MASafeViewController.m */; };
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
 		7969C8E21CA95B8500C22DAA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969C8E11CA95B8500C22DAA /* MapKit.framework */; };
 		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
-		79A1759B1CABA7BC00856401 /* MABaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175571CABA7BC00856401 /* MABaseNavigationController.m */; };
-		79A1759C1CABA7BC00856401 /* MABaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175591CABA7BC00856401 /* MABaseTabBarController.m */; };
-		79A1759D1CABA7BC00856401 /* MABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1755B1CABA7BC00856401 /* MABaseTableViewController.m */; };
-		79A1759E1CABA7BC00856401 /* MABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1755D1CABA7BC00856401 /* MABaseViewController.m */; };
-		79A1759F1CABA7BC00856401 /* MAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175611CABA7BC00856401 /* MAHomeViewController.m */; };
-		79A175A01CABA7BC00856401 /* MAQuNaErViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175651CABA7BC00856401 /* MAQuNaErViewController.m */; };
-		79A175A11CABA7BC00856401 /* MATicketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175671CABA7BC00856401 /* MATicketModel.m */; };
-		79A175A21CABA7BC00856401 /* MAJourneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175691CABA7BC00856401 /* MAJourneyViewController.m */; };
-		79A175A31CABA7BC00856401 /* MACellMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1756D1CABA7BC00856401 /* MACellMapView.m */; };
-		79A175A41CABA7BC00856401 /* MATwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1756F1CABA7BC00856401 /* MATwoTableViewCell.m */; };
-		79A175A51CABA7BC00856401 /* SYScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175721CABA7BC00856401 /* SYScrollerView.m */; };
-		79A175A61CABA7BC00856401 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79A175741CABA7BC00856401 /* citydict.plist */; };
-		79A175A71CABA7BC00856401 /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175761CABA7BC00856401 /* CityListViewController.m */; };
-		79A175A81CABA7BC00856401 /* MADataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175781CABA7BC00856401 /* MADataModel.m */; };
-		79A175A91CABA7BC00856401 /* MAOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1757A1CABA7BC00856401 /* MAOneTableViewCell.m */; };
-		79A175AA1CABA7BC00856401 /* MAWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1757C1CABA7BC00856401 /* MAWeatherView.m */; };
-		79A175AB1CABA7BC00856401 /* UIBarButtonItem+MaBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175801CABA7BC00856401 /* UIBarButtonItem+MaBarButtonItem.m */; };
-		79A175AC1CABA7BC00856401 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175821CABA7BC00856401 /* UIImage+Image.m */; };
-		79A175AD1CABA7BC00856401 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175841CABA7BC00856401 /* UINavigationBar+Awesome.m */; };
-		79A175AE1CABA7BC00856401 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175861CABA7BC00856401 /* UIView+Frame.m */; };
-		79A175AF1CABA7BC00856401 /* MAChooseRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175881CABA7BC00856401 /* MAChooseRootViewController.m */; };
-		79A175B01CABA7BC00856401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175891CABA7BC00856401 /* main.m */; };
-		79A175B11CABA7BC00856401 /* MANewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1758D1CABA7BC00856401 /* MANewFeatureViewController.m */; };
-		79A175B21CABA7BC00856401 /* DGAaimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175901CABA7BC00856401 /* DGAaimaView.m */; };
-		79A175B31CABA7BC00856401 /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175921CABA7BC00856401 /* DGEarthView.m */; };
-		79A175B41CABA7BC00856401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175951CABA7BC00856401 /* AppDelegate.m */; };
-		79A175B51CABA7BC00856401 /* MASafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A175991CABA7BC00856401 /* MASafeViewController.m */; };
 		79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FB9BC71CAA35A80076C9DB /* Assets.xcassets */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
 		79FF65081CA2D7D700CB4FB6 /* aicheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65071CA2D7D700CB4FB6 /* aicheTests.m */; };
@@ -65,61 +67,65 @@
 /* Begin PBXFileReference section */
 		7640220824F1D9B0B8AA67E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		791E44B81CA422AC0050DC34 /* earth@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth@3x.png"; sourceTree = "<group>"; };
+		792A9B0D1CABF4C20026A29C /* MABaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseNavigationController.h; sourceTree = "<group>"; };
+		792A9B0E1CABF4C20026A29C /* MABaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseNavigationController.m; sourceTree = "<group>"; };
+		792A9B0F1CABF4C20026A29C /* MABaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseTabBarController.h; sourceTree = "<group>"; };
+		792A9B101CABF4C20026A29C /* MABaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseTabBarController.m; sourceTree = "<group>"; };
+		792A9B111CABF4C20026A29C /* MABaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseTableViewController.h; sourceTree = "<group>"; };
+		792A9B121CABF4C20026A29C /* MABaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseTableViewController.m; sourceTree = "<group>"; };
+		792A9B131CABF4C20026A29C /* MABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseViewController.h; sourceTree = "<group>"; };
+		792A9B141CABF4C20026A29C /* MABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseViewController.m; sourceTree = "<group>"; };
+		792A9B171CABF4C20026A29C /* MAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeViewController.h; sourceTree = "<group>"; };
+		792A9B181CABF4C20026A29C /* MAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeViewController.m; sourceTree = "<group>"; };
+		792A9B1B1CABF4C20026A29C /* MAQuNaErViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAQuNaErViewController.h; sourceTree = "<group>"; };
+		792A9B1C1CABF4C20026A29C /* MAQuNaErViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAQuNaErViewController.m; sourceTree = "<group>"; };
+		792A9B1D1CABF4C20026A29C /* MATicketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATicketModel.h; sourceTree = "<group>"; };
+		792A9B1E1CABF4C20026A29C /* MATicketModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATicketModel.m; sourceTree = "<group>"; };
+		792A9B1F1CABF4C20026A29C /* MATicketTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATicketTableViewCell.h; sourceTree = "<group>"; };
+		792A9B201CABF4C20026A29C /* MATicketTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATicketTableViewCell.m; sourceTree = "<group>"; };
+		792A9B211CABF4C20026A29C /* MAWEBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAWEBViewController.h; sourceTree = "<group>"; };
+		792A9B221CABF4C20026A29C /* MAWEBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAWEBViewController.m; sourceTree = "<group>"; };
+		792A9B231CABF4C20026A29C /* MAJourneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAJourneyViewController.h; sourceTree = "<group>"; };
+		792A9B241CABF4C20026A29C /* MAJourneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAJourneyViewController.m; sourceTree = "<group>"; };
+		792A9B271CABF4C20026A29C /* MACellMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACellMapView.h; sourceTree = "<group>"; };
+		792A9B281CABF4C20026A29C /* MACellMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACellMapView.m; sourceTree = "<group>"; };
+		792A9B291CABF4C20026A29C /* MATwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATwoTableViewCell.h; sourceTree = "<group>"; };
+		792A9B2A1CABF4C20026A29C /* MATwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATwoTableViewCell.m; sourceTree = "<group>"; };
+		792A9B2C1CABF4C20026A29C /* SYScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYScrollerView.h; sourceTree = "<group>"; };
+		792A9B2D1CABF4C20026A29C /* SYScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYScrollerView.m; sourceTree = "<group>"; };
+		792A9B2F1CABF4C20026A29C /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		792A9B301CABF4C20026A29C /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
+		792A9B311CABF4C20026A29C /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
+		792A9B321CABF4C20026A29C /* MADataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADataModel.h; sourceTree = "<group>"; };
+		792A9B331CABF4C20026A29C /* MADataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADataModel.m; sourceTree = "<group>"; };
+		792A9B341CABF4C20026A29C /* MAOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAOneTableViewCell.h; sourceTree = "<group>"; };
+		792A9B351CABF4C20026A29C /* MAOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAOneTableViewCell.m; sourceTree = "<group>"; };
+		792A9B361CABF4C20026A29C /* MAWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAWeatherView.h; sourceTree = "<group>"; };
+		792A9B371CABF4C20026A29C /* MAWeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAWeatherView.m; sourceTree = "<group>"; };
+		792A9B3A1CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MaBarButtonItem.h"; sourceTree = "<group>"; };
+		792A9B3B1CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MaBarButtonItem.m"; sourceTree = "<group>"; };
+		792A9B3C1CABF4C20026A29C /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		792A9B3D1CABF4C20026A29C /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		792A9B3E1CABF4C20026A29C /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		792A9B3F1CABF4C20026A29C /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		792A9B401CABF4C20026A29C /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		792A9B411CABF4C20026A29C /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		792A9B421CABF4C20026A29C /* MAChooseRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAChooseRootViewController.h; sourceTree = "<group>"; };
+		792A9B431CABF4C20026A29C /* MAChooseRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAChooseRootViewController.m; sourceTree = "<group>"; };
+		792A9B441CABF4C20026A29C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		792A9B471CABF4C20026A29C /* MANewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANewFeatureViewController.h; sourceTree = "<group>"; };
+		792A9B481CABF4C20026A29C /* MANewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANewFeatureViewController.m; sourceTree = "<group>"; };
+		792A9B4A1CABF4C20026A29C /* DGAaimaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAaimaView.h; sourceTree = "<group>"; };
+		792A9B4B1CABF4C20026A29C /* DGAaimaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAaimaView.m; sourceTree = "<group>"; };
+		792A9B4C1CABF4C20026A29C /* DGEarthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGEarthView.h; sourceTree = "<group>"; };
+		792A9B4D1CABF4C20026A29C /* DGEarthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEarthView.m; sourceTree = "<group>"; };
+		792A9B4F1CABF4C20026A29C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		792A9B501CABF4C20026A29C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		792A9B531CABF4C20026A29C /* MASafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASafeViewController.h; sourceTree = "<group>"; };
+		792A9B541CABF4C20026A29C /* MASafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASafeViewController.m; sourceTree = "<group>"; };
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
 		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellBackground.jpg; sourceTree = "<group>"; };
-		79A175561CABA7BC00856401 /* MABaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseNavigationController.h; sourceTree = "<group>"; };
-		79A175571CABA7BC00856401 /* MABaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseNavigationController.m; sourceTree = "<group>"; };
-		79A175581CABA7BC00856401 /* MABaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseTabBarController.h; sourceTree = "<group>"; };
-		79A175591CABA7BC00856401 /* MABaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseTabBarController.m; sourceTree = "<group>"; };
-		79A1755A1CABA7BC00856401 /* MABaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseTableViewController.h; sourceTree = "<group>"; };
-		79A1755B1CABA7BC00856401 /* MABaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseTableViewController.m; sourceTree = "<group>"; };
-		79A1755C1CABA7BC00856401 /* MABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseViewController.h; sourceTree = "<group>"; };
-		79A1755D1CABA7BC00856401 /* MABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseViewController.m; sourceTree = "<group>"; };
-		79A175601CABA7BC00856401 /* MAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeViewController.h; sourceTree = "<group>"; };
-		79A175611CABA7BC00856401 /* MAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeViewController.m; sourceTree = "<group>"; };
-		79A175641CABA7BC00856401 /* MAQuNaErViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAQuNaErViewController.h; sourceTree = "<group>"; };
-		79A175651CABA7BC00856401 /* MAQuNaErViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAQuNaErViewController.m; sourceTree = "<group>"; };
-		79A175661CABA7BC00856401 /* MATicketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATicketModel.h; sourceTree = "<group>"; };
-		79A175671CABA7BC00856401 /* MATicketModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATicketModel.m; sourceTree = "<group>"; };
-		79A175681CABA7BC00856401 /* MAJourneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAJourneyViewController.h; sourceTree = "<group>"; };
-		79A175691CABA7BC00856401 /* MAJourneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAJourneyViewController.m; sourceTree = "<group>"; };
-		79A1756C1CABA7BC00856401 /* MACellMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACellMapView.h; sourceTree = "<group>"; };
-		79A1756D1CABA7BC00856401 /* MACellMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACellMapView.m; sourceTree = "<group>"; };
-		79A1756E1CABA7BC00856401 /* MATwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATwoTableViewCell.h; sourceTree = "<group>"; };
-		79A1756F1CABA7BC00856401 /* MATwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATwoTableViewCell.m; sourceTree = "<group>"; };
-		79A175711CABA7BC00856401 /* SYScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYScrollerView.h; sourceTree = "<group>"; };
-		79A175721CABA7BC00856401 /* SYScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYScrollerView.m; sourceTree = "<group>"; };
-		79A175741CABA7BC00856401 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
-		79A175751CABA7BC00856401 /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
-		79A175761CABA7BC00856401 /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
-		79A175771CABA7BC00856401 /* MADataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADataModel.h; sourceTree = "<group>"; };
-		79A175781CABA7BC00856401 /* MADataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADataModel.m; sourceTree = "<group>"; };
-		79A175791CABA7BC00856401 /* MAOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAOneTableViewCell.h; sourceTree = "<group>"; };
-		79A1757A1CABA7BC00856401 /* MAOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAOneTableViewCell.m; sourceTree = "<group>"; };
-		79A1757B1CABA7BC00856401 /* MAWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAWeatherView.h; sourceTree = "<group>"; };
-		79A1757C1CABA7BC00856401 /* MAWeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAWeatherView.m; sourceTree = "<group>"; };
-		79A1757F1CABA7BC00856401 /* UIBarButtonItem+MaBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MaBarButtonItem.h"; sourceTree = "<group>"; };
-		79A175801CABA7BC00856401 /* UIBarButtonItem+MaBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MaBarButtonItem.m"; sourceTree = "<group>"; };
-		79A175811CABA7BC00856401 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
-		79A175821CABA7BC00856401 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
-		79A175831CABA7BC00856401 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
-		79A175841CABA7BC00856401 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
-		79A175851CABA7BC00856401 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		79A175861CABA7BC00856401 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		79A175871CABA7BC00856401 /* MAChooseRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAChooseRootViewController.h; sourceTree = "<group>"; };
-		79A175881CABA7BC00856401 /* MAChooseRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAChooseRootViewController.m; sourceTree = "<group>"; };
-		79A175891CABA7BC00856401 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		79A1758C1CABA7BC00856401 /* MANewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANewFeatureViewController.h; sourceTree = "<group>"; };
-		79A1758D1CABA7BC00856401 /* MANewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANewFeatureViewController.m; sourceTree = "<group>"; };
-		79A1758F1CABA7BC00856401 /* DGAaimaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAaimaView.h; sourceTree = "<group>"; };
-		79A175901CABA7BC00856401 /* DGAaimaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAaimaView.m; sourceTree = "<group>"; };
-		79A175911CABA7BC00856401 /* DGEarthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGEarthView.h; sourceTree = "<group>"; };
-		79A175921CABA7BC00856401 /* DGEarthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEarthView.m; sourceTree = "<group>"; };
-		79A175941CABA7BC00856401 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		79A175951CABA7BC00856401 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		79A175981CABA7BC00856401 /* MASafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASafeViewController.h; sourceTree = "<group>"; };
-		79A175991CABA7BC00856401 /* MASafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASafeViewController.m; sourceTree = "<group>"; };
 		79FB9BC71CAA35A80076C9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FF64EA1CA2D7D700CB4FB6 /* 爱车.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱车.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FF64FC1CA2D7D700CB4FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -170,215 +176,211 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		79A175531CABA7BC00856401 /* class */ = {
+		792A9B0A1CABF4C20026A29C /* class */ = {
 			isa = PBXGroup;
 			children = (
-				79A175541CABA7BC00856401 /* baseVc */,
-				79A1755E1CABA7BC00856401 /* home */,
-				79A175621CABA7BC00856401 /* journey */,
-				79A1757D1CABA7BC00856401 /* main */,
-				79A1758A1CABA7BC00856401 /* newFeature */,
-				79A175931CABA7BC00856401 /* other */,
-				79A175961CABA7BC00856401 /* safe */,
-				79A1759A1CABA7BC00856401 /* tools */,
+				792A9B0B1CABF4C20026A29C /* baseVc */,
+				792A9B151CABF4C20026A29C /* home */,
+				792A9B191CABF4C20026A29C /* journey */,
+				792A9B381CABF4C20026A29C /* main */,
+				792A9B451CABF4C20026A29C /* newFeature */,
+				792A9B4E1CABF4C20026A29C /* other */,
+				792A9B511CABF4C20026A29C /* safe */,
 			);
 			path = class;
 			sourceTree = "<group>";
 		};
-		79A175541CABA7BC00856401 /* baseVc */ = {
+		792A9B0B1CABF4C20026A29C /* baseVc */ = {
 			isa = PBXGroup;
 			children = (
-				79A175551CABA7BC00856401 /* controller */,
+				792A9B0C1CABF4C20026A29C /* controller */,
 			);
 			path = baseVc;
 			sourceTree = "<group>";
 		};
-		79A175551CABA7BC00856401 /* controller */ = {
+		792A9B0C1CABF4C20026A29C /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				79A175561CABA7BC00856401 /* MABaseNavigationController.h */,
-				79A175571CABA7BC00856401 /* MABaseNavigationController.m */,
-				79A175581CABA7BC00856401 /* MABaseTabBarController.h */,
-				79A175591CABA7BC00856401 /* MABaseTabBarController.m */,
-				79A1755A1CABA7BC00856401 /* MABaseTableViewController.h */,
-				79A1755B1CABA7BC00856401 /* MABaseTableViewController.m */,
-				79A1755C1CABA7BC00856401 /* MABaseViewController.h */,
-				79A1755D1CABA7BC00856401 /* MABaseViewController.m */,
+				792A9B0D1CABF4C20026A29C /* MABaseNavigationController.h */,
+				792A9B0E1CABF4C20026A29C /* MABaseNavigationController.m */,
+				792A9B0F1CABF4C20026A29C /* MABaseTabBarController.h */,
+				792A9B101CABF4C20026A29C /* MABaseTabBarController.m */,
+				792A9B111CABF4C20026A29C /* MABaseTableViewController.h */,
+				792A9B121CABF4C20026A29C /* MABaseTableViewController.m */,
+				792A9B131CABF4C20026A29C /* MABaseViewController.h */,
+				792A9B141CABF4C20026A29C /* MABaseViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		79A1755E1CABA7BC00856401 /* home */ = {
+		792A9B151CABF4C20026A29C /* home */ = {
 			isa = PBXGroup;
 			children = (
-				79A1755F1CABA7BC00856401 /* controller */,
+				792A9B161CABF4C20026A29C /* controller */,
 			);
 			path = home;
 			sourceTree = "<group>";
 		};
-		79A1755F1CABA7BC00856401 /* controller */ = {
+		792A9B161CABF4C20026A29C /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				79A175601CABA7BC00856401 /* MAHomeViewController.h */,
-				79A175611CABA7BC00856401 /* MAHomeViewController.m */,
+				792A9B171CABF4C20026A29C /* MAHomeViewController.h */,
+				792A9B181CABF4C20026A29C /* MAHomeViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		79A175621CABA7BC00856401 /* journey */ = {
+		792A9B191CABF4C20026A29C /* journey */ = {
 			isa = PBXGroup;
 			children = (
-				79A175681CABA7BC00856401 /* MAJourneyViewController.h */,
-				79A175691CABA7BC00856401 /* MAJourneyViewController.m */,
-				79A175631CABA7BC00856401 /* controller */,
-				79A1756A1CABA7BC00856401 /* view */,
+				792A9B1A1CABF4C20026A29C /* controller */,
+				792A9B231CABF4C20026A29C /* MAJourneyViewController.h */,
+				792A9B241CABF4C20026A29C /* MAJourneyViewController.m */,
+				792A9B251CABF4C20026A29C /* view */,
 			);
 			path = journey;
 			sourceTree = "<group>";
 		};
-		79A175631CABA7BC00856401 /* controller */ = {
+		792A9B1A1CABF4C20026A29C /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				79A175641CABA7BC00856401 /* MAQuNaErViewController.h */,
-				79A175651CABA7BC00856401 /* MAQuNaErViewController.m */,
-				79A175661CABA7BC00856401 /* MATicketModel.h */,
-				79A175671CABA7BC00856401 /* MATicketModel.m */,
+				792A9B1B1CABF4C20026A29C /* MAQuNaErViewController.h */,
+				792A9B1C1CABF4C20026A29C /* MAQuNaErViewController.m */,
+				792A9B1D1CABF4C20026A29C /* MATicketModel.h */,
+				792A9B1E1CABF4C20026A29C /* MATicketModel.m */,
+				792A9B1F1CABF4C20026A29C /* MATicketTableViewCell.h */,
+				792A9B201CABF4C20026A29C /* MATicketTableViewCell.m */,
+				792A9B211CABF4C20026A29C /* MAWEBViewController.h */,
+				792A9B221CABF4C20026A29C /* MAWEBViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		79A1756A1CABA7BC00856401 /* view */ = {
+		792A9B251CABF4C20026A29C /* view */ = {
 			isa = PBXGroup;
 			children = (
-				79A175701CABA7BC00856401 /* scrollerView */,
-				79A175731CABA7BC00856401 /* weather */,
-				79A1756B1CABA7BC00856401 /* map */,
+				792A9B261CABF4C20026A29C /* map */,
+				792A9B2B1CABF4C20026A29C /* scrollerView */,
+				792A9B2E1CABF4C20026A29C /* weather */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		79A1756B1CABA7BC00856401 /* map */ = {
+		792A9B261CABF4C20026A29C /* map */ = {
 			isa = PBXGroup;
 			children = (
-				79A1756C1CABA7BC00856401 /* MACellMapView.h */,
-				79A1756D1CABA7BC00856401 /* MACellMapView.m */,
-				79A1756E1CABA7BC00856401 /* MATwoTableViewCell.h */,
-				79A1756F1CABA7BC00856401 /* MATwoTableViewCell.m */,
+				792A9B271CABF4C20026A29C /* MACellMapView.h */,
+				792A9B281CABF4C20026A29C /* MACellMapView.m */,
+				792A9B291CABF4C20026A29C /* MATwoTableViewCell.h */,
+				792A9B2A1CABF4C20026A29C /* MATwoTableViewCell.m */,
 			);
 			path = map;
 			sourceTree = "<group>";
 		};
-		79A175701CABA7BC00856401 /* scrollerView */ = {
+		792A9B2B1CABF4C20026A29C /* scrollerView */ = {
 			isa = PBXGroup;
 			children = (
-				79A175711CABA7BC00856401 /* SYScrollerView.h */,
-				79A175721CABA7BC00856401 /* SYScrollerView.m */,
+				792A9B2C1CABF4C20026A29C /* SYScrollerView.h */,
+				792A9B2D1CABF4C20026A29C /* SYScrollerView.m */,
 			);
 			path = scrollerView;
 			sourceTree = "<group>";
 		};
-		79A175731CABA7BC00856401 /* weather */ = {
+		792A9B2E1CABF4C20026A29C /* weather */ = {
 			isa = PBXGroup;
 			children = (
-				79A175741CABA7BC00856401 /* citydict.plist */,
-				79A175751CABA7BC00856401 /* CityListViewController.h */,
-				79A175761CABA7BC00856401 /* CityListViewController.m */,
-				79A175771CABA7BC00856401 /* MADataModel.h */,
-				79A175781CABA7BC00856401 /* MADataModel.m */,
-				79A175791CABA7BC00856401 /* MAOneTableViewCell.h */,
-				79A1757A1CABA7BC00856401 /* MAOneTableViewCell.m */,
-				79A1757B1CABA7BC00856401 /* MAWeatherView.h */,
-				79A1757C1CABA7BC00856401 /* MAWeatherView.m */,
+				792A9B2F1CABF4C20026A29C /* citydict.plist */,
+				792A9B301CABF4C20026A29C /* CityListViewController.h */,
+				792A9B311CABF4C20026A29C /* CityListViewController.m */,
+				792A9B321CABF4C20026A29C /* MADataModel.h */,
+				792A9B331CABF4C20026A29C /* MADataModel.m */,
+				792A9B341CABF4C20026A29C /* MAOneTableViewCell.h */,
+				792A9B351CABF4C20026A29C /* MAOneTableViewCell.m */,
+				792A9B361CABF4C20026A29C /* MAWeatherView.h */,
+				792A9B371CABF4C20026A29C /* MAWeatherView.m */,
 			);
 			path = weather;
 			sourceTree = "<group>";
 		};
-		79A1757D1CABA7BC00856401 /* main */ = {
+		792A9B381CABF4C20026A29C /* main */ = {
 			isa = PBXGroup;
 			children = (
-				79A1757E1CABA7BC00856401 /* Category */,
-				79A175871CABA7BC00856401 /* MAChooseRootViewController.h */,
-				79A175881CABA7BC00856401 /* MAChooseRootViewController.m */,
-				79A175891CABA7BC00856401 /* main.m */,
+				792A9B391CABF4C20026A29C /* Category */,
+				792A9B421CABF4C20026A29C /* MAChooseRootViewController.h */,
+				792A9B431CABF4C20026A29C /* MAChooseRootViewController.m */,
+				792A9B441CABF4C20026A29C /* main.m */,
 			);
 			path = main;
 			sourceTree = "<group>";
 		};
-		79A1757E1CABA7BC00856401 /* Category */ = {
+		792A9B391CABF4C20026A29C /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				79A1757F1CABA7BC00856401 /* UIBarButtonItem+MaBarButtonItem.h */,
-				79A175801CABA7BC00856401 /* UIBarButtonItem+MaBarButtonItem.m */,
-				79A175811CABA7BC00856401 /* UIImage+Image.h */,
-				79A175821CABA7BC00856401 /* UIImage+Image.m */,
-				79A175831CABA7BC00856401 /* UINavigationBar+Awesome.h */,
-				79A175841CABA7BC00856401 /* UINavigationBar+Awesome.m */,
-				79A175851CABA7BC00856401 /* UIView+Frame.h */,
-				79A175861CABA7BC00856401 /* UIView+Frame.m */,
+				792A9B3A1CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.h */,
+				792A9B3B1CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m */,
+				792A9B3C1CABF4C20026A29C /* UIImage+Image.h */,
+				792A9B3D1CABF4C20026A29C /* UIImage+Image.m */,
+				792A9B3E1CABF4C20026A29C /* UINavigationBar+Awesome.h */,
+				792A9B3F1CABF4C20026A29C /* UINavigationBar+Awesome.m */,
+				792A9B401CABF4C20026A29C /* UIView+Frame.h */,
+				792A9B411CABF4C20026A29C /* UIView+Frame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
 		};
-		79A1758A1CABA7BC00856401 /* newFeature */ = {
+		792A9B451CABF4C20026A29C /* newFeature */ = {
 			isa = PBXGroup;
 			children = (
-				79A1758B1CABA7BC00856401 /* controller */,
-				79A1758E1CABA7BC00856401 /* view */,
+				792A9B461CABF4C20026A29C /* controller */,
+				792A9B491CABF4C20026A29C /* view */,
 			);
 			path = newFeature;
 			sourceTree = "<group>";
 		};
-		79A1758B1CABA7BC00856401 /* controller */ = {
+		792A9B461CABF4C20026A29C /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				79A1758C1CABA7BC00856401 /* MANewFeatureViewController.h */,
-				79A1758D1CABA7BC00856401 /* MANewFeatureViewController.m */,
+				792A9B471CABF4C20026A29C /* MANewFeatureViewController.h */,
+				792A9B481CABF4C20026A29C /* MANewFeatureViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		79A1758E1CABA7BC00856401 /* view */ = {
+		792A9B491CABF4C20026A29C /* view */ = {
 			isa = PBXGroup;
 			children = (
-				79A1758F1CABA7BC00856401 /* DGAaimaView.h */,
-				79A175901CABA7BC00856401 /* DGAaimaView.m */,
-				79A175911CABA7BC00856401 /* DGEarthView.h */,
-				79A175921CABA7BC00856401 /* DGEarthView.m */,
+				792A9B4A1CABF4C20026A29C /* DGAaimaView.h */,
+				792A9B4B1CABF4C20026A29C /* DGAaimaView.m */,
+				792A9B4C1CABF4C20026A29C /* DGEarthView.h */,
+				792A9B4D1CABF4C20026A29C /* DGEarthView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		79A175931CABA7BC00856401 /* other */ = {
+		792A9B4E1CABF4C20026A29C /* other */ = {
 			isa = PBXGroup;
 			children = (
-				79A175941CABA7BC00856401 /* AppDelegate.h */,
-				79A175951CABA7BC00856401 /* AppDelegate.m */,
+				792A9B4F1CABF4C20026A29C /* AppDelegate.h */,
+				792A9B501CABF4C20026A29C /* AppDelegate.m */,
 			);
 			path = other;
 			sourceTree = "<group>";
 		};
-		79A175961CABA7BC00856401 /* safe */ = {
+		792A9B511CABF4C20026A29C /* safe */ = {
 			isa = PBXGroup;
 			children = (
-				79A175971CABA7BC00856401 /* controller */,
+				792A9B521CABF4C20026A29C /* controller */,
 			);
 			path = safe;
 			sourceTree = "<group>";
 		};
-		79A175971CABA7BC00856401 /* controller */ = {
+		792A9B521CABF4C20026A29C /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				79A175981CABA7BC00856401 /* MASafeViewController.h */,
-				79A175991CABA7BC00856401 /* MASafeViewController.m */,
+				792A9B531CABF4C20026A29C /* MASafeViewController.h */,
+				792A9B541CABF4C20026A29C /* MASafeViewController.m */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		79A1759A1CABA7BC00856401 /* tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tools;
 			sourceTree = "<group>";
 		};
 		79FF64E11CA2D7D700CB4FB6 = {
@@ -406,7 +408,7 @@
 		79FF64EC1CA2D7D700CB4FB6 /* aiche */ = {
 			isa = PBXGroup;
 			children = (
-				79A175531CABA7BC00856401 /* class */,
+				792A9B0A1CABF4C20026A29C /* class */,
 				79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */,
 				79FB9BC71CAA35A80076C9DB /* Assets.xcassets */,
 				79FF64ED1CA2D7D700CB4FB6 /* Supporting Files */,
@@ -565,7 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */,
-				79A175A61CABA7BC00856401 /* citydict.plist in Resources */,
+				792A9B621CABF4C20026A29C /* citydict.plist in Resources */,
 				79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */,
 				791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */,
 				79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */,
@@ -642,32 +644,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A175A51CABA7BC00856401 /* SYScrollerView.m in Sources */,
-				79A175AA1CABA7BC00856401 /* MAWeatherView.m in Sources */,
-				79A175A01CABA7BC00856401 /* MAQuNaErViewController.m in Sources */,
-				79A1759C1CABA7BC00856401 /* MABaseTabBarController.m in Sources */,
-				79A175A41CABA7BC00856401 /* MATwoTableViewCell.m in Sources */,
-				79A175A11CABA7BC00856401 /* MATicketModel.m in Sources */,
-				79A1759E1CABA7BC00856401 /* MABaseViewController.m in Sources */,
-				79A175B51CABA7BC00856401 /* MASafeViewController.m in Sources */,
-				79A1759B1CABA7BC00856401 /* MABaseNavigationController.m in Sources */,
-				79A175AC1CABA7BC00856401 /* UIImage+Image.m in Sources */,
-				79A175A81CABA7BC00856401 /* MADataModel.m in Sources */,
-				79A175B31CABA7BC00856401 /* DGEarthView.m in Sources */,
-				79A175AE1CABA7BC00856401 /* UIView+Frame.m in Sources */,
-				79A175AB1CABA7BC00856401 /* UIBarButtonItem+MaBarButtonItem.m in Sources */,
-				79A175A71CABA7BC00856401 /* CityListViewController.m in Sources */,
-				79A175A31CABA7BC00856401 /* MACellMapView.m in Sources */,
-				79A175AD1CABA7BC00856401 /* UINavigationBar+Awesome.m in Sources */,
-				79A175A91CABA7BC00856401 /* MAOneTableViewCell.m in Sources */,
-				79A175A21CABA7BC00856401 /* MAJourneyViewController.m in Sources */,
-				79A175B21CABA7BC00856401 /* DGAaimaView.m in Sources */,
-				79A175B41CABA7BC00856401 /* AppDelegate.m in Sources */,
-				79A175AF1CABA7BC00856401 /* MAChooseRootViewController.m in Sources */,
-				79A175B11CABA7BC00856401 /* MANewFeatureViewController.m in Sources */,
-				79A1759D1CABA7BC00856401 /* MABaseTableViewController.m in Sources */,
-				79A175B01CABA7BC00856401 /* main.m in Sources */,
-				79A1759F1CABA7BC00856401 /* MAHomeViewController.m in Sources */,
+				792A9B5A1CABF4C20026A29C /* MAQuNaErViewController.m in Sources */,
+				792A9B711CABF4C20026A29C /* MASafeViewController.m in Sources */,
+				792A9B561CABF4C20026A29C /* MABaseTabBarController.m in Sources */,
+				792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */,
+				792A9B6D1CABF4C20026A29C /* MANewFeatureViewController.m in Sources */,
+				792A9B651CABF4C20026A29C /* MAOneTableViewCell.m in Sources */,
+				792A9B6A1CABF4C20026A29C /* UIView+Frame.m in Sources */,
+				792A9B5B1CABF4C20026A29C /* MATicketModel.m in Sources */,
+				792A9B581CABF4C20026A29C /* MABaseViewController.m in Sources */,
+				792A9B641CABF4C20026A29C /* MADataModel.m in Sources */,
+				792A9B551CABF4C20026A29C /* MABaseNavigationController.m in Sources */,
+				792A9B5F1CABF4C20026A29C /* MACellMapView.m in Sources */,
+				792A9B661CABF4C20026A29C /* MAWeatherView.m in Sources */,
+				792A9B6C1CABF4C20026A29C /* main.m in Sources */,
+				792A9B5E1CABF4C20026A29C /* MAJourneyViewController.m in Sources */,
+				792A9B631CABF4C20026A29C /* CityListViewController.m in Sources */,
+				792A9B571CABF4C20026A29C /* MABaseTableViewController.m in Sources */,
+				792A9B6E1CABF4C20026A29C /* DGAaimaView.m in Sources */,
+				792A9B681CABF4C20026A29C /* UIImage+Image.m in Sources */,
+				792A9B5D1CABF4C20026A29C /* MAWEBViewController.m in Sources */,
+				792A9B6B1CABF4C20026A29C /* MAChooseRootViewController.m in Sources */,
+				792A9B611CABF4C20026A29C /* SYScrollerView.m in Sources */,
+				792A9B591CABF4C20026A29C /* MAHomeViewController.m in Sources */,
+				792A9B601CABF4C20026A29C /* MATwoTableViewCell.m in Sources */,
+				792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */,
+				792A9B5C1CABF4C20026A29C /* MATicketTableViewCell.m in Sources */,
+				792A9B671CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m in Sources */,
+				792A9B691CABF4C20026A29C /* UINavigationBar+Awesome.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
