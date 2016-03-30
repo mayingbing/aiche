@@ -18,14 +18,15 @@
 @property(nonatomic ,strong) AMapSearchAPI *search;
 @property(nonatomic ,strong) MAUserLocation *userLocation;
 @property(nonatomic ,copy) NSString *searchContent;
-
+@property(nonatomic ,strong) NSTimer *timer;
+@property(nonatomic ,assign) BOOL openTime;
 @end
 
 @implementation MACellMapView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        
+        self.openTime = NO;
         //配置用户Key
         [MAMapServices sharedServices].apiKey = @"890210ecad379c78557ad10845ea319e";
         [AMapSearchServices sharedServices].apiKey = @"890210ecad379c78557ad10845ea319e";
@@ -74,9 +75,9 @@ updatingLocation:(BOOL)updatingLocation
     if(response.regeocode != nil)
     {
         //通过AMapReGeocodeSearchResponse对象处理搜索结果
-        NSString *result = [NSString stringWithFormat:@"ReGeocode: %@", response.regeocode.addressComponent.city];
-        if (!result) {
-            result = [NSString stringWithFormat:@"ReGeocode: %@", response.regeocode.addressComponent.province];
+        NSString *result = [NSString stringWithFormat:@"%@", response.regeocode.addressComponent.city];
+        if ([result isEqual:@""]) {
+            result = [NSString stringWithFormat:@"%@", response.regeocode.addressComponent.province];
             
         }
         
@@ -86,7 +87,11 @@ updatingLocation:(BOOL)updatingLocation
     }
 }
 
-
+-(void)viewDidDisappear:(BOOL)animated
+{
+    //关闭定时器
+    [self.timer setFireDate:[NSDate distantFuture]];
+}
 
 -(void)setupMapModel
 {   //交通路况

@@ -64,12 +64,8 @@ static NSString *oneID = @"oneCell";
     [addBtn setBackgroundImage:[UIImage imageNamed:@"hou"] forState:UIControlStateNormal];
     [addBtn setBackgroundImage:[UIImage imageNamed:@"hou_press"] forState:UIControlStateHighlighted];
     [addBtn addTarget:self action:@selector(jumpToCityList) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    
-    NSString *urlStr = @"http://apis.baidu.com/apistore/weatherservice/weather?citypinyin=beijing";
-    _urlStr = urlStr;
-    
+
+    self.urlStr = @"http://apis.baidu.com/apistore/weatherservice/cityname?cityname=%E6%9C%9D%E9%98%B3";
     [self doRequestWeatherData];
     
 }
@@ -120,21 +116,16 @@ static NSString *oneID = @"oneCell";
 }
     
 -(void)CityListVCGetNewCityweatherWithCityName:(NSString *)cityName{
-     NSString *baseStr = @"http://apis.baidu.com/apistore/weatherservice/weather?citypinyin=";
-    NSString *hanziText = cityName;
-    NSMutableString *ms ;
-    if ([hanziText length]) {
-        ms = [[NSMutableString alloc] initWithString:hanziText];
-        if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformMandarinLatin, NO)) {
-           
-        }
-        if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformStripDiacritics, NO)) {
-            
-        }  
-    }
-    self.urlStr = [NSString stringWithFormat:@"%@%@",baseStr,ms];
-    self.urlStr = [self.urlStr stringByReplacingOccurrencesOfString:@" " withString:@""];
-    self.urlStr = [self.urlStr stringByReplacingOccurrencesOfString:@"shi" withString:@""];
+  
+    
+    NSString *cityname = cityName;
+    cityname = [cityname stringByReplacingOccurrencesOfString:@"市" withString:@""];
+    NSString *dataUTF8 = [cityname stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet controlCharacterSet]];
+    
+    NSString *baseUrlStr = @"http://apis.baidu.com/apistore/weatherservice/cityname?cityname=";
+    self.urlStr = [NSString stringWithFormat:@"%@%@",baseUrlStr,dataUTF8];
+   
+    
     [self doRequestWeatherData];
 }
 
