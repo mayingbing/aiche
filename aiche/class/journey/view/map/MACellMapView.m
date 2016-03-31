@@ -10,7 +10,12 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapCommonObj.h>
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "MANaviRoute.h"
+#import "CommonUtility.h"
 
+const NSString *RoutePlanningViewControllerStartTitle       = @"起点";
+const NSString *RoutePlanningViewControllerDestinationTitle = @"终点";
+const NSInteger RoutePlanningPaddingEdge                    = 50;
 
 @interface MACellMapView ()<MAMapViewDelegate,AMapSearchDelegate,UISearchBarDelegate>
 
@@ -20,6 +25,13 @@
 @property(nonatomic ,copy) NSString *searchContent;
 @property(nonatomic ,strong) NSTimer *timer;
 @property(nonatomic ,assign) BOOL openTime;
+/* 用于显示当前路线方案. */
+@property (nonatomic)MANaviRoute *naviRoute;
+
+/* 路径规划类型 */
+
+@property (nonatomic, strong) AMapRoute *route;
+
 @end
 
 @implementation MACellMapView
@@ -55,13 +67,10 @@ updatingLocation:(BOOL)updatingLocation
     _userLocation = userLocation;
     if(updatingLocation)
     {
-        //取出当前位置的坐标
-        //  NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
         
-        //构造AMapReGeocodeSearchRequest对象
         AMapReGeocodeSearchRequest *regeo = [[AMapReGeocodeSearchRequest alloc] init];
         regeo.location = [AMapGeoPoint locationWithLatitude:userLocation.coordinate.latitude     longitude:userLocation.coordinate.longitude];
-        regeo.radius = 10000;
+        regeo.radius = 100;
         regeo.requireExtension = YES;
         
         //发起逆地理编码
@@ -95,7 +104,7 @@ updatingLocation:(BOOL)updatingLocation
 
 -(void)setupMapModel
 {   //交通路况
-    _mapView.showTraffic= YES;
+    //_mapView.showTraffic= YES;
     
     //位置展示
     _mapView.showsUserLocation = YES;
@@ -118,7 +127,16 @@ updatingLocation:(BOOL)updatingLocation
 
 }
 
+/* 清空地图上已有的路线. */
+- (void)clear
+{
+    [self.naviRoute removeFromMapView];
+    [self setNeedsLayout];
+}
 
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;{
+    [self clear];
+}
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     
         _searchContent = searchBar.text;
@@ -131,6 +149,7 @@ updatingLocation:(BOOL)updatingLocation
     searchBar.text = @"";
     
     [searchBar resignFirstResponder];
+    
 }
 //实现正向地理编码的回调函数
 - (void)onGeocodeSearchDone:(AMapGeocodeSearchRequest *)request response:(AMapGeocodeSearchResponse *)response
@@ -171,10 +190,118 @@ updatingLocation:(BOOL)updatingLocation
         return;
     }
     
-    //通过AMapNavigationSearchResponse对象处理搜索结果
-   // NSString *route = [NSString stringWithFormat:@"Navi: %@", response.route];
-   // NSLog(@"%@", route);
+//    通过AMapNavigationSearchResponse对象处理搜索结果
+    self.route = response.route;
+
+    
+    [self presentCurrentCourse];
 }
+/* 展示当前路线方案. */
+- (void)presentCurrentCourse
+{
+
+        
+       MANaviRoute *naviRoute = [MANaviRoute naviRouteForPath:self.route.paths[0] withNaviType:MANaviAnnotationTypeDrive];
+   
+    
+    [naviRoute addToMapView:self.mapView];
+    
+    /* 缩放地图使其适应polylines的展示. */
+    [self.mapView setVisibleMapRect:[CommonUtility mapRectForOverlays:self.naviRoute.routePolylines]
+                        edgePadding:UIEdgeInsetsMake(RoutePlanningPaddingEdge, RoutePlanningPaddingEdge, RoutePlanningPaddingEdge, RoutePlanningPaddingEdge)
+                           animated:YES];
+}
+
+#pragma mark - MAMapViewDelegate
+
+- (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id<MAOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[LineDashPolyline class]])
+    {
+        MAPolylineRenderer *polylineRenderer = [[MAPolylineRenderer alloc] initWithPolyline:((LineDashPolyline *)overlay).polyline];
+        
+        polylineRenderer.lineWidth   = 3;
+        polylineRenderer.strokeColor = [UIColor blueColor];
+        
+        return polylineRenderer;
+    }
+    if ([overlay isKindOfClass:[MANaviPolyline class]])
+    {
+        MANaviPolyline *naviPolyline = (MANaviPolyline *)overlay;
+        MAPolylineRenderer *polylineRenderer = [[MAPolylineRenderer alloc] initWithPolyline:naviPolyline.polyline];
+        
+        polylineRenderer.lineWidth = 4;
+        
+        if (naviPolyline.type == MANaviAnnotationTypeWalking)
+        {
+            polylineRenderer.strokeColor = self.naviRoute.walkingColor;
+        }
+        else
+        {
+            polylineRenderer.strokeColor = self.naviRoute.routeColor;
+        }
+        
+        return polylineRenderer;
+    }
+    
+    return nil;
+}
+- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MAPointAnnotation class]])
+    {
+        static NSString *routePlanningCellIdentifier = @"RoutePlanningCellIdentifier";
+        
+        MAAnnotationView *poiAnnotationView = (MAAnnotationView*)[self.mapView dequeueReusableAnnotationViewWithIdentifier:routePlanningCellIdentifier];
+        if (poiAnnotationView == nil)
+        {
+            poiAnnotationView = [[MAAnnotationView alloc] initWithAnnotation:annotation
+                                                             reuseIdentifier:routePlanningCellIdentifier];
+        }
+        
+        poiAnnotationView.canShowCallout = YES;
+        
+        if ([annotation isKindOfClass:[MANaviAnnotation class]])
+        {
+            switch (((MANaviAnnotation*)annotation).type)
+            {
+                case MANaviAnnotationTypeBus:
+                    poiAnnotationView.image = [UIImage imageNamed:@"bus"];
+                    break;
+                    
+                case MANaviAnnotationTypeDrive:
+                    poiAnnotationView.image = [UIImage imageNamed:@"car"];
+                    break;
+                    
+                case MANaviAnnotationTypeWalking:
+                    poiAnnotationView.image = [UIImage imageNamed:@"man"];
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            /* 起点. */
+            if ([[annotation title] isEqualToString:(NSString*)RoutePlanningViewControllerStartTitle])
+            {
+                poiAnnotationView.image = [UIImage imageNamed:@"startPoint"];
+            }
+            /* 终点. */
+            else if([[annotation title] isEqualToString:(NSString*)RoutePlanningViewControllerDestinationTitle])
+            {
+                poiAnnotationView.image = [UIImage imageNamed:@"endPoint"];
+            }
+            
+        }
+        
+        return poiAnnotationView;
+    }
+    
+    return nil;
+}
+
 
 - (void)mapView:(MAMapView *)mapView didAddAnnotationViews:(NSArray *)views
 {

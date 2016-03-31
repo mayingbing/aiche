@@ -41,6 +41,11 @@
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
 		7969C8E21CA95B8500C22DAA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969C8E11CA95B8500C22DAA /* MapKit.framework */; };
 		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
+		79D5D3011CAD198E00D32E35 /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3001CAD198E00D32E35 /* MANaviRoute.m */; };
+		79D5D3041CAD19D500D32E35 /* MANaviAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3031CAD19D500D32E35 /* MANaviAnnotation.m */; };
+		79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3061CAD19F200D32E35 /* MANaviPolyline.m */; };
+		79D5D30A1CAD1A0600D32E35 /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */; };
+		79D5D30D1CAD1AC900D32E35 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */; };
 		79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FB9BC71CAA35A80076C9DB /* Assets.xcassets */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
 		79FF65081CA2D7D700CB4FB6 /* aicheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65071CA2D7D700CB4FB6 /* aicheTests.m */; };
@@ -126,6 +131,16 @@
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
 		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellBackground.jpg; sourceTree = "<group>"; };
+		79D5D2FF1CAD198E00D32E35 /* MANaviRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviRoute.h; sourceTree = "<group>"; };
+		79D5D3001CAD198E00D32E35 /* MANaviRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviRoute.m; sourceTree = "<group>"; };
+		79D5D3021CAD19D500D32E35 /* MANaviAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviAnnotation.h; sourceTree = "<group>"; };
+		79D5D3031CAD19D500D32E35 /* MANaviAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviAnnotation.m; sourceTree = "<group>"; };
+		79D5D3051CAD19F200D32E35 /* MANaviPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviPolyline.h; sourceTree = "<group>"; };
+		79D5D3061CAD19F200D32E35 /* MANaviPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviPolyline.m; sourceTree = "<group>"; };
+		79D5D3081CAD1A0600D32E35 /* LineDashPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDashPolyline.h; sourceTree = "<group>"; };
+		79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
+		79D5D30B1CAD1AC900D32E35 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
+		79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
 		79FB9BC71CAA35A80076C9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FF64EA1CA2D7D700CB4FB6 /* 爱车.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱车.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FF64FC1CA2D7D700CB4FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -233,9 +248,9 @@
 		792A9B191CABF4C20026A29C /* journey */ = {
 			isa = PBXGroup;
 			children = (
-				792A9B1A1CABF4C20026A29C /* controller */,
 				792A9B231CABF4C20026A29C /* MAJourneyViewController.h */,
 				792A9B241CABF4C20026A29C /* MAJourneyViewController.m */,
+				792A9B1A1CABF4C20026A29C /* controller */,
 				792A9B251CABF4C20026A29C /* view */,
 			);
 			path = journey;
@@ -259,9 +274,9 @@
 		792A9B251CABF4C20026A29C /* view */ = {
 			isa = PBXGroup;
 			children = (
-				792A9B261CABF4C20026A29C /* map */,
 				792A9B2B1CABF4C20026A29C /* scrollerView */,
 				792A9B2E1CABF4C20026A29C /* weather */,
+				792A9B261CABF4C20026A29C /* map */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -269,10 +284,20 @@
 		792A9B261CABF4C20026A29C /* map */ = {
 			isa = PBXGroup;
 			children = (
-				792A9B271CABF4C20026A29C /* MACellMapView.h */,
-				792A9B281CABF4C20026A29C /* MACellMapView.m */,
 				792A9B291CABF4C20026A29C /* MATwoTableViewCell.h */,
 				792A9B2A1CABF4C20026A29C /* MATwoTableViewCell.m */,
+				792A9B271CABF4C20026A29C /* MACellMapView.h */,
+				792A9B281CABF4C20026A29C /* MACellMapView.m */,
+				79D5D2FF1CAD198E00D32E35 /* MANaviRoute.h */,
+				79D5D3001CAD198E00D32E35 /* MANaviRoute.m */,
+				79D5D3021CAD19D500D32E35 /* MANaviAnnotation.h */,
+				79D5D3031CAD19D500D32E35 /* MANaviAnnotation.m */,
+				79D5D3051CAD19F200D32E35 /* MANaviPolyline.h */,
+				79D5D3061CAD19F200D32E35 /* MANaviPolyline.m */,
+				79D5D3081CAD1A0600D32E35 /* LineDashPolyline.h */,
+				79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */,
+				79D5D30B1CAD1AC900D32E35 /* CommonUtility.h */,
+				79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -645,9 +670,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				792A9B5A1CABF4C20026A29C /* MAQuNaErViewController.m in Sources */,
+				79D5D30A1CAD1A0600D32E35 /* LineDashPolyline.m in Sources */,
 				792A9B711CABF4C20026A29C /* MASafeViewController.m in Sources */,
 				792A9B561CABF4C20026A29C /* MABaseTabBarController.m in Sources */,
 				792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */,
+				79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */,
 				792A9B6D1CABF4C20026A29C /* MANewFeatureViewController.m in Sources */,
 				792A9B651CABF4C20026A29C /* MAOneTableViewCell.m in Sources */,
 				792A9B6A1CABF4C20026A29C /* UIView+Frame.m in Sources */,
@@ -660,7 +687,10 @@
 				792A9B6C1CABF4C20026A29C /* main.m in Sources */,
 				792A9B5E1CABF4C20026A29C /* MAJourneyViewController.m in Sources */,
 				792A9B631CABF4C20026A29C /* CityListViewController.m in Sources */,
+				79D5D30D1CAD1AC900D32E35 /* CommonUtility.m in Sources */,
 				792A9B571CABF4C20026A29C /* MABaseTableViewController.m in Sources */,
+				79D5D3011CAD198E00D32E35 /* MANaviRoute.m in Sources */,
+				79D5D3041CAD19D500D32E35 /* MANaviAnnotation.m in Sources */,
 				792A9B6E1CABF4C20026A29C /* DGAaimaView.m in Sources */,
 				792A9B681CABF4C20026A29C /* UIImage+Image.m in Sources */,
 				792A9B5D1CABF4C20026A29C /* MAWEBViewController.m in Sources */,
