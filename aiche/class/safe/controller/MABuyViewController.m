@@ -27,6 +27,8 @@
     
     [webView loadRequest:request];
     
+    self.navigationItem.title = @"无数据接口";
+    
     webView.delegate = self;
 }
 #pragma mark -UIWebView代理

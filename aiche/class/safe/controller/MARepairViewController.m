@@ -20,12 +20,14 @@
     
     UIWebView *webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:webView];
-    NSString *webUrl = @"http://club.m.autohome.com.cn/#pvareaid=100238";
+    NSString *webUrl = @"http://m.autohome.com.cn";
     NSURL *url = [[NSURL alloc]initWithString:webUrl];
     
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
     
     [webView loadRequest:request];
+    
+    self.navigationItem.title = @"无数据接口";
     
     webView.delegate = self;
 }
@@ -49,5 +51,6 @@
 {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
+
 
 @end
