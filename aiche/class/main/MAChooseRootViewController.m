@@ -9,9 +9,9 @@
 #import "MAChooseRootViewController.h"
 
 #import "MAJourneyViewController.h"
-#import "MASafeViewController.h"
-#import "MAHomeViewController.h"
 
+#import "MAHomeViewController.h"
+#import "MASafeViewController.h"
 #import "MABaseTabBarController.h"
 
 #import "MABaseNavigationController.h"
@@ -33,7 +33,7 @@
     //安全
     
     MASafeViewController *safeVc = [[MASafeViewController alloc]init];
-    safeVc.view.backgroundColor = [UIColor redColor];
+    safeVc.view.backgroundColor = [UIColor grayColor];
     MABaseNavigationController *safeNavVc = [[MABaseNavigationController alloc]initWithRootViewController:safeVc];
 
     

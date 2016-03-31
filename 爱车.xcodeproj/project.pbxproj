@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE88082086B1DBAD18ECB0D9 /* libPods.a */; };
 		791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 791E44B81CA422AC0050DC34 /* earth@3x.png */; };
+		7926C3341CAD30E200A7291A /* MASafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7926C3331CAD30E200A7291A /* MASafeViewController.m */; };
+		7926C3371CAD41FD00A7291A /* MASOSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7926C3361CAD41FD00A7291A /* MASOSTableViewController.m */; };
+		7926C3431CAD52B700A7291A /* MABuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7926C3421CAD52B700A7291A /* MABuyViewController.m */; };
+		7926C3461CAD534E00A7291A /* MARepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7926C3451CAD534E00A7291A /* MARepairViewController.m */; };
 		792A9B551CABF4C20026A29C /* MABaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B0E1CABF4C20026A29C /* MABaseNavigationController.m */; };
 		792A9B561CABF4C20026A29C /* MABaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B101CABF4C20026A29C /* MABaseTabBarController.m */; };
 		792A9B571CABF4C20026A29C /* MABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B121CABF4C20026A29C /* MABaseTableViewController.m */; };
@@ -37,7 +41,6 @@
 		792A9B6E1CABF4C20026A29C /* DGAaimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B4B1CABF4C20026A29C /* DGAaimaView.m */; };
 		792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B4D1CABF4C20026A29C /* DGEarthView.m */; };
 		792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B501CABF4C20026A29C /* AppDelegate.m */; };
-		792A9B711CABF4C20026A29C /* MASafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B541CABF4C20026A29C /* MASafeViewController.m */; };
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
 		7969C8E21CA95B8500C22DAA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969C8E11CA95B8500C22DAA /* MapKit.framework */; };
 		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
@@ -72,6 +75,14 @@
 /* Begin PBXFileReference section */
 		7640220824F1D9B0B8AA67E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		791E44B81CA422AC0050DC34 /* earth@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth@3x.png"; sourceTree = "<group>"; };
+		7926C3321CAD30E200A7291A /* MASafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASafeViewController.h; sourceTree = "<group>"; };
+		7926C3331CAD30E200A7291A /* MASafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASafeViewController.m; sourceTree = "<group>"; };
+		7926C3351CAD41FD00A7291A /* MASOSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASOSTableViewController.h; sourceTree = "<group>"; };
+		7926C3361CAD41FD00A7291A /* MASOSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASOSTableViewController.m; sourceTree = "<group>"; };
+		7926C3411CAD52B700A7291A /* MABuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABuyViewController.h; sourceTree = "<group>"; };
+		7926C3421CAD52B700A7291A /* MABuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABuyViewController.m; sourceTree = "<group>"; };
+		7926C3441CAD534E00A7291A /* MARepairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARepairViewController.h; sourceTree = "<group>"; };
+		7926C3451CAD534E00A7291A /* MARepairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARepairViewController.m; sourceTree = "<group>"; };
 		792A9B0D1CABF4C20026A29C /* MABaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseNavigationController.h; sourceTree = "<group>"; };
 		792A9B0E1CABF4C20026A29C /* MABaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseNavigationController.m; sourceTree = "<group>"; };
 		792A9B0F1CABF4C20026A29C /* MABaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseTabBarController.h; sourceTree = "<group>"; };
@@ -126,8 +137,6 @@
 		792A9B4D1CABF4C20026A29C /* DGEarthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEarthView.m; sourceTree = "<group>"; };
 		792A9B4F1CABF4C20026A29C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		792A9B501CABF4C20026A29C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		792A9B531CABF4C20026A29C /* MASafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASafeViewController.h; sourceTree = "<group>"; };
-		792A9B541CABF4C20026A29C /* MASafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASafeViewController.m; sourceTree = "<group>"; };
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
 		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellBackground.jpg; sourceTree = "<group>"; };
@@ -191,16 +200,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7926C3381CAD485C00A7291A /* sos */ = {
+			isa = PBXGroup;
+			children = (
+				7926C3351CAD41FD00A7291A /* MASOSTableViewController.h */,
+				7926C3361CAD41FD00A7291A /* MASOSTableViewController.m */,
+			);
+			name = sos;
+			sourceTree = "<group>";
+		};
+		7926C3391CAD486800A7291A /* repair */ = {
+			isa = PBXGroup;
+			children = (
+				7926C3441CAD534E00A7291A /* MARepairViewController.h */,
+				7926C3451CAD534E00A7291A /* MARepairViewController.m */,
+			);
+			name = repair;
+			sourceTree = "<group>";
+		};
+		7926C33A1CAD487E00A7291A /* buyCar */ = {
+			isa = PBXGroup;
+			children = (
+				7926C3411CAD52B700A7291A /* MABuyViewController.h */,
+				7926C3421CAD52B700A7291A /* MABuyViewController.m */,
+			);
+			name = buyCar;
+			sourceTree = "<group>";
+		};
 		792A9B0A1CABF4C20026A29C /* class */ = {
 			isa = PBXGroup;
 			children = (
 				792A9B0B1CABF4C20026A29C /* baseVc */,
-				792A9B151CABF4C20026A29C /* home */,
 				792A9B191CABF4C20026A29C /* journey */,
+				792A9B511CABF4C20026A29C /* safe */,
+				792A9B151CABF4C20026A29C /* home */,
 				792A9B381CABF4C20026A29C /* main */,
 				792A9B451CABF4C20026A29C /* newFeature */,
 				792A9B4E1CABF4C20026A29C /* other */,
-				792A9B511CABF4C20026A29C /* safe */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -402,8 +438,11 @@
 		792A9B521CABF4C20026A29C /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				792A9B531CABF4C20026A29C /* MASafeViewController.h */,
-				792A9B541CABF4C20026A29C /* MASafeViewController.m */,
+				7926C3321CAD30E200A7291A /* MASafeViewController.h */,
+				7926C3331CAD30E200A7291A /* MASafeViewController.m */,
+				7926C33A1CAD487E00A7291A /* buyCar */,
+				7926C3391CAD486800A7291A /* repair */,
+				7926C3381CAD485C00A7291A /* sos */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -671,11 +710,13 @@
 			files = (
 				792A9B5A1CABF4C20026A29C /* MAQuNaErViewController.m in Sources */,
 				79D5D30A1CAD1A0600D32E35 /* LineDashPolyline.m in Sources */,
-				792A9B711CABF4C20026A29C /* MASafeViewController.m in Sources */,
+				7926C3341CAD30E200A7291A /* MASafeViewController.m in Sources */,
+				7926C3461CAD534E00A7291A /* MARepairViewController.m in Sources */,
 				792A9B561CABF4C20026A29C /* MABaseTabBarController.m in Sources */,
 				792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */,
 				79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */,
 				792A9B6D1CABF4C20026A29C /* MANewFeatureViewController.m in Sources */,
+				7926C3371CAD41FD00A7291A /* MASOSTableViewController.m in Sources */,
 				792A9B651CABF4C20026A29C /* MAOneTableViewCell.m in Sources */,
 				792A9B6A1CABF4C20026A29C /* UIView+Frame.m in Sources */,
 				792A9B5B1CABF4C20026A29C /* MATicketModel.m in Sources */,
@@ -700,6 +741,7 @@
 				792A9B601CABF4C20026A29C /* MATwoTableViewCell.m in Sources */,
 				792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */,
 				792A9B5C1CABF4C20026A29C /* MATicketTableViewCell.m in Sources */,
+				7926C3431CAD52B700A7291A /* MABuyViewController.m in Sources */,
 				792A9B671CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m in Sources */,
 				792A9B691CABF4C20026A29C /* UINavigationBar+Awesome.m in Sources */,
 			);

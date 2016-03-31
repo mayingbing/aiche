@@ -96,7 +96,7 @@
 //获取多个景点名称
 -(void)getSpotName{
     
-    NSString *httpUrl = @"http://apis.baidu.com/apistore/qunaerticket/querylist?pageno=1&pagesize=25";
+    NSString *httpUrl = @"http://apis.baidu.com/apistore/qunaerticket/querylist?pageno=1&pagesize=50";
    
     NSString *apikey = @"96c51e31f222b3b154a9ce707c9a32ea";
     

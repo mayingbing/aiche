@@ -70,7 +70,7 @@ updatingLocation:(BOOL)updatingLocation
         
         AMapReGeocodeSearchRequest *regeo = [[AMapReGeocodeSearchRequest alloc] init];
         regeo.location = [AMapGeoPoint locationWithLatitude:userLocation.coordinate.latitude     longitude:userLocation.coordinate.longitude];
-        regeo.radius = 100;
+        regeo.radius = 1000;
         regeo.requireExtension = YES;
         
         //发起逆地理编码
@@ -131,7 +131,7 @@ updatingLocation:(BOOL)updatingLocation
 - (void)clear
 {
     [self.naviRoute removeFromMapView];
-    [self setNeedsLayout];
+    [self layoutSubviews];
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;{
