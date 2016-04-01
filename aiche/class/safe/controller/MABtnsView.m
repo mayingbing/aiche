@@ -56,7 +56,7 @@
     [lightView addGestureRecognizer:taplightViewGesture];
     
     
-    //telphone
+    //camera
     MAbtnBaseView *cameraView = [[MAbtnBaseView alloc]initWithFrame:CGRectMake(screenSize.width/3*2, 0, screenSize.width/3, 95)];
     [self addSubview:cameraView];
     cameraView.btnImageView.image = [UIImage imageNamed:@"camer"];
@@ -91,7 +91,9 @@
 }
 -(void)jumpTocameraView{
     
-    
+    if ([self.cameraDelegate respondsToSelector:@selector(MABtnsViewCameraJumpOutWithMABtnsView:)]) {
+        [self.cameraDelegate MABtnsViewCameraJumpOutWithMABtnsView:self];
+    }
     
 }
 @end

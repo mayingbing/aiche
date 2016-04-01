@@ -10,6 +10,7 @@
 @class MABtnsView;
 @class MAbtnBaseView;
 
+//电话代理
 @protocol MABtnsViewDelegate <NSObject>
 
 @optional
@@ -18,8 +19,19 @@
 
 @end
 
+//相机代理
+@protocol MABtnsViewCameraDelegate <NSObject>
+
+@optional
+
+-(void)MABtnsViewCameraJumpOutWithMABtnsView:(MABtnsView *)maBtnView;
+
+@end
+
+
 @interface MABtnsView : UIView
 @property(nonatomic ,strong)MAbtnBaseView *telView;
 @property(nonatomic ,weak)id<MABtnsViewDelegate> delegate;
+@property(nonatomic ,weak)id<MABtnsViewCameraDelegate> cameraDelegate;
 
 @end

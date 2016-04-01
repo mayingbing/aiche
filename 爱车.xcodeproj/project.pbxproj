@@ -46,6 +46,7 @@
 		79C41B111CAE1FE1007F3601 /* MASosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C41B101CAE1FE1007F3601 /* MASosViewController.m */; };
 		79C41B141CAE41FB007F3601 /* MABtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C41B131CAE41FB007F3601 /* MABtnsView.m */; };
 		79C41B171CAE465C007F3601 /* MAbtnBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C41B161CAE465C007F3601 /* MAbtnBaseView.m */; };
+		79C41B1A1CAE7C4C007F3601 /* MACameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C41B191CAE7C4C007F3601 /* MACameraViewController.m */; };
 		79D5D3011CAD198E00D32E35 /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3001CAD198E00D32E35 /* MANaviRoute.m */; };
 		79D5D3041CAD19D500D32E35 /* MANaviAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3031CAD19D500D32E35 /* MANaviAnnotation.m */; };
 		79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3061CAD19F200D32E35 /* MANaviPolyline.m */; };
@@ -146,6 +147,8 @@
 		79C41B131CAE41FB007F3601 /* MABtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABtnsView.m; sourceTree = "<group>"; };
 		79C41B151CAE465C007F3601 /* MAbtnBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAbtnBaseView.h; sourceTree = "<group>"; };
 		79C41B161CAE465C007F3601 /* MAbtnBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAbtnBaseView.m; sourceTree = "<group>"; };
+		79C41B181CAE7C4C007F3601 /* MACameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACameraViewController.h; sourceTree = "<group>"; };
+		79C41B191CAE7C4C007F3601 /* MACameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACameraViewController.m; sourceTree = "<group>"; };
 		79D5D2FF1CAD198E00D32E35 /* MANaviRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviRoute.h; sourceTree = "<group>"; };
 		79D5D3001CAD198E00D32E35 /* MANaviRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviRoute.m; sourceTree = "<group>"; };
 		79D5D3021CAD19D500D32E35 /* MANaviAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviAnnotation.h; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 			children = (
 				79C41B0F1CAE1FE1007F3601 /* MASosViewController.h */,
 				79C41B101CAE1FE1007F3601 /* MASosViewController.m */,
+				79C41B181CAE7C4C007F3601 /* MACameraViewController.h */,
+				79C41B191CAE7C4C007F3601 /* MACameraViewController.m */,
 				79C41B121CAE41FB007F3601 /* MABtnsView.h */,
 				79C41B131CAE41FB007F3601 /* MABtnsView.m */,
 				79C41B151CAE465C007F3601 /* MAbtnBaseView.h */,
@@ -752,6 +757,7 @@
 				792A9B591CABF4C20026A29C /* MAHomeViewController.m in Sources */,
 				792A9B601CABF4C20026A29C /* MATwoTableViewCell.m in Sources */,
 				792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */,
+				79C41B1A1CAE7C4C007F3601 /* MACameraViewController.m in Sources */,
 				792A9B5C1CABF4C20026A29C /* MATicketTableViewCell.m in Sources */,
 				7926C3431CAD52B700A7291A /* MABuyViewController.m in Sources */,
 				792A9B671CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m in Sources */,

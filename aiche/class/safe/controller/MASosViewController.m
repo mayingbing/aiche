@@ -11,10 +11,11 @@
 #import "Masonry.h"
 #import "ReactiveCocoa.h"
 #import "MAbtnBaseView.h"
+#import "MACameraViewController.h"
 
 #define screenSize [UIScreen mainScreen].bounds.size
 
-@interface MASosViewController ()<MABtnsViewDelegate>
+@interface MASosViewController ()<MABtnsViewDelegate,MABtnsViewCameraDelegate>
 
 @property(nonatomic ,assign) BOOL isShowTelView;
 @property(nonatomic ,strong) MABtnsView *btnsView;
@@ -50,6 +51,7 @@
     
     MABtnsView *btnsView = [[MABtnsView alloc]initWithFrame:CGRectMake(0, screenSize.height-98, screenSize.width, 98)];
     btnsView.delegate = self;
+    btnsView.cameraDelegate = self;
     [self.view addSubview:btnsView];
     
     _btnsView = btnsView;
@@ -160,4 +162,16 @@
     
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://119"]];
 }
+
+#pragma mark camera
+
+-(void)MABtnsViewCameraJumpOutWithMABtnsView:(MABtnsView *)maBtnView{
+    
+    MACameraViewController *cameraView = [[MACameraViewController alloc]init];
+    cameraView.view.backgroundColor = [UIColor lightGrayColor];
+    [self.navigationController pushViewController:cameraView animated:YES];
+    
+}
+
+
 @end
