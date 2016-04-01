@@ -8,11 +8,15 @@
 
 #import "MABtnsView.h"
 #import "MAbtnBaseView.h"
+#import <AVFoundation/AVFoundation.h>
 #define screenSize [UIScreen mainScreen].bounds.size
 
 @interface MABtnsView ()
 
 @property(nonatomic ,strong)UIView *telShowView;
+@property(nonatomic ,strong)MAbtnBaseView *lightView;
+
+@property(nonatomic ,assign)BOOL islightOpen;
 
 @end
 @implementation MABtnsView
@@ -28,11 +32,12 @@
 }
 -(void)setupChildViews{
     
-   
+    _islightOpen = NO;
     
     //telphone
     MAbtnBaseView *telView = [[MAbtnBaseView alloc]initWithFrame:CGRectMake(0, 0, screenSize.width/3, 95)];
     [self addSubview:telView];
+    _telView = telView;
     
     telView.btnImageView.image = [UIImage imageNamed:@"my_8"];
     telView.btnLable.text = @"紧急呼叫";
@@ -43,6 +48,7 @@
     //lightView
     MAbtnBaseView *lightView = [[MAbtnBaseView alloc]initWithFrame:CGRectMake(screenSize.width/3, 0, screenSize.width/3, 95)];
     [self addSubview:lightView];
+    _lightView = lightView;
     lightView.btnImageView.image = [UIImage imageNamed:@"light"];
     lightView.btnLable.text = @"应急照明";
     
@@ -67,8 +73,20 @@
     }
 }
 -(void)jumpTolightView{
-    
-    
+    _islightOpen = !_islightOpen;
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if ([device hasTorch]) {
+        [device lockForConfiguration:nil];
+        if (_islightOpen) {
+            [device setTorchMode:AVCaptureTorchModeOn];
+            self.lightView.btnLable.textColor = [UIColor yellowColor];
+        } else {
+            [device setTorchMode:AVCaptureTorchModeOff];
+            self.lightView.btnLable.textColor = [UIColor orangeColor];
+        }
+        [device unlockForConfiguration];
+    }
+
     
 }
 -(void)jumpTocameraView{

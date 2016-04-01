@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class MABtnsView;
+@class MAbtnBaseView;
 
 @protocol MABtnsViewDelegate <NSObject>
 
@@ -18,7 +19,7 @@
 @end
 
 @interface MABtnsView : UIView
-
+@property(nonatomic ,strong)MAbtnBaseView *telView;
 @property(nonatomic ,weak)id<MABtnsViewDelegate> delegate;
 
 @end
