@@ -10,7 +10,7 @@
 #import "UIImage+Image.h"
 #import "Masonry.h"
 #import "ReactiveCocoa.h"
-#import "MASOSTableViewController.h"
+#import "MASosViewController.h"
 #import "MARepairViewController.h"
 #import "MABuyViewController.h"
 
@@ -65,10 +65,10 @@
         make.height.equalTo(@((self.view.bounds.size.height-153)/3));
     }];
     // 单击的 Recognizer
-    UITapGestureRecognizer* jumpToSosVCGesture;
-    jumpToSosVCGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jumpToBuyView)];
-    jumpToSosVCGesture.numberOfTapsRequired = 1; // 单击
-    [self.buyCarView addGestureRecognizer:jumpToSosVCGesture];
+    UITapGestureRecognizer* jumpToBuyCarVCGesture;
+    jumpToBuyCarVCGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jumpToBuyView)];
+    jumpToBuyCarVCGesture.numberOfTapsRequired = 1; // 单击
+    [self.buyCarView addGestureRecognizer:jumpToBuyCarVCGesture];
 }
 
 -(void)setRepair{
@@ -88,10 +88,10 @@
         make.height.equalTo(@((self.view.bounds.size.height-153)/3));
     }];
     // 单击的 Recognizer
-    UITapGestureRecognizer* jumpToSosVCGesture;
-    jumpToSosVCGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jumpToRepairView)];
-    jumpToSosVCGesture.numberOfTapsRequired = 1; // 单击
-    [self.repairView addGestureRecognizer:jumpToSosVCGesture];
+    UITapGestureRecognizer* jumpToRepairVCGesture;
+    jumpToRepairVCGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jumpToRepairView)];
+    jumpToRepairVCGesture.numberOfTapsRequired = 1; // 单击
+    [self.repairView addGestureRecognizer:jumpToRepairVCGesture];
 
 }
 -(void)setSos{
@@ -118,18 +118,23 @@
     [self.SOSCarView addGestureRecognizer:jumpToSosVCGesture];
   
 }
--(void)jumpToSosView{
-    
-    MASOSTableViewController *SosVC = [[MASOSTableViewController alloc]init];
-    [self.navigationController pushViewController:SosVC animated:YES];
-    
-}
+
 -(void)jumpToBuyView{
-    MABuyViewController *SosVC = [[MABuyViewController alloc]init];
-    [self.navigationController pushViewController:SosVC animated:YES];
+    MABuyViewController *buyVC = [[MABuyViewController alloc]init];
+    buyVC.view.backgroundColor = [UIColor lightGrayColor];
+    [self.navigationController pushViewController:buyVC animated:YES];
 }
 -(void)jumpToRepairView{
-    MARepairViewController *SosVC = [[MARepairViewController alloc]init];
+    MARepairViewController *repairVC = [[MARepairViewController alloc]init];
+    repairVC.view.backgroundColor = [UIColor lightGrayColor];
+    [self.navigationController pushViewController:repairVC animated:YES];
+}
+-(void)jumpToSosView{
+    
+    MASosViewController *SosVC = [[MASosViewController alloc]init];
+    SosVC.view.backgroundColor = [UIColor lightGrayColor];
     [self.navigationController pushViewController:SosVC animated:YES];
+    
+    
 }
 @end
