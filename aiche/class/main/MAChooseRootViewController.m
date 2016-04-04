@@ -33,7 +33,7 @@
     //安全
     
     MASafeViewController *safeVc = [[MASafeViewController alloc]init];
-    safeVc.view.backgroundColor = [UIColor grayColor];
+    safeVc.view.backgroundColor = [UIColor lightGrayColor];
     MABaseNavigationController *safeNavVc = [[MABaseNavigationController alloc]initWithRootViewController:safeVc];
 
     

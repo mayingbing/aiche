@@ -28,6 +28,7 @@
     self.window.backgroundColor = [UIColor lightGrayColor];
     
     
+    
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     NSNumber *num = [defaults objectForKey:@"number"];
     

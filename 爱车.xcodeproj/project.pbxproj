@@ -41,12 +41,15 @@
 		792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B4D1CABF4C20026A29C /* DGEarthView.m */; };
 		792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B501CABF4C20026A29C /* AppDelegate.m */; };
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
-		7969C8E21CA95B8500C22DAA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969C8E11CA95B8500C22DAA /* MapKit.framework */; };
 		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
-		79C41B111CAE1FE1007F3601 /* MASosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C41B101CAE1FE1007F3601 /* MASosViewController.m */; };
-		79C41B141CAE41FB007F3601 /* MABtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C41B131CAE41FB007F3601 /* MABtnsView.m */; };
-		79C41B171CAE465C007F3601 /* MAbtnBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C41B161CAE465C007F3601 /* MAbtnBaseView.m */; };
-		79C41B1A1CAE7C4C007F3601 /* MACameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C41B191CAE7C4C007F3601 /* MACameraViewController.m */; };
+		79C63BBA1CB2430F0046D568 /* HyPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB51CB2430F0046D568 /* HyPopMenuView.m */; };
+		79C63BBB1CB2430F0046D568 /* MenuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB71CB2430F0046D568 /* MenuLabel.m */; };
+		79C63BBC1CB2430F0046D568 /* UIColor+ImageGetColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB91CB2430F0046D568 /* UIColor+ImageGetColor.m */; };
+		79C63BC01CB2467C0046D568 /* composer_close.wav in Resources */ = {isa = PBXBuildFile; fileRef = 79C63BBD1CB2467C0046D568 /* composer_close.wav */; };
+		79C63BC11CB2467C0046D568 /* composer_open.wav in Resources */ = {isa = PBXBuildFile; fileRef = 79C63BBE1CB2467C0046D568 /* composer_open.wav */; };
+		79C63BC21CB2467C0046D568 /* composer_select.wav in Resources */ = {isa = PBXBuildFile; fileRef = 79C63BBF1CB2467C0046D568 /* composer_select.wav */; };
+		79C63BCF1CB278320046D568 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C63BC31CB26EED0046D568 /* SystemConfiguration.framework */; };
+		79C63BD21CB278E20046D568 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BD11CB278E20046D568 /* Reachability.m */; };
 		79D5D3011CAD198E00D32E35 /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3001CAD198E00D32E35 /* MANaviRoute.m */; };
 		79D5D3041CAD19D500D32E35 /* MANaviAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3031CAD19D500D32E35 /* MANaviAnnotation.m */; };
 		79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3061CAD19F200D32E35 /* MANaviPolyline.m */; };
@@ -141,14 +144,21 @@
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
 		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellBackground.jpg; sourceTree = "<group>"; };
-		79C41B0F1CAE1FE1007F3601 /* MASosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASosViewController.h; sourceTree = "<group>"; };
-		79C41B101CAE1FE1007F3601 /* MASosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASosViewController.m; sourceTree = "<group>"; };
-		79C41B121CAE41FB007F3601 /* MABtnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABtnsView.h; sourceTree = "<group>"; };
-		79C41B131CAE41FB007F3601 /* MABtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABtnsView.m; sourceTree = "<group>"; };
-		79C41B151CAE465C007F3601 /* MAbtnBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAbtnBaseView.h; sourceTree = "<group>"; };
-		79C41B161CAE465C007F3601 /* MAbtnBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAbtnBaseView.m; sourceTree = "<group>"; };
-		79C41B181CAE7C4C007F3601 /* MACameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACameraViewController.h; sourceTree = "<group>"; };
-		79C41B191CAE7C4C007F3601 /* MACameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACameraViewController.m; sourceTree = "<group>"; };
+		798B7CB11CAEA1AA005593D9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		798B7CB31CAEA1F1005593D9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		798B7CB51CAEA3E3005593D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		79C63BB41CB2430F0046D568 /* HyPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyPopMenuView.h; sourceTree = "<group>"; };
+		79C63BB51CB2430F0046D568 /* HyPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyPopMenuView.m; sourceTree = "<group>"; };
+		79C63BB61CB2430F0046D568 /* MenuLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLabel.h; sourceTree = "<group>"; };
+		79C63BB71CB2430F0046D568 /* MenuLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuLabel.m; sourceTree = "<group>"; };
+		79C63BB81CB2430F0046D568 /* UIColor+ImageGetColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ImageGetColor.h"; sourceTree = "<group>"; };
+		79C63BB91CB2430F0046D568 /* UIColor+ImageGetColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageGetColor.m"; sourceTree = "<group>"; };
+		79C63BBD1CB2467C0046D568 /* composer_close.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = composer_close.wav; sourceTree = "<group>"; };
+		79C63BBE1CB2467C0046D568 /* composer_open.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = composer_open.wav; sourceTree = "<group>"; };
+		79C63BBF1CB2467C0046D568 /* composer_select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = composer_select.wav; sourceTree = "<group>"; };
+		79C63BC31CB26EED0046D568 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		79C63BD01CB278E20046D568 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../Reachability.h; sourceTree = "<group>"; };
+		79C63BD11CB278E20046D568 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../Reachability.m; sourceTree = "<group>"; };
 		79D5D2FF1CAD198E00D32E35 /* MANaviRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviRoute.h; sourceTree = "<group>"; };
 		79D5D3001CAD198E00D32E35 /* MANaviRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviRoute.m; sourceTree = "<group>"; };
 		79D5D3021CAD19D500D32E35 /* MANaviAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviAnnotation.h; sourceTree = "<group>"; };
@@ -178,7 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7969C8E21CA95B8500C22DAA /* MapKit.framework in Frameworks */,
+				79C63BCF1CB278320046D568 /* SystemConfiguration.framework in Frameworks */,
 				1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,25 +213,14 @@
 		6A713AD8E69BB4EFA35496DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79C63BC31CB26EED0046D568 /* SystemConfiguration.framework */,
+				798B7CB51CAEA3E3005593D9 /* CoreGraphics.framework */,
+				798B7CB31CAEA1F1005593D9 /* AssetsLibrary.framework */,
+				798B7CB11CAEA1AA005593D9 /* ImageIO.framework */,
 				7969C8E11CA95B8500C22DAA /* MapKit.framework */,
 				CE88082086B1DBAD18ECB0D9 /* libPods.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7926C3381CAD485C00A7291A /* sos */ = {
-			isa = PBXGroup;
-			children = (
-				79C41B0F1CAE1FE1007F3601 /* MASosViewController.h */,
-				79C41B101CAE1FE1007F3601 /* MASosViewController.m */,
-				79C41B181CAE7C4C007F3601 /* MACameraViewController.h */,
-				79C41B191CAE7C4C007F3601 /* MACameraViewController.m */,
-				79C41B121CAE41FB007F3601 /* MABtnsView.h */,
-				79C41B131CAE41FB007F3601 /* MABtnsView.m */,
-				79C41B151CAE465C007F3601 /* MAbtnBaseView.h */,
-				79C41B161CAE465C007F3601 /* MAbtnBaseView.m */,
-			);
-			name = sos;
 			sourceTree = "<group>";
 		};
 		7926C3391CAD486800A7291A /* repair */ = {
@@ -438,6 +437,8 @@
 			children = (
 				792A9B4F1CABF4C20026A29C /* AppDelegate.h */,
 				792A9B501CABF4C20026A29C /* AppDelegate.m */,
+				79C63BD01CB278E20046D568 /* Reachability.h */,
+				79C63BD11CB278E20046D568 /* Reachability.m */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -457,9 +458,30 @@
 				7926C3331CAD30E200A7291A /* MASafeViewController.m */,
 				7926C33A1CAD487E00A7291A /* buyCar */,
 				7926C3391CAD486800A7291A /* repair */,
-				7926C3381CAD485C00A7291A /* sos */,
+				79C63BA61CB2429C0046D568 /* sos */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		79C63BA61CB2429C0046D568 /* sos */ = {
+			isa = PBXGroup;
+			children = (
+				79C63BB31CB243000046D568 /* pop */,
+			);
+			path = sos;
+			sourceTree = "<group>";
+		};
+		79C63BB31CB243000046D568 /* pop */ = {
+			isa = PBXGroup;
+			children = (
+				79C63BB41CB2430F0046D568 /* HyPopMenuView.h */,
+				79C63BB51CB2430F0046D568 /* HyPopMenuView.m */,
+				79C63BB61CB2430F0046D568 /* MenuLabel.h */,
+				79C63BB71CB2430F0046D568 /* MenuLabel.m */,
+				79C63BB81CB2430F0046D568 /* UIColor+ImageGetColor.h */,
+				79C63BB91CB2430F0046D568 /* UIColor+ImageGetColor.m */,
+			);
+			path = pop;
 			sourceTree = "<group>";
 		};
 		79FF64E11CA2D7D700CB4FB6 = {
@@ -499,6 +521,9 @@
 			isa = PBXGroup;
 			children = (
 				79FF64FE1CA2D7D700CB4FB6 /* Info.plist */,
+				79C63BBD1CB2467C0046D568 /* composer_close.wav */,
+				79C63BBE1CB2467C0046D568 /* composer_open.wav */,
+				79C63BBF1CB2467C0046D568 /* composer_select.wav */,
 				7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */,
 				79687E731CA4572100988C5C /* tsl.jpg */,
 				791E44B81CA422AC0050DC34 /* earth@3x.png */,
@@ -646,11 +671,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */,
+				79C63BC21CB2467C0046D568 /* composer_select.wav in Resources */,
 				792A9B621CABF4C20026A29C /* citydict.plist in Resources */,
 				79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */,
 				791E44B91CA422AC0050DC34 /* earth@3x.png in Resources */,
 				79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */,
 				79687E741CA4572100988C5C /* tsl.jpg in Resources */,
+				79C63BC11CB2467C0046D568 /* composer_open.wav in Resources */,
+				79C63BC01CB2467C0046D568 /* composer_close.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,7 +757,6 @@
 				7926C3461CAD534E00A7291A /* MARepairViewController.m in Sources */,
 				792A9B561CABF4C20026A29C /* MABaseTabBarController.m in Sources */,
 				792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */,
-				79C41B111CAE1FE1007F3601 /* MASosViewController.m in Sources */,
 				79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */,
 				792A9B6D1CABF4C20026A29C /* MANewFeatureViewController.m in Sources */,
 				792A9B651CABF4C20026A29C /* MAOneTableViewCell.m in Sources */,
@@ -737,12 +764,12 @@
 				792A9B5B1CABF4C20026A29C /* MATicketModel.m in Sources */,
 				792A9B581CABF4C20026A29C /* MABaseViewController.m in Sources */,
 				792A9B641CABF4C20026A29C /* MADataModel.m in Sources */,
+				79C63BD21CB278E20046D568 /* Reachability.m in Sources */,
 				792A9B551CABF4C20026A29C /* MABaseNavigationController.m in Sources */,
 				792A9B5F1CABF4C20026A29C /* MACellMapView.m in Sources */,
 				792A9B661CABF4C20026A29C /* MAWeatherView.m in Sources */,
-				79C41B141CAE41FB007F3601 /* MABtnsView.m in Sources */,
-				79C41B171CAE465C007F3601 /* MAbtnBaseView.m in Sources */,
 				792A9B6C1CABF4C20026A29C /* main.m in Sources */,
+				79C63BBA1CB2430F0046D568 /* HyPopMenuView.m in Sources */,
 				792A9B5E1CABF4C20026A29C /* MAJourneyViewController.m in Sources */,
 				792A9B631CABF4C20026A29C /* CityListViewController.m in Sources */,
 				79D5D30D1CAD1AC900D32E35 /* CommonUtility.m in Sources */,
@@ -752,12 +779,13 @@
 				792A9B6E1CABF4C20026A29C /* DGAaimaView.m in Sources */,
 				792A9B681CABF4C20026A29C /* UIImage+Image.m in Sources */,
 				792A9B5D1CABF4C20026A29C /* MAWEBViewController.m in Sources */,
+				79C63BBB1CB2430F0046D568 /* MenuLabel.m in Sources */,
 				792A9B6B1CABF4C20026A29C /* MAChooseRootViewController.m in Sources */,
 				792A9B611CABF4C20026A29C /* SYScrollerView.m in Sources */,
 				792A9B591CABF4C20026A29C /* MAHomeViewController.m in Sources */,
+				79C63BBC1CB2430F0046D568 /* UIColor+ImageGetColor.m in Sources */,
 				792A9B601CABF4C20026A29C /* MATwoTableViewCell.m in Sources */,
 				792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */,
-				79C41B1A1CAE7C4C007F3601 /* MACameraViewController.m in Sources */,
 				792A9B5C1CABF4C20026A29C /* MATicketTableViewCell.m in Sources */,
 				7926C3431CAD52B700A7291A /* MABuyViewController.m in Sources */,
 				792A9B671CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m in Sources */,
@@ -895,6 +923,10 @@
 			baseConfigurationReference = ABB5289F71869BD849470EF4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = aiche/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -909,6 +941,10 @@
 			baseConfigurationReference = 7640220824F1D9B0B8AA67E3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = aiche/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

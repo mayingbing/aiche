@@ -17,6 +17,9 @@
 #import "UINavigationBar+Awesome.h"
 #import "MACellMapView.h"
 #import <MAMapKit/MAMapKit.h>
+#import "ReactiveCocoa.h"
+#import "Reachability.h"
+
 #define NEW_THEMECOLOR    [UIColor colorWithRed:0xff/255.0f green:0xff/255.0f blue:0xff/255.0f alpha:1]
 
 
@@ -34,6 +37,10 @@
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     [self.navigationController.navigationBar lt_setBackgroundColor:[NEW_THEMECOLOR colorWithAlphaComponent:0]];
+    
+    //判断网络
+    [self reachabilityChange:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reachabilityChange:) name:@"kNetworkReachabilityChangedNotification" object:nil];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -61,6 +68,45 @@
     [self setContentViews];
     
 
+    
+}
+
+- (void)reachabilityChange:(NSNotification *)note {
+    
+    
+    Reachability *reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    switch ([reach currentReachabilityStatus]) {
+        case NotReachable:
+        {
+            
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"没有连接网络" preferredStyle:UIAlertControllerStyleAlert];
+            
+            // Create the actions.
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+                
+            }];
+            
+            UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+            }];
+            
+            // Add the actions.
+            [alertController addAction:cancelAction];
+            [alertController addAction:otherAction];
+            [self presentViewController: alertController animated: YES completion: nil];
+        }
+            break;
+        case ReachableViaWiFi:
+            
+            
+            break;
+        case ReachableViaWWAN:
+            
+            break;
+            
+        default:
+            break;
+    }
     
 }
 //滚动广告
