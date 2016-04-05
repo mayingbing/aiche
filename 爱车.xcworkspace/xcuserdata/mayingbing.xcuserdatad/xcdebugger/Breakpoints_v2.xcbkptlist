@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "aiche/class/safe/controller/sos/MACameraViewController.m"
-            timestampString = "481467262.656883"
+            timestampString = "481523004.717073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207">
+            startingLineNumber = "322"
+            endingLineNumber = "322">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

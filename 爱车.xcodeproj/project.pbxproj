@@ -56,6 +56,8 @@
 		79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3061CAD19F200D32E35 /* MANaviPolyline.m */; };
 		79D5D30A1CAD1A0600D32E35 /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */; };
 		79D5D30D1CAD1AC900D32E35 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */; };
+		79E8A9CE1CB36DA700D58B7A /* MAPhotoLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E8A9CD1CB36DA700D58B7A /* MAPhotoLibViewController.m */; };
+		79E8A9D41CB37A4A00D58B7A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E8A9D11CB376FB00D58B7A /* Photos.framework */; };
 		79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FB9BC71CAA35A80076C9DB /* Assets.xcassets */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
 		79FF65081CA2D7D700CB4FB6 /* aicheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65071CA2D7D700CB4FB6 /* aicheTests.m */; };
@@ -172,6 +174,10 @@
 		79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
 		79D5D30B1CAD1AC900D32E35 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
 		79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		79E8A9CC1CB36DA700D58B7A /* MAPhotoLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPhotoLibViewController.h; sourceTree = "<group>"; };
+		79E8A9CD1CB36DA700D58B7A /* MAPhotoLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPhotoLibViewController.m; sourceTree = "<group>"; };
+		79E8A9D11CB376FB00D58B7A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		79E8A9D51CB37A5300D58B7A /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		79FB9BC71CAA35A80076C9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FF64EA1CA2D7D700CB4FB6 /* 爱车.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱车.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FF64FC1CA2D7D700CB4FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E8A9D41CB37A4A00D58B7A /* Photos.framework in Frameworks */,
 				79C63BCF1CB278320046D568 /* SystemConfiguration.framework in Frameworks */,
 				1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */,
 			);
@@ -216,6 +223,8 @@
 		6A713AD8E69BB4EFA35496DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79E8A9D51CB37A5300D58B7A /* PhotosUI.framework */,
+				79E8A9D11CB376FB00D58B7A /* Photos.framework */,
 				79C63BC31CB26EED0046D568 /* SystemConfiguration.framework */,
 				798B7CB51CAEA3E3005593D9 /* CoreGraphics.framework */,
 				798B7CB31CAEA1F1005593D9 /* AssetsLibrary.framework */,
@@ -471,6 +480,8 @@
 			children = (
 				793B9E281CB2975500CA86A1 /* MACameraViewController.h */,
 				793B9E291CB2975500CA86A1 /* MACameraViewController.m */,
+				79E8A9CC1CB36DA700D58B7A /* MAPhotoLibViewController.h */,
+				79E8A9CD1CB36DA700D58B7A /* MAPhotoLibViewController.m */,
 				79C63BB31CB243000046D568 /* pop */,
 			);
 			path = sos;
@@ -785,6 +796,7 @@
 				792A9B681CABF4C20026A29C /* UIImage+Image.m in Sources */,
 				792A9B5D1CABF4C20026A29C /* MAWEBViewController.m in Sources */,
 				79C63BBB1CB2430F0046D568 /* MenuLabel.m in Sources */,
+				79E8A9CE1CB36DA700D58B7A /* MAPhotoLibViewController.m in Sources */,
 				792A9B6B1CABF4C20026A29C /* MAChooseRootViewController.m in Sources */,
 				792A9B611CABF4C20026A29C /* SYScrollerView.m in Sources */,
 				792A9B591CABF4C20026A29C /* MAHomeViewController.m in Sources */,

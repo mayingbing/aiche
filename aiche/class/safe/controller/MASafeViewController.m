@@ -17,6 +17,7 @@
 #import "MenuLabel.h"
 #import "HyPopMenuView.h"
 #import <POP.h>
+#import "MAPhotoLibViewController.h"
 
 #define Objs @[[MenuLabel CreatelabelIconName:@"tabbar_compose_idea" Title:@"紧急求救"],[MenuLabel CreatelabelIconName:@"tabbar_compose_lbs" Title:@"应急照明"],[MenuLabel CreatelabelIconName:@"tabbar_compose_camera" Title:@"录像取证"],[MenuLabel CreatelabelIconName:@"tabbar_compose_photo" Title:@"相册"],[MenuLabel CreatelabelIconName:@"tabbar_compose_review" Title:@"点评"],[MenuLabel CreatelabelIconName:@"tabbar_compose_more" Title:@"更多"],]
 
@@ -28,6 +29,7 @@
 @property(nonatomic ,strong)UITableView *tableView;
 @property(nonatomic ,strong)NSMutableArray *imgArr;
 @property(nonatomic ,strong)MACameraViewController *cameraView;
+@property(nonatomic ,strong)MAPhotoLibViewController *photoView;
 @end
 
 @implementation MASafeViewController
@@ -54,7 +56,11 @@
         cameraView.view.backgroundColor = [UIColor blackColor];
         _cameraView = cameraView;
     }
-    
+    if (!self.photoView) {
+        MAPhotoLibViewController *photoView = [[MAPhotoLibViewController alloc]init];
+        photoView.view.backgroundColor = [UIColor blackColor];
+        _photoView = photoView;
+    }
     
     self.tabBarItem.image = [UIImage imageNamed:@"tab2"];
     
@@ -163,6 +169,10 @@
         
         if (index == 2) {
            [self.navigationController pushViewController:self.cameraView animated:YES];
+        }else if (index ==3){
+            
+            [self.navigationController pushViewController:self.photoView animated:YES];
+            
         }
         
         
