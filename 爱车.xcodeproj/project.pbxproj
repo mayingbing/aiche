@@ -40,6 +40,7 @@
 		792A9B6E1CABF4C20026A29C /* DGAaimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B4B1CABF4C20026A29C /* DGAaimaView.m */; };
 		792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B4D1CABF4C20026A29C /* DGEarthView.m */; };
 		792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B501CABF4C20026A29C /* AppDelegate.m */; };
+		793B9E2A1CB2975500CA86A1 /* MACameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B9E291CB2975500CA86A1 /* MACameraViewController.m */; };
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
 		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
 		79C63BBA1CB2430F0046D568 /* HyPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB51CB2430F0046D568 /* HyPopMenuView.m */; };
@@ -141,6 +142,8 @@
 		792A9B4D1CABF4C20026A29C /* DGEarthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEarthView.m; sourceTree = "<group>"; };
 		792A9B4F1CABF4C20026A29C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		792A9B501CABF4C20026A29C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		793B9E281CB2975500CA86A1 /* MACameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACameraViewController.h; sourceTree = "<group>"; };
+		793B9E291CB2975500CA86A1 /* MACameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACameraViewController.m; sourceTree = "<group>"; };
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
 		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellBackground.jpg; sourceTree = "<group>"; };
@@ -466,6 +469,8 @@
 		79C63BA61CB2429C0046D568 /* sos */ = {
 			isa = PBXGroup;
 			children = (
+				793B9E281CB2975500CA86A1 /* MACameraViewController.h */,
+				793B9E291CB2975500CA86A1 /* MACameraViewController.m */,
 				79C63BB31CB243000046D568 /* pop */,
 			);
 			path = sos;
@@ -783,6 +788,7 @@
 				792A9B6B1CABF4C20026A29C /* MAChooseRootViewController.m in Sources */,
 				792A9B611CABF4C20026A29C /* SYScrollerView.m in Sources */,
 				792A9B591CABF4C20026A29C /* MAHomeViewController.m in Sources */,
+				793B9E2A1CB2975500CA86A1 /* MACameraViewController.m in Sources */,
 				79C63BBC1CB2430F0046D568 /* UIColor+ImageGetColor.m in Sources */,
 				792A9B601CABF4C20026A29C /* MATwoTableViewCell.m in Sources */,
 				792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */,

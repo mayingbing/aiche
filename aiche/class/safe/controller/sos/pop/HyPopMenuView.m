@@ -370,9 +370,9 @@ NSString *const kHyPopMenuViewSelectAudioTypeKey = @"SelectAudioTypeKey";
             NSInteger index = [_ItmesArr indexOfObject:label];
             CustomButton *buttons = (CustomButton *)[self viewWithTag:(index + 1) + ButtonTag];
             if (index == tag) {
-                //[button SelectdAnimation];
+                [button SelectdAnimation];
             }else{
-                // [buttons CancelAnimation];
+                 [buttons CancelAnimation];
             }
         }
         [self HidDelay:0.3f CompletionBlock:^(BOOL completion) {

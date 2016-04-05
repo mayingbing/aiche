@@ -13,7 +13,7 @@
 
 #import "MARepairViewController.h"
 #import "MABuyViewController.h"
-//#import "MACameraViewController.h"
+#import "MACameraViewController.h"
 #import "MenuLabel.h"
 #import "HyPopMenuView.h"
 #import <POP.h>
@@ -27,7 +27,7 @@
 @property(nonatomic ,strong)UIImageView *SOSCarView;
 @property(nonatomic ,strong)UITableView *tableView;
 @property(nonatomic ,strong)NSMutableArray *imgArr;
-//@property(nonatomic ,strong)MACameraViewController *cameraView;
+@property(nonatomic ,strong)MACameraViewController *cameraView;
 @end
 
 @implementation MASafeViewController
@@ -49,11 +49,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    if (!self.cameraView) {
-//        MACameraViewController *cameraView = [[MACameraViewController alloc]init];
-//        cameraView.view.backgroundColor = [UIColor blackColor];
-//        _cameraView = cameraView;
-//    }
+    if (!self.cameraView) {
+        MACameraViewController *cameraView = [[MACameraViewController alloc]init];
+        cameraView.view.backgroundColor = [UIColor blackColor];
+        _cameraView = cameraView;
+    }
     
     
     self.tabBarItem.image = [UIImage imageNamed:@"tab2"];
@@ -161,9 +161,9 @@
     
     [HyPopMenuView CreatingPopMenuObjectItmes:Objs TopView:topView /*nil*/OpenOrCloseAudioDictionary:AudioDictionary /*nil*/ SelectdCompletionBlock:^(MenuLabel *menuLabel, NSInteger index) {
         
-//        if (index == 2) {
-//           [self.navigationController pushViewController:self.cameraView animated:YES];
-//        }
+        if (index == 2) {
+           [self.navigationController pushViewController:self.cameraView animated:YES];
+        }
         
         
         
