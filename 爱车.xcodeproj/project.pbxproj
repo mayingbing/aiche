@@ -40,12 +40,15 @@
 		792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B4D1CABF4C20026A29C /* DGEarthView.m */; };
 		792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A9B501CABF4C20026A29C /* AppDelegate.m */; };
 		793B9E2A1CB2975500CA86A1 /* MACameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B9E291CB2975500CA86A1 /* MACameraViewController.m */; };
+		7962634D1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7962634C1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.m */; };
+		796263501CB3F02B00B1FBD6 /* MAHomeWEBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7962634F1CB3F02B00B1FBD6 /* MAHomeWEBViewController.m */; };
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
 		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
 		797D03A21CB395A100CA1CDD /* MAHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03A11CB395A100CA1CDD /* MAHomeTableViewController.m */; };
 		797D03A81CB39A8000CA1CDD /* MAHomeSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03A71CB39A8000CA1CDD /* MAHomeSelfCell.m */; };
 		797D03AD1CB3B4AB00CA1CDD /* MAHeadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03AC1CB3B4AB00CA1CDD /* MAHeadTableViewController.m */; };
 		797D03B01CB3B62300CA1CDD /* MAOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03AF1CB3B62300CA1CDD /* MAOtherViewController.m */; };
+		797FB3481CB3EBE600712B18 /* ScanBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797FB3461CB3EBE600712B18 /* ScanBackgroundView.m */; };
 		79C63BBA1CB2430F0046D568 /* HyPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB51CB2430F0046D568 /* HyPopMenuView.m */; };
 		79C63BBB1CB2430F0046D568 /* MenuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB71CB2430F0046D568 /* MenuLabel.m */; };
 		79C63BBC1CB2430F0046D568 /* UIColor+ImageGetColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB91CB2430F0046D568 /* UIColor+ImageGetColor.m */; };
@@ -59,7 +62,6 @@
 		79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3061CAD19F200D32E35 /* MANaviPolyline.m */; };
 		79D5D30A1CAD1A0600D32E35 /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */; };
 		79D5D30D1CAD1AC900D32E35 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */; };
-		79E8A9CE1CB36DA700D58B7A /* MAPhotoLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E8A9CD1CB36DA700D58B7A /* MAPhotoLibViewController.m */; };
 		79E8A9D41CB37A4A00D58B7A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E8A9D11CB376FB00D58B7A /* Photos.framework */; };
 		79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FB9BC71CAA35A80076C9DB /* Assets.xcassets */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
@@ -147,6 +149,10 @@
 		792A9B501CABF4C20026A29C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		793B9E281CB2975500CA86A1 /* MACameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACameraViewController.h; sourceTree = "<group>"; };
 		793B9E291CB2975500CA86A1 /* MACameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACameraViewController.m; sourceTree = "<group>"; };
+		7962634B1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeCameraViewController.h; sourceTree = "<group>"; };
+		7962634C1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeCameraViewController.m; sourceTree = "<group>"; };
+		7962634E1CB3F02B00B1FBD6 /* MAHomeWEBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeWEBViewController.h; sourceTree = "<group>"; };
+		7962634F1CB3F02B00B1FBD6 /* MAHomeWEBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeWEBViewController.m; sourceTree = "<group>"; };
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
 		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellBackground.jpg; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 		797D03AC1CB3B4AB00CA1CDD /* MAHeadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAHeadTableViewController.m; path = ../view/MAHeadTableViewController.m; sourceTree = "<group>"; };
 		797D03AE1CB3B62300CA1CDD /* MAOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAOtherViewController.h; sourceTree = "<group>"; };
 		797D03AF1CB3B62300CA1CDD /* MAOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAOtherViewController.m; sourceTree = "<group>"; };
+		797FB3451CB3EBE600712B18 /* ScanBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanBackgroundView.h; sourceTree = "<group>"; };
+		797FB3461CB3EBE600712B18 /* ScanBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanBackgroundView.m; sourceTree = "<group>"; };
 		798B7CB11CAEA1AA005593D9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		798B7CB31CAEA1F1005593D9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		798B7CB51CAEA3E3005593D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -183,8 +191,6 @@
 		79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
 		79D5D30B1CAD1AC900D32E35 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
 		79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
-		79E8A9CC1CB36DA700D58B7A /* MAPhotoLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPhotoLibViewController.h; sourceTree = "<group>"; };
-		79E8A9CD1CB36DA700D58B7A /* MAPhotoLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPhotoLibViewController.m; sourceTree = "<group>"; };
 		79E8A9D11CB376FB00D58B7A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		79E8A9D51CB37A5300D58B7A /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		79FB9BC71CAA35A80076C9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -320,6 +326,12 @@
 				797D03AC1CB3B4AB00CA1CDD /* MAHeadTableViewController.m */,
 				797D03AE1CB3B62300CA1CDD /* MAOtherViewController.h */,
 				797D03AF1CB3B62300CA1CDD /* MAOtherViewController.m */,
+				7962634B1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.h */,
+				7962634C1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.m */,
+				797FB3451CB3EBE600712B18 /* ScanBackgroundView.h */,
+				797FB3461CB3EBE600712B18 /* ScanBackgroundView.m */,
+				7962634E1CB3F02B00B1FBD6 /* MAHomeWEBViewController.h */,
+				7962634F1CB3F02B00B1FBD6 /* MAHomeWEBViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -511,8 +523,6 @@
 			children = (
 				793B9E281CB2975500CA86A1 /* MACameraViewController.h */,
 				793B9E291CB2975500CA86A1 /* MACameraViewController.m */,
-				79E8A9CC1CB36DA700D58B7A /* MAPhotoLibViewController.h */,
-				79E8A9CD1CB36DA700D58B7A /* MAPhotoLibViewController.m */,
 				79C63BB31CB243000046D568 /* pop */,
 			);
 			path = sos;
@@ -799,6 +809,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792A9B5A1CABF4C20026A29C /* MAQuNaErViewController.m in Sources */,
+				796263501CB3F02B00B1FBD6 /* MAHomeWEBViewController.m in Sources */,
 				79D5D30A1CAD1A0600D32E35 /* LineDashPolyline.m in Sources */,
 				7926C3341CAD30E200A7291A /* MASafeViewController.m in Sources */,
 				7926C3461CAD534E00A7291A /* MARepairViewController.m in Sources */,
@@ -831,7 +842,6 @@
 				792A9B681CABF4C20026A29C /* UIImage+Image.m in Sources */,
 				792A9B5D1CABF4C20026A29C /* MAWEBViewController.m in Sources */,
 				79C63BBB1CB2430F0046D568 /* MenuLabel.m in Sources */,
-				79E8A9CE1CB36DA700D58B7A /* MAPhotoLibViewController.m in Sources */,
 				792A9B6B1CABF4C20026A29C /* MAChooseRootViewController.m in Sources */,
 				792A9B611CABF4C20026A29C /* SYScrollerView.m in Sources */,
 				793B9E2A1CB2975500CA86A1 /* MACameraViewController.m in Sources */,
@@ -840,8 +850,10 @@
 				792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */,
 				792A9B5C1CABF4C20026A29C /* MATicketTableViewCell.m in Sources */,
 				7926C3431CAD52B700A7291A /* MABuyViewController.m in Sources */,
+				797FB3481CB3EBE600712B18 /* ScanBackgroundView.m in Sources */,
 				792A9B671CABF4C20026A29C /* UIBarButtonItem+MaBarButtonItem.m in Sources */,
 				792A9B691CABF4C20026A29C /* UINavigationBar+Awesome.m in Sources */,
+				7962634D1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

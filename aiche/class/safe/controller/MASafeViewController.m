@@ -17,11 +17,11 @@
 #import "MenuLabel.h"
 #import "HyPopMenuView.h"
 #import <POP.h>
-#import "MAPhotoLibViewController.h"
+
 
 #define Objs @[[MenuLabel CreatelabelIconName:@"tabbar_compose_idea" Title:@"紧急求救"],[MenuLabel CreatelabelIconName:@"tabbar_compose_lbs" Title:@"应急照明"],[MenuLabel CreatelabelIconName:@"tabbar_compose_camera" Title:@"录像取证"],[MenuLabel CreatelabelIconName:@"tabbar_compose_photo" Title:@"相册"],[MenuLabel CreatelabelIconName:@"tabbar_compose_review" Title:@"点评"],[MenuLabel CreatelabelIconName:@"tabbar_compose_more" Title:@"更多"],]
 
-@interface MASafeViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MASafeViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property(nonatomic ,strong)UIImageView *buyCarView;
 @property(nonatomic ,strong)UIImageView *repairView;
@@ -29,7 +29,7 @@
 @property(nonatomic ,strong)UITableView *tableView;
 
 @property(nonatomic ,strong)MACameraViewController *cameraView;
-@property(nonatomic ,strong)MAPhotoLibViewController *photoView;
+
 @end
 
 @implementation MASafeViewController
@@ -51,11 +51,7 @@
         cameraView.view.backgroundColor = [UIColor blackColor];
         _cameraView = cameraView;
     }
-    if (!self.photoView) {
-        MAPhotoLibViewController *photoView = [[MAPhotoLibViewController alloc]init];
-        photoView.view.backgroundColor = [UIColor blackColor];
-        _photoView = photoView;
-    }
+    
     
     self.tabBarItem.image = [UIImage imageNamed:@"tab2"];
     
@@ -166,7 +162,18 @@
            [self.navigationController pushViewController:self.cameraView animated:YES];
         }else if (index ==3){
             
-            [self.navigationController pushViewController:self.photoView animated:YES];
+            NSLog(@"相册");
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            
+            picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            
+            picker.delegate = self;
+            //设置选择后的图片可被编辑
+            picker.allowsEditing = YES;
+            [self presentViewController:picker animated:YES completion:^{
+                
+            }];
+
             
         }
         

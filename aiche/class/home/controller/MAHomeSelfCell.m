@@ -108,7 +108,7 @@ static NSString *oneID = @"oneCell";
     
     //头像
     if (self.iconView.image==nil) {
-        self.iconView.image = [UIImage imageNamed:@"placeholder"];
+        self.iconView.image = [UIImage imageNamed:@"WWeChat"];
     }
     
     self.nameLable.text = @"昵称";
