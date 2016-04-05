@@ -10,7 +10,7 @@
 
 #import "MAJourneyViewController.h"
 
-#import "MAHomeViewController.h"
+#import "MAHomeTableViewController.h"
 #import "MASafeViewController.h"
 #import "MABaseTabBarController.h"
 
@@ -41,8 +41,8 @@
     
     // 到家
     
-    MAHomeViewController *homeVc = [[MAHomeViewController alloc]init];
-    homeVc.view.backgroundColor = [UIColor greenColor];
+    MAHomeTableViewController *homeVc = [[MAHomeTableViewController alloc]init];
+    homeVc.view.backgroundColor = [UIColor whiteColor];
     MABaseNavigationController *homeNavVc = [[MABaseNavigationController alloc]initWithRootViewController:homeVc];
     
 
