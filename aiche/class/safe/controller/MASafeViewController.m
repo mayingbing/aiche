@@ -27,7 +27,7 @@
 @property(nonatomic ,strong)UIImageView *repairView;
 @property(nonatomic ,strong)UIImageView *SOSCarView;
 @property(nonatomic ,strong)UITableView *tableView;
-@property(nonatomic ,strong)NSMutableArray *imgArr;
+
 @property(nonatomic ,strong)MACameraViewController *cameraView;
 @property(nonatomic ,strong)MAPhotoLibViewController *photoView;
 @end
@@ -42,12 +42,7 @@
     return _tableView;
 }
 
--(NSMutableArray *)imgArr{
-    if (!_imgArr) {
-        _imgArr = [NSMutableArray array];
-    }
-    return _imgArr;
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,8 +63,7 @@
     
     self.title = @"平安";
     
-    _imgArr = @[@"buycar",@"repair",@"sos",
-                @"买车",@"保养",@"紧急处理"];
+    
     
     [self.view addSubview:self.tableView];
     self.tableView.dataSource = self;
@@ -93,9 +87,10 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
-    
-    cell.imageView.image = [UIImage imageNamed:self.imgArr[indexPath.section]];
-    cell.textLabel.text = self.imgArr[indexPath.section+3];
+    NSArray *imgArr = @[@"buycar",@"repair",@"sos",
+                @"买车",@"保养",@"紧急处理"];
+    cell.imageView.image = [UIImage imageNamed:imgArr[indexPath.section]];
+    cell.textLabel.text = imgArr[indexPath.section+3];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;

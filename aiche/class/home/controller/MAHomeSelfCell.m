@@ -57,6 +57,7 @@ static NSString *oneID = @"oneCell";
     
     UIImageView *iconView = [[UIImageView alloc]init];
     _iconView = iconView;
+    
     [self addSubview:iconView];
     
     UILabel *nameLable = [[UILabel alloc]init];
@@ -82,23 +83,24 @@ static NSString *oneID = @"oneCell";
     
     [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.top.equalTo(self.mas_top).with.offset(15);
-        make.left.equalTo(self.iconView.mas_right).with.offset(5);
+        make.top.equalTo(self.mas_top).with.offset(30);
+        make.left.equalTo(self.iconView.mas_right).with.offset(10);
         make.height.mas_equalTo(@15);
     }];
 
     [countLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.top.equalTo(self.nameLable.mas_bottom).with.offset(15);
+        make.top.equalTo(self.nameLable.mas_bottom).with.offset(10);
         make.left.equalTo(self.iconView.mas_right).with.offset(10);
         make.height.mas_equalTo(@15);
     }];
-
+    
+    markView.image = [UIImage imageNamed:@"mark"];
     [markView mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.top.equalTo(self.mas_top).with.offset(40);
-        make.right.equalTo(self.mas_right).with.offset(15);
-        make.size.mas_equalTo(CGSizeMake(20, 20));
+        make.top.equalTo(self.mas_top).with.offset(35);
+        make.right.equalTo(self.mas_right).with.offset(-15);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
     }];
 
 }
@@ -109,5 +111,9 @@ static NSString *oneID = @"oneCell";
         self.iconView.image = [UIImage imageNamed:@"placeholder"];
     }
     
+    self.nameLable.text = @"昵称";
+    self.countLable.text = @"账号名";
+    
 }
+
 @end

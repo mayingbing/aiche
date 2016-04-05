@@ -44,6 +44,8 @@
 		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
 		797D03A21CB395A100CA1CDD /* MAHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03A11CB395A100CA1CDD /* MAHomeTableViewController.m */; };
 		797D03A81CB39A8000CA1CDD /* MAHomeSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03A71CB39A8000CA1CDD /* MAHomeSelfCell.m */; };
+		797D03AD1CB3B4AB00CA1CDD /* MAHeadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03AC1CB3B4AB00CA1CDD /* MAHeadTableViewController.m */; };
+		797D03B01CB3B62300CA1CDD /* MAOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03AF1CB3B62300CA1CDD /* MAOtherViewController.m */; };
 		79C63BBA1CB2430F0046D568 /* HyPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB51CB2430F0046D568 /* HyPopMenuView.m */; };
 		79C63BBB1CB2430F0046D568 /* MenuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB71CB2430F0046D568 /* MenuLabel.m */; };
 		79C63BBC1CB2430F0046D568 /* UIColor+ImageGetColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BB91CB2430F0046D568 /* UIColor+ImageGetColor.m */; };
@@ -152,6 +154,10 @@
 		797D03A11CB395A100CA1CDD /* MAHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeTableViewController.m; sourceTree = "<group>"; };
 		797D03A61CB39A8000CA1CDD /* MAHomeSelfCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeSelfCell.h; sourceTree = "<group>"; };
 		797D03A71CB39A8000CA1CDD /* MAHomeSelfCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeSelfCell.m; sourceTree = "<group>"; };
+		797D03AB1CB3B4AB00CA1CDD /* MAHeadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAHeadTableViewController.h; path = ../view/MAHeadTableViewController.h; sourceTree = "<group>"; };
+		797D03AC1CB3B4AB00CA1CDD /* MAHeadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAHeadTableViewController.m; path = ../view/MAHeadTableViewController.m; sourceTree = "<group>"; };
+		797D03AE1CB3B62300CA1CDD /* MAOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAOtherViewController.h; sourceTree = "<group>"; };
+		797D03AF1CB3B62300CA1CDD /* MAOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAOtherViewController.m; sourceTree = "<group>"; };
 		798B7CB11CAEA1AA005593D9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		798B7CB31CAEA1F1005593D9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		798B7CB51CAEA3E3005593D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -296,6 +302,8 @@
 		792A9B151CABF4C20026A29C /* home */ = {
 			isa = PBXGroup;
 			children = (
+				797D03A91CB3B45700CA1CDD /* model */,
+				797D03AA1CB3B45700CA1CDD /* view */,
 				792A9B161CABF4C20026A29C /* controller */,
 			);
 			path = home;
@@ -308,6 +316,10 @@
 				797D03A11CB395A100CA1CDD /* MAHomeTableViewController.m */,
 				797D03A61CB39A8000CA1CDD /* MAHomeSelfCell.h */,
 				797D03A71CB39A8000CA1CDD /* MAHomeSelfCell.m */,
+				797D03AB1CB3B4AB00CA1CDD /* MAHeadTableViewController.h */,
+				797D03AC1CB3B4AB00CA1CDD /* MAHeadTableViewController.m */,
+				797D03AE1CB3B62300CA1CDD /* MAOtherViewController.h */,
+				797D03AF1CB3B62300CA1CDD /* MAOtherViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -478,6 +490,20 @@
 				79C63BA61CB2429C0046D568 /* sos */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		797D03A91CB3B45700CA1CDD /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		797D03AA1CB3B45700CA1CDD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		79C63BA61CB2429C0046D568 /* sos */ = {
@@ -777,7 +803,9 @@
 				7926C3341CAD30E200A7291A /* MASafeViewController.m in Sources */,
 				7926C3461CAD534E00A7291A /* MARepairViewController.m in Sources */,
 				792A9B561CABF4C20026A29C /* MABaseTabBarController.m in Sources */,
+				797D03B01CB3B62300CA1CDD /* MAOtherViewController.m in Sources */,
 				792A9B701CABF4C20026A29C /* AppDelegate.m in Sources */,
+				797D03AD1CB3B4AB00CA1CDD /* MAHeadTableViewController.m in Sources */,
 				797D03A21CB395A100CA1CDD /* MAHomeTableViewController.m in Sources */,
 				79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */,
 				792A9B6D1CABF4C20026A29C /* MANewFeatureViewController.m in Sources */,

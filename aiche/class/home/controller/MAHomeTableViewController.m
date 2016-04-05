@@ -9,6 +9,8 @@
 #import "MAHomeTableViewController.h"
 #import "MAHomeSelfCell.h"
 #import "UIImage+Image.h"
+#import "MAHeadTableViewController.h"
+#import "MAOtherViewController.h"
 
 #define screenSize [UIScreen mainScreen].bounds.size
 
@@ -95,6 +97,18 @@
     }
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        MAHeadTableViewController *headVC = [[MAHeadTableViewController alloc]init];
+        [self.navigationController pushViewController:headVC animated:YES];
+        
+    }else{
+        MAOtherViewController *otherVC = [[MAOtherViewController alloc]init];
+        [self.navigationController pushViewController:otherVC animated:YES];
+        
+    }
+   cell.selected = NO; 
+}
 
 @end
