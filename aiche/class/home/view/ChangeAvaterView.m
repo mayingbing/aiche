@@ -1,9 +1,10 @@
 //
 //  ChangeAvaterView.m
-//  WWeChat
+
+//  爱车
 //
-//  Created by 王子轩 on 16/2/5.
-//  Copyright © 2016年 wzx. All rights reserved.
+//  Created by mayingbing on 16/4/5.
+//  Copyright © 2016年 aiche. All rights reserved.
 //
 
 #import "ChangeAvaterView.h"
