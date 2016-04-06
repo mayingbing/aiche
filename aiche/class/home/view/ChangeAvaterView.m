@@ -77,7 +77,7 @@
 {
     [UIView animateWithDuration:0.2 animations:^{
        
-        self.popView.frame = CGRectMake(0, self.frame.size.height - _height, self.frame.size.width, _height);
+        self.popView.frame = CGRectMake(0, self.frame.size.height - _height+WGiveHeight(50), self.frame.size.width, _height);
         
     }];
 }

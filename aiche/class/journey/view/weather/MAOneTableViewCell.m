@@ -15,7 +15,7 @@
 #import "MACellMapView.h"
 
 
-@interface MAOneTableViewCell ()<CityListVCDelegate,MACellMapViewDelegate>
+@interface MAOneTableViewCell ()<CityListVCDelegate>
 
 @property(nonatomic ,strong)UILabel *resultText;
 @property(nonatomic ,copy)NSString *urlStr;
@@ -52,34 +52,43 @@ static NSString *oneID = @"oneCell";
 
 -(void)setUpChildView{
     
+    CityListViewController *cityListVC = [[CityListViewController alloc]init];
+    _cityListVC= cityListVC;
+    cityListVC.delegate =  self;
+    
     MAWeatherView *weatherView = [[MAWeatherView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 50)];
     _weatherView = weatherView;
-    weatherView.backgroundColor = [UIColor lightGrayColor];
+    _weatherView.userInteractionEnabled = NO;
+    weatherView.backgroundColor = [UIColor whiteColor];
     [self addSubview:weatherView];
     
     //查看更多城市
-    UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.weatherView addSubview:addBtn];
-    addBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-30, 5, 30, 40);
-    [addBtn setBackgroundImage:[UIImage imageNamed:@"hou"] forState:UIControlStateNormal];
-    [addBtn setBackgroundImage:[UIImage imageNamed:@"hou_press"] forState:UIControlStateHighlighted];
-    [addBtn addTarget:self action:@selector(jumpToCityList) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [self.weatherView addSubview:addBtn];
+//    addBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-30, 5, 30, 40);
+//    [addBtn setBackgroundImage:[UIImage imageNamed:@"jiantou"] forState:UIControlStateNormal];
+//    [addBtn setBackgroundImage:[UIImage imageNamed:@"jiantou"] forState:UIControlStateHighlighted];
+//    [addBtn addTarget:self action:@selector(jumpToCityList) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-30, 0, 30, 50)];
+    imgView.image = [UIImage imageNamed:@"jiantou"];
+    [self addSubview:imgView];
 
     self.urlStr = @"http://apis.baidu.com/apistore/weatherservice/cityname?cityname=%E6%9C%9D%E9%98%B3";
     [self doRequestWeatherData];
     
 }
 //
--(void)jumpToCityList{
-    
-        CityListViewController *cityListVC = [[CityListViewController alloc]init];
-        cityListVC.delegate =  self;
-    
-    if ([self.delegate respondsToSelector:@selector(jumpToVCWithCityListViewController:)]) {
-        [self.delegate jumpToVCWithCityListViewController:cityListVC];
-    }
-
-}
+//-(void)jumpToCityList{
+//    
+//        CityListViewController *cityListVC = [[CityListViewController alloc]init];
+//        cityListVC.delegate =  self;
+//    
+////    if ([self.delegate respondsToSelector:@selector(jumpToVCWithCityListViewController:)]) {
+////        [self.delegate jumpToVCWithCityListViewController:cityListVC];
+////    }
+//
+//}
 
 -(void)doRequestWeatherData{
     
@@ -109,11 +118,7 @@ static NSString *oneID = @"oneCell";
 
 
 }
--(void)MACellMapViewWithLocationData:(NSString *)cityName{
-    
-    [self CityListVCGetNewCityweatherWithCityName:cityName];
-    
-}
+
     
 -(void)CityListVCGetNewCityweatherWithCityName:(NSString *)cityName{
   

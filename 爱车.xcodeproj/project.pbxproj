@@ -43,7 +43,6 @@
 		7962634D1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7962634C1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.m */; };
 		796263501CB3F02B00B1FBD6 /* MAHomeWEBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7962634F1CB3F02B00B1FBD6 /* MAHomeWEBViewController.m */; };
 		79687E741CA4572100988C5C /* tsl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79687E731CA4572100988C5C /* tsl.jpg */; };
-		7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */; };
 		797D03A21CB395A100CA1CDD /* MAHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03A11CB395A100CA1CDD /* MAHomeTableViewController.m */; };
 		797D03A81CB39A8000CA1CDD /* MAHomeSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03A71CB39A8000CA1CDD /* MAHomeSelfCell.m */; };
 		797D03AD1CB3B4AB00CA1CDD /* MAHeadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D03AC1CB3B4AB00CA1CDD /* MAHeadTableViewController.m */; };
@@ -159,7 +158,6 @@
 		7962634F1CB3F02B00B1FBD6 /* MAHomeWEBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeWEBViewController.m; sourceTree = "<group>"; };
 		79687E731CA4572100988C5C /* tsl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsl.jpg; sourceTree = "<group>"; };
 		7969C8E11CA95B8500C22DAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellBackground.jpg; sourceTree = "<group>"; };
 		797D03A01CB395A100CA1CDD /* MAHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeTableViewController.h; sourceTree = "<group>"; };
 		797D03A11CB395A100CA1CDD /* MAHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeTableViewController.m; sourceTree = "<group>"; };
 		797D03A61CB39A8000CA1CDD /* MAHomeSelfCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeSelfCell.h; sourceTree = "<group>"; };
@@ -601,7 +599,6 @@
 				79C63BBD1CB2467C0046D568 /* composer_close.wav */,
 				79C63BBE1CB2467C0046D568 /* composer_open.wav */,
 				79C63BBF1CB2467C0046D568 /* composer_select.wav */,
-				7969C8EF1CA990DD00C22DAA /* cellBackground.jpg */,
 				79687E731CA4572100988C5C /* tsl.jpg */,
 				791E44B81CA422AC0050DC34 /* earth@3x.png */,
 			);
@@ -747,7 +744,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7969C8F01CA990DD00C22DAA /* cellBackground.jpg in Resources */,
 				79C63BC21CB2467C0046D568 /* composer_select.wav in Resources */,
 				792A9B621CABF4C20026A29C /* citydict.plist in Resources */,
 				79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */,

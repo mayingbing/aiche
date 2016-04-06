@@ -35,9 +35,9 @@
 
 -(void)setupWeatherView{
     
-    UIImageView *imgview = [[UIImageView alloc]initWithFrame:self.bounds];
-    imgview.image = [UIImage imageNamed:@"cellBackground.jpg"];
-    [self addSubview:imgview];
+//    UIImageView *imgview = [[UIImageView alloc]initWithFrame:self.bounds];
+//    imgview.image = [UIImage imageNamed:@"cellBackground.jpg"];
+//    [self addSubview:imgview];
     
     //城市
     UILabel *cityNameLable = [[UILabel alloc]init];
@@ -122,7 +122,7 @@
     self.WDLable.text = weatherData.WD;
     [self.WDLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.left.equalTo(self.tmpLable.mas_right).with.offset(20);
+        make.left.equalTo(self.tmpLable.mas_right).with.offset(10);
         make.top.equalTo(self.cityNameLable.mas_bottom).with.offset(10);
         make.height.equalTo(@15);
     }];
@@ -131,7 +131,7 @@
     self.WSLable.text = weatherData.WS;
     [self.WSLable mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self)
-        make.left.equalTo(self.WDLable.mas_right).with.offset(10);
+        make.left.equalTo(self.WDLable.mas_right).with.offset(5);
         make.top.equalTo(self.cityNameLable.mas_bottom).with.offset(10);
         make.height.equalTo(@15);
     }];

@@ -8,16 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MACellMapViewDelegate <NSObject>
-
-@optional
-
--(void)MACellMapViewWithLocationData:(NSString *)cityName;
-
-@end
+//@protocol MACellMapViewDelegate <NSObject>
+//
+//@optional
+//
+//-(void)MACellMapViewWithLocationData:(NSString *)cityName;
+//
+//@end
 
 @interface MACellMapView : UIView
 
-@property(nonatomic ,weak)id<MACellMapViewDelegate> delegate;
+@property(nonatomic ,copy)NSString *result;
+//@property(nonatomic ,weak)id<MACellMapViewDelegate> delegate;
 
 @end

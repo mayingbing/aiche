@@ -233,6 +233,7 @@
     MAWEBViewController *webVC = [[MAWEBViewController alloc]init];
     [webVC loadWebViewWithWebUrl:webUrl];
     [self.navigationController pushViewController:webVC animated:YES];
+    
     UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     cell.selected = NO;
 }

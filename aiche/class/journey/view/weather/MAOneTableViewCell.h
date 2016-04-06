@@ -10,19 +10,15 @@
 @class MAWeatherView;
 @class CityListViewController;
 
-@protocol MAOneTableViewCellDelegate <NSObject>
-
-@optional
-
--(void)jumpToVCWithCityListViewController:(CityListViewController *)cityListVC;
-
-@end
 
 @interface MAOneTableViewCell : UITableViewCell
 
+@property(nonatomic ,strong) CityListViewController *cityListVC;
 @property(nonatomic ,strong)MAWeatherView *weatherView;
-@property(nonatomic ,weak)id<MAOneTableViewCellDelegate> delegate;
 
+-(void)CityListVCGetNewCityweatherWithCityName:(NSString *)cityName;
 +(instancetype)creatCellWithTableView:(UITableView *)tableView;
 
 @end
+
+

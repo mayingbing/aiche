@@ -8,6 +8,7 @@
 
 #import "MABaseViewController.h"
 
+
 @interface MAQuNaErViewController : MABaseViewController
 
 @end

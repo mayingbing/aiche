@@ -23,10 +23,12 @@
 #define NEW_THEMECOLOR    [UIColor colorWithRed:0xff/255.0f green:0xff/255.0f blue:0xff/255.0f alpha:1]
 
 
-@interface MAJourneyViewController ()<UITableViewDataSource,UITableViewDelegate,SYScrollerViewDeledage,MACellMapViewDelegate,MAOneTableViewCellDelegate,MAMapViewDelegate>
+@interface MAJourneyViewController ()<UITableViewDataSource,UITableViewDelegate,SYScrollerViewDeledage,MAMapViewDelegate,CityListVCDelegate>
 
 @property(nonatomic,strong) MAOneTableViewCell *weatherCell;
-@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong) MATwoTableViewCell *mapCell;
+@property(nonatomic,strong) UITableView *tableView;
+@property(nonatomic,strong) NSTimer *timer;
 
 @end
 
@@ -41,12 +43,18 @@
     //判断网络
     [self reachabilityChange:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reachabilityChange:) name:@"kNetworkReachabilityChangedNotification" object:nil];
+    
+    NSTimer *timer =  [NSTimer scheduledTimerWithTimeInterval:60.0 target:self selector:@selector(timeRun) userInfo:nil repeats:YES];
+    _timer = timer;
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.shadowImage = nil;
     [self.navigationController.navigationBar lt_setBackgroundColor:[NEW_THEMECOLOR colorWithAlphaComponent:1]];
+    
+    [self.timer invalidate];
 }
 
 - (void)viewDidLoad {
@@ -152,15 +160,16 @@
     if (indexPath.section==0) {
         
         MAOneTableViewCell *weatherCell = [MAOneTableViewCell creatCellWithTableView:(UITableView *)tableView];
-        weatherCell.delegate = self;
-        
+       
+        weatherCell.selectionStyle = UITableViewCellSelectionStyleNone;
         _weatherCell = weatherCell;
+        [self timeRun];
         return weatherCell;
     }else{
         
-        MATwoTableViewCell *cell = [MATwoTableViewCell creatCellWithTableView:(UITableView *)tableView];
-        cell.mapView.delegate = self.weatherCell;
-        return cell;
+        MATwoTableViewCell *mapCell = [MATwoTableViewCell creatCellWithTableView:(UITableView *)tableView];
+        _mapCell = mapCell;
+        return mapCell;
     }
 }
 
@@ -174,7 +183,19 @@
     
 }
 
--(void)jumpToVCWithCityListViewController:(CityListViewController *)cityListVC{
-    [self.navigationController pushViewController:cityListVC animated:YES];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==0) {
+
+        [self.navigationController pushViewController:self.weatherCell.cityListVC animated:YES];
+    }
+ 
 }
+
+-(void)timeRun{
+    
+    NSString *cityName = self.mapCell.mapView.result;
+    [self.weatherCell CityListVCGetNewCityweatherWithCityName:cityName];
+    
+}
+
 @end

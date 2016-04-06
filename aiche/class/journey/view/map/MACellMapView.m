@@ -85,14 +85,15 @@ updatingLocation:(BOOL)updatingLocation
     {
         //通过AMapReGeocodeSearchResponse对象处理搜索结果
         NSString *result = [NSString stringWithFormat:@"%@", response.regeocode.addressComponent.city];
+        
         if ([result isEqual:@""]) {
             result = [NSString stringWithFormat:@"%@", response.regeocode.addressComponent.province];
             
         }
-        
-        if ([self.delegate respondsToSelector:@selector(MACellMapViewWithLocationData:)]) {
-            [self.delegate MACellMapViewWithLocationData:result];
-        }
+        _result = result;
+//        if ([self.delegate respondsToSelector:@selector(MACellMapViewWithLocationData:)]) {
+//            [self.delegate MACellMapViewWithLocationData:result];
+//        }
     }
 }
 
