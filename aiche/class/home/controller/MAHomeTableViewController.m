@@ -34,16 +34,22 @@
     
     self.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tab3_press"];
     
-    
-    
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     if ([NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName]) {
         
         self.homeSelfCell.nameLable.text = [NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName];
+    }else{
+       self.homeSelfCell.nameLable.text = @"昵称";
+    }
+    
+    if ([NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName]) {
         
         self.homeSelfCell.iconView.image = [NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName];
+    }else{
+        self.homeSelfCell.iconView.image = [UIImage imageNamed:@"WWeChat"];
     }
 }
 

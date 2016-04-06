@@ -57,7 +57,13 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     
-    self.imageView.image = [NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName];
+    if ([NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName]) {
+        
+        self.imageView.image = [NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName];
+    }else{
+        self.imageView.image = [UIImage imageNamed:@"WWeChat"];
+    }
+
     
 }
 #pragma mark -- tableView --
@@ -99,7 +105,7 @@
         if (_imageView ==nil) {
             UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(WGiveWidth(220), (cell.frame.size.height - WGiveHeight(64))/2.0, WGiveHeight(64), WGiveHeight(64))];
             _imageView = imageView;
-            imageView.image = [UIImage imageNamed:@"WWeChat"];
+            
         }
         
        

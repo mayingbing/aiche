@@ -106,17 +106,7 @@ static NSString *oneID = @"oneCell";
 }
 -(void)setupViewData{
     
-    //头像
-    if (self.iconView.image==nil) {
-        self.iconView.image = [UIImage imageNamed:@"WWeChat"];
-    }
-    
-    
-    if (![NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName]) {
-        self.nameLable.text = @"昵称";
-    }else{
-        self.nameLable.text = [NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName];
-    }
+   
 //    self.countLable.text = @"账号名";
     
 }
