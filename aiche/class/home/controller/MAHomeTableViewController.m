@@ -55,7 +55,7 @@
         
         self.homeSelfCell.iconView.image = [NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName];
     }else{
-        self.homeSelfCell.iconView.image = [UIImage imageNamed:@"WWeChat"];
+        self.homeSelfCell.iconView.image = [UIImage imageNamed:@"placeholder"];
     }
 
 }

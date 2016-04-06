@@ -56,6 +56,8 @@ static NSString *oneID = @"oneCell";
 -(void)setUpChildView{
     
     UIImageView *iconView = [[UIImageView alloc]init];
+    iconView.layer.cornerRadius = 5;
+    iconView.layer.masksToBounds = YES;
     _iconView = iconView;
     
     [self addSubview:iconView];

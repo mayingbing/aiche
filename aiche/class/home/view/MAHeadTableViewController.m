@@ -17,6 +17,8 @@
 //按比例获取高度
 #define  WGiveHeight(HEIGHT) HEIGHT * [UIScreen mainScreen].bounds.size.height/568.0
 
+#define screenSize [UIScreen mainScreen].bounds.size
+
 //按比例获取宽度
 #define  WGiveWidth(WIDTH) WIDTH * [UIScreen mainScreen].bounds.size.width/320.0
 #define CZImageFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"image.data"]
@@ -67,7 +69,7 @@
         
         self.imageView.image = [NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName];
     }else{
-        self.imageView.image = [UIImage imageNamed:@"WWeChat"];
+        self.imageView.image = [UIImage imageNamed:@"placeholder"];
     }
     
 
@@ -199,7 +201,7 @@
             
             if (!_changeView)
             {
-                _changeView = [[ChangeAvaterView alloc]initWithFrame:self.view.bounds andBtnArr:@[
+                _changeView = [[ChangeAvaterView alloc]initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height) andBtnArr:@[
                                                                                                   @"拍照",
                                                                                                   @"从手机相册选择",
                                                                                                   @"保存图片"
