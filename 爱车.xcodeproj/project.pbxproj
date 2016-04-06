@@ -62,6 +62,10 @@
 		79D5D3071CAD19F200D32E35 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3061CAD19F200D32E35 /* MANaviPolyline.m */; };
 		79D5D30A1CAD1A0600D32E35 /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */; };
 		79D5D30D1CAD1AC900D32E35 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */; };
+		79E689A71CB4B0CB00515DB3 /* IWStatusCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E689A61CB4B0CB00515DB3 /* IWStatusCacheTool.m */; };
+		79E689AA1CB4EAD200515DB3 /* MANameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E689A91CB4EAD200515DB3 /* MANameViewController.m */; };
+		79E689AD1CB4EBA600515DB3 /* MANameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E689AC1CB4EBA600515DB3 /* MANameModel.m */; };
+		79E689B31CB4F91C00515DB3 /* ChangeAvaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E689B21CB4F91C00515DB3 /* ChangeAvaterView.m */; };
 		79E8A9D41CB37A4A00D58B7A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E8A9D11CB376FB00D58B7A /* Photos.framework */; };
 		79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FB9BC71CAA35A80076C9DB /* Assets.xcassets */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
@@ -191,6 +195,14 @@
 		79D5D3091CAD1A0600D32E35 /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
 		79D5D30B1CAD1AC900D32E35 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
 		79D5D30C1CAD1AC900D32E35 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		79E689A51CB4B0CB00515DB3 /* IWStatusCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWStatusCacheTool.h; sourceTree = "<group>"; };
+		79E689A61CB4B0CB00515DB3 /* IWStatusCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWStatusCacheTool.m; sourceTree = "<group>"; };
+		79E689A81CB4EAD200515DB3 /* MANameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANameViewController.h; sourceTree = "<group>"; };
+		79E689A91CB4EAD200515DB3 /* MANameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANameViewController.m; sourceTree = "<group>"; };
+		79E689AB1CB4EBA600515DB3 /* MANameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANameModel.h; sourceTree = "<group>"; };
+		79E689AC1CB4EBA600515DB3 /* MANameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANameModel.m; sourceTree = "<group>"; };
+		79E689B11CB4F91C00515DB3 /* ChangeAvaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeAvaterView.h; sourceTree = "<group>"; };
+		79E689B21CB4F91C00515DB3 /* ChangeAvaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeAvaterView.m; sourceTree = "<group>"; };
 		79E8A9D11CB376FB00D58B7A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		79E8A9D51CB37A5300D58B7A /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		79FB9BC71CAA35A80076C9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -324,6 +336,8 @@
 				797D03A71CB39A8000CA1CDD /* MAHomeSelfCell.m */,
 				797D03AB1CB3B4AB00CA1CDD /* MAHeadTableViewController.h */,
 				797D03AC1CB3B4AB00CA1CDD /* MAHeadTableViewController.m */,
+				79E689A81CB4EAD200515DB3 /* MANameViewController.h */,
+				79E689A91CB4EAD200515DB3 /* MANameViewController.m */,
 				797D03AE1CB3B62300CA1CDD /* MAOtherViewController.h */,
 				797D03AF1CB3B62300CA1CDD /* MAOtherViewController.m */,
 				7962634B1CB3EEBB00B1FBD6 /* MAHomeCameraViewController.h */,
@@ -356,6 +370,8 @@
 				792A9B1E1CABF4C20026A29C /* MATicketModel.m */,
 				792A9B1F1CABF4C20026A29C /* MATicketTableViewCell.h */,
 				792A9B201CABF4C20026A29C /* MATicketTableViewCell.m */,
+				79E689A51CB4B0CB00515DB3 /* IWStatusCacheTool.h */,
+				79E689A61CB4B0CB00515DB3 /* IWStatusCacheTool.m */,
 				792A9B211CABF4C20026A29C /* MAWEBViewController.h */,
 				792A9B221CABF4C20026A29C /* MAWEBViewController.m */,
 			);
@@ -507,6 +523,8 @@
 		797D03A91CB3B45700CA1CDD /* model */ = {
 			isa = PBXGroup;
 			children = (
+				79E689AB1CB4EBA600515DB3 /* MANameModel.h */,
+				79E689AC1CB4EBA600515DB3 /* MANameModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -514,6 +532,8 @@
 		797D03AA1CB3B45700CA1CDD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				79E689B11CB4F91C00515DB3 /* ChangeAvaterView.h */,
+				79E689B21CB4F91C00515DB3 /* ChangeAvaterView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -812,6 +832,7 @@
 				796263501CB3F02B00B1FBD6 /* MAHomeWEBViewController.m in Sources */,
 				79D5D30A1CAD1A0600D32E35 /* LineDashPolyline.m in Sources */,
 				7926C3341CAD30E200A7291A /* MASafeViewController.m in Sources */,
+				79E689AD1CB4EBA600515DB3 /* MANameModel.m in Sources */,
 				7926C3461CAD534E00A7291A /* MARepairViewController.m in Sources */,
 				792A9B561CABF4C20026A29C /* MABaseTabBarController.m in Sources */,
 				797D03B01CB3B62300CA1CDD /* MAOtherViewController.m in Sources */,
@@ -823,10 +844,12 @@
 				792A9B651CABF4C20026A29C /* MAOneTableViewCell.m in Sources */,
 				792A9B6A1CABF4C20026A29C /* UIView+Frame.m in Sources */,
 				792A9B5B1CABF4C20026A29C /* MATicketModel.m in Sources */,
+				79E689AA1CB4EAD200515DB3 /* MANameViewController.m in Sources */,
 				792A9B581CABF4C20026A29C /* MABaseViewController.m in Sources */,
 				792A9B641CABF4C20026A29C /* MADataModel.m in Sources */,
 				79C63BD21CB278E20046D568 /* Reachability.m in Sources */,
 				792A9B551CABF4C20026A29C /* MABaseNavigationController.m in Sources */,
+				79E689B31CB4F91C00515DB3 /* ChangeAvaterView.m in Sources */,
 				792A9B5F1CABF4C20026A29C /* MACellMapView.m in Sources */,
 				792A9B661CABF4C20026A29C /* MAWeatherView.m in Sources */,
 				792A9B6C1CABF4C20026A29C /* main.m in Sources */,
@@ -845,6 +868,7 @@
 				792A9B6B1CABF4C20026A29C /* MAChooseRootViewController.m in Sources */,
 				792A9B611CABF4C20026A29C /* SYScrollerView.m in Sources */,
 				793B9E2A1CB2975500CA86A1 /* MACameraViewController.m in Sources */,
+				79E689A71CB4B0CB00515DB3 /* IWStatusCacheTool.m in Sources */,
 				79C63BBC1CB2430F0046D568 /* UIColor+ImageGetColor.m in Sources */,
 				792A9B601CABF4C20026A29C /* MATwoTableViewCell.m in Sources */,
 				792A9B6F1CABF4C20026A29C /* DGEarthView.m in Sources */,

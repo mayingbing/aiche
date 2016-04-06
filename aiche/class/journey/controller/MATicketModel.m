@@ -9,5 +9,12 @@
 #import "MATicketModel.h"
 
 @implementation MATicketModel
-
++ (instancetype)accountWithDict:(NSDictionary *)dict
+{
+    MATicketModel *account = [[self alloc] init];
+    
+    [account setValuesForKeysWithDictionary:dict];
+    
+    return account;
+}
 @end

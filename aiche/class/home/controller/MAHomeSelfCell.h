@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MAHomeSelfCell : UITableViewCell
+
+@property(nonatomic ,strong)UIImageView *iconView;
+@property(nonatomic ,strong)UILabel *nameLable;
+
 +(instancetype)creatCellWithTableView:(UITableView *)tableView;
 @end

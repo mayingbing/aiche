@@ -11,11 +11,11 @@
 #import "ReactiveCocoa.h"
 #import "UIImageView+WebCache.h"
 
+#define CZAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"judge.data"]
+
 @interface MAHomeSelfCell ()
 
-@property(nonatomic ,strong)UIImageView *iconView;
 
-@property(nonatomic ,strong)UILabel *nameLable;
 
 @property(nonatomic ,strong)UILabel *countLable;
 
@@ -111,8 +111,13 @@ static NSString *oneID = @"oneCell";
         self.iconView.image = [UIImage imageNamed:@"WWeChat"];
     }
     
-    self.nameLable.text = @"昵称";
-    self.countLable.text = @"账号名";
+    
+    if (![NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName]) {
+        self.nameLable.text = @"昵称";
+    }else{
+        self.nameLable.text = [NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName];
+    }
+//    self.countLable.text = @"账号名";
     
 }
 

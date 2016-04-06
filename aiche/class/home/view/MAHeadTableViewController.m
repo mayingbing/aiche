@@ -10,17 +10,22 @@
 #import "UIImageView+WebCache.h"
 #import "MAHomeCameraViewController.h"
 #import "MAHomeWEBViewController.h"
+#import "MANameViewController.h"
+#import "ChangeAvaterView.h"
+#import "MBProgressHUD.h"
 
 //按比例获取高度
 #define  WGiveHeight(HEIGHT) HEIGHT * [UIScreen mainScreen].bounds.size.height/568.0
 
 //按比例获取宽度
 #define  WGiveWidth(WIDTH) WIDTH * [UIScreen mainScreen].bounds.size.width/320.0
+#define CZImageFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"image.data"]
 
-
-@interface MAHeadTableViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MAHeadTableViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property(nonatomic,copy)NSArray * titleArr;
 @property(nonatomic ,strong)NSString *webString;
+@property(nonatomic,strong)ChangeAvaterView * changeView;
+@property(nonatomic,strong)UIImageView * imageView ;
 
 @end
 
@@ -35,19 +40,24 @@
                   @[
                       @"头像",
                       @"名字",
-                      @"微信号",
-                      @"我的二维码",
-                      @"我的地址"
+//                      @"微信号",
+                      @"扫一扫",
+//                      @"我的地址"
                       ]
                   ,
                   @[
-                      @"性别",
-                      @"地区",
-                      @"个性签名"
+//                      @"性别",
+//                      @"地区",
+//                      @"个性签名"
                       ]
                   
                   ];
 
+    
+}
+-(void)viewWillAppear:(BOOL)animated{
+    
+    self.imageView.image = [NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName];
     
 }
 #pragma mark -- tableView --
@@ -70,14 +80,9 @@
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
     }
-    if (indexPath.section == 0 && indexPath.row == 2)
-    {
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
-    else
-    {
+
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
+
     return cell;
 }
 
@@ -91,18 +96,20 @@
         {
             [view removeFromSuperview];
         }
+        if (_imageView ==nil) {
+            UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(WGiveWidth(220), (cell.frame.size.height - WGiveHeight(64))/2.0, WGiveHeight(64), WGiveHeight(64))];
+            _imageView = imageView;
+            imageView.image = [UIImage imageNamed:@"WWeChat"];
+        }
         
-        UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(WGiveWidth(220), (cell.frame.size.height - WGiveHeight(64))/2.0, WGiveHeight(64), WGiveHeight(64))];
-        
-        imageView.image = [UIImage imageNamed:@"WWeChat"];
        
         
-        imageView.layer.cornerRadius = 5;
-        imageView.clipsToBounds = YES;
+        _imageView.layer.cornerRadius = 5;
+        _imageView.clipsToBounds = YES;
         
-        [cell.contentView addSubview:imageView];
+        [cell.contentView addSubview:_imageView];
     }
-    else if(indexPath.section == 0 && indexPath.row == 3)
+    else if(indexPath.section == 0 && indexPath.row == 2)
     {
         for (UIView * view in cell.contentView.subviews)
         {
@@ -175,20 +182,37 @@
         //修改头像
         if (indexPath.row == 0)
         {
-           
+            
+            if (!_changeView)
+            {
+                _changeView = [[ChangeAvaterView alloc]initWithFrame:self.view.bounds andBtnArr:@[
+                                                                                                  @"拍照",
+                                                                                                  @"从手机相册选择",
+                                                                                                  @"保存图片"
+                                                                                                  ]];
+                UIButton * cameraBtn = (UIButton *)[_changeView viewWithTag:_changeView.thisTag + 0];
+                UIButton * photoBtn = (UIButton *)[_changeView viewWithTag:_changeView.thisTag + 1];
+                UIButton * saveBtn = (UIButton *)[_changeView viewWithTag:_changeView.thisTag + 2];
+                [cameraBtn addTarget:self action:@selector(cameraBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+                [photoBtn addTarget:self action:@selector(photoClick:) forControlEvents:UIControlEventTouchUpInside];
+                [saveBtn addTarget:self action:@selector(saveClick:) forControlEvents:UIControlEventTouchUpInside];
+            }
+            [[UIApplication sharedApplication].keyWindow addSubview:_changeView];
+            [_changeView show];
+ 
+
         }
         //修改用户名
         else if(indexPath.row == 1)
         {
+            MANameViewController *nameVC = [[MANameViewController alloc]init];
+            nameVC.view.backgroundColor = [UIColor whiteColor];
+            [self.navigationController pushViewController:nameVC animated:YES];
+            
             
         }
-        //微信号（不能修改）
+
         else if(indexPath.row == 2)
-        {
-            
-        }
-        //二维码
-        else if(indexPath.row == 3)
         {
         MAHomeCameraViewController *scanCodeViewController = [[MAHomeCameraViewController alloc]init];
             scanCodeViewController.sucessScanBlock = ^(NSString *result) {
@@ -255,6 +279,116 @@
     MAHomeWEBViewController *webVc = [MAHomeWEBViewController initWebWithNSString:result];
     [self.navigationController pushViewController:webVc animated:YES];
     
+}
+
+- (void)cameraBtnClick:(UIButton *)sender
+{
+    [_changeView hide];
+    NSLog(@"拍照");
+    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
+    {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        //设置拍照后的图片可被编辑
+        picker.allowsEditing = YES;
+        picker.sourceType = sourceType;
+        [self presentViewController:picker animated:YES completion:^{
+            
+        }];
+    }else
+    {
+        NSLog(@"模拟其中无法打开照相机,请在真机中使用");
+    }
+}
+
+- (void)photoClick:(UIButton *)sender
+{
+    [_changeView hide];
+    NSLog(@"相册");
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.delegate = self;
+    //设置选择后的图片可被编辑
+    picker.allowsEditing = YES;
+    [self presentViewController:picker animated:YES completion:^{
+        
+    }];
+}
+
+- (void)saveClick:(UIButton *)sender
+{
+    [_changeView hide];
+    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
+}
+- (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    NSString *message = @"";
+    if (!error) {
+        message = @"成功保存到相册";
+
+    }else
+    {
+        message = [error description];
+    }
+    NSLog(@"message is %@",message);
+}
+
+//当选择一张图片后进入这里
+-(void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+
+{
+    
+    NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
+    
+    //当选择的类型是图片
+    if ([type isEqualToString:@"public.image"])
+    {
+        //        //先把图片转成NSData
+        UIImage* image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+        UIImage * smallImage = [self imageWithImageSimple:image scaledToSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.width)];
+        
+        
+        [NSKeyedArchiver archiveRootObject:smallImage toFile:CZImageFileName];
+        
+        [picker dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+        
+
+        
+    }
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    NSLog(@"您取消了选择图片");
+    [picker dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+
+//压缩图片方法
+- (UIImage*)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize
+{
+    // Create a graphics image context
+    UIGraphicsBeginImageContext(newSize);
+    
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    // Return the new image.
+    return newImage;
 }
 
 @end

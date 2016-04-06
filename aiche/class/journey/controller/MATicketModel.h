@@ -22,7 +22,7 @@
 @property (nonatomic ,strong) NSURL *imageUrl;
 
 
-
++ (instancetype)accountWithDict:(NSDictionary *)dict;
 
 
 @end

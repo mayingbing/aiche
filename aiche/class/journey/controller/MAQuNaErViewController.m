@@ -14,6 +14,7 @@
 #import "MATicketTableViewCell.h"
 #import "MAWEBViewController.h"
 #import "MBProgressHUD.h"
+#import "IWStatusCacheTool.h"
 
 @interface MAQuNaErViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -54,13 +55,14 @@
     _tableView = tableView;
     tableView.dataSource = self;
     tableView.delegate = self;
-    
+
+}
+-(void)viewWillAppear:(BOOL)animated{
     //获取景点
     [self getSpotName];
     
     //刷新页面
     [self MJRefreshRun];
-    
 }
 
 -(void)MJRefreshRun{
@@ -130,11 +132,31 @@
 
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        // 拼接参数
+        MATicketModel *param = [[MATicketModel alloc] init];
         
+        
+        // 加载更多缓存数据
+        NSArray *objArr =  [IWStatusCacheTool statusesWithParam:param];
+        if (objArr.count) {
+            
+            
+            for (MATicketModel *statues in objArr) {
+                if ([statues isKindOfClass:[MATicketModel class]]) {
+                    
+                    [self.ticketArr addObject:statues];
+                }
+            }
+            
+            
+        }
+        [self.tableView.mj_header beginRefreshing];
     }];
 }
 //获取景点详情
 -(void)getQuNaErDataWithNumStr:(NSString *)numStr{
+    
+    
     
     NSString *httpUrl = @"http://apis.baidu.com/apistore/qunaerticket/querydetail";
     NSString *pre = @"id=";
@@ -157,7 +179,11 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        
+        
         NSMutableDictionary *content = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        
+        [IWStatusCacheTool saveWithStatuses:content[@"retData"][@"ticketDetail"][@"data"][@"display"][@"ticket"]];
         
         NSMutableDictionary *ticketContent = [[[[[content objectForKey:@"retData"] objectForKey:@"ticketDetail"] objectForKey:@"data"] objectForKey:@"display"] objectForKey:@"ticket"];
         
@@ -207,7 +233,8 @@
     MAWEBViewController *webVC = [[MAWEBViewController alloc]init];
     [webVC loadWebViewWithWebUrl:webUrl];
     [self.navigationController pushViewController:webVC animated:YES];
-    
+    UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    cell.selected = NO;
 }
 
 @end

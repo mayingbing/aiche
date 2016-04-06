@@ -14,7 +14,13 @@
 
 #define screenSize [UIScreen mainScreen].bounds.size
 
+#define CZAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"judge.data"]
+
+#define CZImageFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"image.data"]
+
 @interface MAHomeTableViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property(nonatomic ,strong) MAHomeSelfCell *homeSelfCell;
 
 @end
 
@@ -27,6 +33,18 @@
     self.tabBarItem.image = [UIImage imageNamed:@"tab3"];
     
     self.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tab3_press"];
+    
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    if ([NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName]) {
+        
+        self.homeSelfCell.nameLable.text = [NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName];
+        
+        self.homeSelfCell.iconView.image = [NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -52,47 +70,47 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 4;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
+//    if (section == 0) {
+//        return 1;
+//    }else if (section == 1){
+//        return 4;
+//    }else{
         return 1;
-    }else if (section == 1){
-        return 4;
-    }else{
-        return 1;
-    }
+//    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section==0) {
         
         MAHomeSelfCell *homeSelfCell = [MAHomeSelfCell creatCellWithTableView:(UITableView *)tableView];
-
+        _homeSelfCell = homeSelfCell;
         return homeSelfCell;
     }else{
         
-         NSArray *imgArr = @[@"MoreMyAlbum",@"MoreMyFavorites",@"MoreMyBankCard",@"MyCardPackageIcon",@"相册",@"收藏",@"钱包",@"优惠券"];
+//         NSArray *imgArr = @[@"MoreMyAlbum",@"MoreMyFavorites",@"MoreMyBankCard",@"MyCardPackageIcon",@"相册",@"收藏",@"钱包",@"优惠券"];
         
         static NSString *defaultCell = @"defaultCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:defaultCell];
         if (!cell) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:defaultCell];
         }
-        if (indexPath.section == 1) {
-            cell.imageView.image = [UIImage imageNamed:imgArr[indexPath.row]];
-            cell.textLabel.text = imgArr[indexPath.row+4];
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }else if (indexPath.section == 2){
-            cell.imageView.image = [UIImage imageNamed:@"MoreExpressionShops"];
-            cell.textLabel.text = @"表情";
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }else{
+//        if (indexPath.section == 1) {
+//            cell.imageView.image = [UIImage imageNamed:imgArr[indexPath.row]];
+//            cell.textLabel.text = imgArr[indexPath.row+4];
+//            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        }else if (indexPath.section == 2){
+//            cell.imageView.image = [UIImage imageNamed:@"MoreExpressionShops"];
+//            cell.textLabel.text = @"表情";
+//            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        }else{
             cell.imageView.image = [UIImage imageNamed:@"MoreSetting"];
             cell.textLabel.text = @"设置";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
+//        }
         return cell;
     }
 }
