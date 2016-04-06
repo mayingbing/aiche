@@ -24,17 +24,17 @@ static FMDatabase *_db;
     _db = [FMDatabase databaseWithPath:IWStatusFile];
     // 打开数据库
     if ([_db open]) {
-        NSLog(@"打开成功");
+       // NSLog(@"打开成功");
         // 创建表格
          BOOL success =[_db executeUpdate:@"create table if not exists t_status (id integer primary key autoincrement,spotID text not null,dict blob not null,spotName text not null);"];
         if (success) {
-            NSLog(@"创表成功");
+           // NSLog(@"创表成功");
         }else{
-            NSLog(@"创表失败");
+           // NSLog(@"创表失败");
         }
         
     }else{
-        NSLog(@"打开失败");
+      //  NSLog(@"打开失败");
     }
 }
 + (void)saveWithStatuses:(NSDictionary *)dict
@@ -43,9 +43,9 @@ static FMDatabase *_db;
         NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
         BOOL success =[_db executeUpdate:@"insert into t_status (spotID,dict,spotName) values(?,?,?)",dict[@"spotID"],data,dict[@"spotName"]];
         if (success) {
-            NSLog(@"插入成功");
+          //  NSLog(@"插入成功");
         }else{
-            NSLog(@"插入失败");
+          //  NSLog(@"插入失败");
         }
     }
 }

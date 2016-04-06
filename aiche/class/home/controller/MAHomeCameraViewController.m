@@ -69,7 +69,7 @@
             [captureSession addOutput:captureMetadataOutput];
             
             if(![captureMetadataOutput.availableMetadataObjectTypes containsObject:AVMetadataObjectTypeQRCode]) {
-                NSLog(@"摄像头不支持扫描二维码");
+//                NSLog(@"摄像头不支持扫描二维码");
                 return;
             } else {
                 [captureMetadataOutput setMetadataObjectTypes:captureMetadataOutput.availableMetadataObjectTypes];
@@ -165,7 +165,7 @@
 }
 
 - (void)analyseResult:(AVMetadataMachineReadableCodeObject *)result{
-    NSLog(@"result : %@", result.stringValue);
+//    NSLog(@"result : %@", result.stringValue);
     if (result.stringValue.length <= 0) {
         return;
     }

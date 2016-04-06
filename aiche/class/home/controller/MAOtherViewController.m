@@ -36,7 +36,7 @@
 //                 @[@"退出登录"]
                  ];
     
-    [self.tableView reloadData];
+    
 }
 //组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -66,22 +66,15 @@
 //养成习惯在WillDisplayCell中处理数据
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.section == _dataArr.count -1)
-//    {
-//        UILabel * backLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
-//        backLabel.text = _dataArr[indexPath.section][indexPath.row];
-//        backLabel.font = [UIFont systemFontOfSize:17];
-//        backLabel.textAlignment = NSTextAlignmentCenter;
-//        [cell.contentView addSubview:backLabel];
-//    }
-//    else
-//    {
+
     NSFileManager *fileManager=[NSFileManager defaultManager];
     CGFloat fileSize = 0;
     if([fileManager fileExistsAtPath:IWStatusFile]){
         long long size=[fileManager attributesOfItemAtPath:IWStatusFile error:nil].fileSize;
         fileSize = size/1024.0/1024.0;
         _fileSize = fileSize;
+    }else{
+        self.fileSize = 0;
     }
 
     cell.textLabel.text = _dataArr[indexPath.section][indexPath.row];
@@ -135,46 +128,24 @@
 }
 -(void)clearCache{
    
-//    CGFloat fileSize = 0;
-//    if([fileManager fileExistsAtPath:IWStatusFile]){
-//        long long size=[fileManager attributesOfItemAtPath:IWStatusFile error:nil].fileSize;
-//        fileSize = size/1024.0;
-//        _fileSize = fileSize;
-//    }
-    
-//    if ([fileManager fileExistsAtPath:IWStatusFile]) {
-//        NSArray *childerFiles=[fileManager subpathsAtPath:IWStatusFile];
-//        for (NSString *fileName in childerFiles) {
-            //如有需要，加入条件，过滤掉不想删除的文件
-//            if ([fileName containsString:@"account.data"]) {
-//                continue;
-//            }
-//            NSString *absolutePath=[IWStatusFile stringByAppendingPathComponent:fileName];
-//            [fileManager removeItemAtPath:absolutePath error:nil];
-//        }
-//    }
-    [[SDImageCache sharedImageCache] cleanDisk];
 
+    [[SDImageCache sharedImageCache] cleanDisk];
+    
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"本次清理垃圾" message:[NSString stringWithFormat:@"%gM",self.fileSize] preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-         NSFileManager *fileManager=[NSFileManager defaultManager];
-//        if ([fileManager fileExistsAtPath:IWStatusFile]) {
-//            NSArray *childerFiles=[fileManager subpathsAtPath:IWStatusFile];
-//            for (NSString *fileName in childerFiles) {
-//
-//                NSString *absolutePath=[IWStatusFile stringByAppendingPathComponent:fileName];
-                [fileManager removeItemAtPath:IWStatusFile error:nil];
-//            }
-//        }
-
+        NSFileManager *fileManager=[NSFileManager defaultManager];
+        
+        
+        [fileManager removeItemAtPath:IWStatusFile error:nil];
+        
+        
         [self.tableView reloadData];
+        
+        
         
     }];
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
-
-    
-    
 
 }
 

@@ -347,7 +347,7 @@
 {
     if (mapRects == NULL || count == 0)
     {
-        NSLog(@"%s: 无效的参数.", __func__);
+        //NSLog(@"%s: 无效的参数.", __func__);
         return MAMapRectZero;
     }
     
@@ -365,7 +365,7 @@
 {
     if (overlays.count == 0)
     {
-        NSLog(@"%s: 无效的参数.", __func__);
+       // NSLog(@"%s: 无效的参数.", __func__);
         return MAMapRectZero;
     }
     
@@ -388,7 +388,7 @@
 {
     if (mapPoints == NULL || count <= 1)
     {
-        NSLog(@"%s: 无效的参数.", __func__);
+      //  NSLog(@"%s: 无效的参数.", __func__);
         return MAMapRectZero;
     }
     
@@ -429,7 +429,7 @@
 {
     if (annotations.count <= 1)
     {
-        NSLog(@"%s: 无效的参数.", __func__);
+       // NSLog(@"%s: 无效的参数.", __func__);
         return MAMapRectZero;
     }
     

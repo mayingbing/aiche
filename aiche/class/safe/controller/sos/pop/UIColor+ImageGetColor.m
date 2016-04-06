@@ -76,10 +76,10 @@
         int red = data[offset+1];
         int green = data[offset+2];
         int blue = data[offset+3];
-        NSLog(@"offset: %i colors: RGB A %i %i %i  %i",offset,red,green,
-              blue,alpha);
+//        NSLog(@"offset: %i colors: RGB A %i %i %i  %i",offset,red,green,
+//              blue,alpha);
         
-        NSLog(@"x:%f y:%f", point.x, point.y);
+//        NSLog(@"x:%f y:%f", point.x, point.y);
         
         color = [UIColor colorWithRed:(red/255.0f) green:(green/255.0f) blue:
                  (blue/255.0f) alpha:(alpha/255.0f)];

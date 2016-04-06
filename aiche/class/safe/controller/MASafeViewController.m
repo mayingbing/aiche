@@ -162,7 +162,7 @@
            [self.navigationController pushViewController:self.cameraView animated:YES];
         }else if (index ==3){
             
-            NSLog(@"相册");
+//            NSLog(@"相册");
             UIImagePickerController *picker = [[UIImagePickerController alloc] init];
             
             picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -173,8 +173,10 @@
             [self presentViewController:picker animated:YES completion:^{
                 
             }];
-
+        }else if (index ==4 || index == 5){
             
+            [self jumpToAlertView];
+        
         }
         
         
@@ -185,5 +187,20 @@
     
     
 }
-
+-(void)jumpToAlertView{
+    
+    UIAlertController *alterVC = [UIAlertController alertControllerWithTitle:@"sorry" message:@"正在开发中" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+    }];
+    
+    // Add the actions.
+    
+    [alterVC addAction:okAction];
+    
+    [self presentViewController:alterVC animated:YES completion:nil];
+    
+    
+}
 @end

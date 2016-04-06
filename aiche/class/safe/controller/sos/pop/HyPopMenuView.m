@@ -100,6 +100,11 @@ NSString *const kHyPopMenuViewSelectAudioTypeKey = @"SelectAudioTypeKey";
         
         //light
         self.islightOpen = NO;
+        
+        // 提示
+        
+        
+        
     
     }
     return self;
@@ -542,7 +547,7 @@ CompletionBlock:(void(^)(BOOL completion))blcok
     [window resignKeyWindow];
     [window removeFromSuperview];
     window = nil;
-    NSLog(@"正常释放");
+   // NSLog(@"正常释放");
 }
 
 -(void)show{

@@ -151,7 +151,7 @@
     }
     else
     {
-        NSLog(@"font%@  color%@",cell.textLabel.font,cell.textLabel.textColor);
+//        NSLog(@"font%@  color%@",cell.textLabel.font,cell.textLabel.textColor);
         cell.detailTextLabel.text = @" ";
     }
 }
@@ -271,6 +271,10 @@
             
         }
     }
+    UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    cell.selected = NO;
+    
 }
 
 - (CGFloat)giveMeHeightWithStr:(NSString *)str
@@ -298,7 +302,7 @@
 - (void)cameraBtnClick:(UIButton *)sender
 {
     [_changeView hide];
-    NSLog(@"拍照");
+//    NSLog(@"拍照");
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
     {
@@ -312,14 +316,14 @@
         }];
     }else
     {
-        NSLog(@"模拟其中无法打开照相机,请在真机中使用");
+//        NSLog(@"模拟其中无法打开照相机,请在真机中使用");
     }
 }
 
 - (void)photoClick:(UIButton *)sender
 {
     [_changeView hide];
-    NSLog(@"相册");
+//    NSLog(@"相册");
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -346,7 +350,7 @@
     {
         message = [error description];
     }
-    NSLog(@"message is %@",message);
+//    NSLog(@"message is %@",message);
 }
 
 //当选择一张图片后进入这里
@@ -378,7 +382,7 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    NSLog(@"您取消了选择图片");
+//    NSLog(@"您取消了选择图片");
     [picker dismissViewControllerAnimated:YES completion:^{
         
     }];
