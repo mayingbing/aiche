@@ -34,15 +34,21 @@
     
     self.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tab3_press"];
     
-
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [self setCellData];
+}
+
+
+
+-(void)setCellData{
     if ([NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName]) {
         
         self.homeSelfCell.nameLable.text = [NSKeyedUnarchiver unarchiveObjectWithFile:CZAccountFileName];
     }else{
-       self.homeSelfCell.nameLable.text = @"昵称";
+        self.homeSelfCell.nameLable.text = @"昵称";
     }
     
     if ([NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName]) {
@@ -51,6 +57,7 @@
     }else{
         self.homeSelfCell.iconView.image = [UIImage imageNamed:@"WWeChat"];
     }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -94,6 +101,7 @@
         
         MAHomeSelfCell *homeSelfCell = [MAHomeSelfCell creatCellWithTableView:(UITableView *)tableView];
         _homeSelfCell = homeSelfCell;
+        [self setCellData];
         return homeSelfCell;
     }else{
         

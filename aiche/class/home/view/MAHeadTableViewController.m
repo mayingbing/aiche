@@ -52,10 +52,16 @@
                       ]
                   
                   ];
+    
 
     
 }
 -(void)viewWillAppear:(BOOL)animated{
+    
+    [self setCellData];
+}
+
+-(void)setCellData{
     
     if ([NSKeyedUnarchiver unarchiveObjectWithFile:CZImageFileName]) {
         
@@ -63,9 +69,11 @@
     }else{
         self.imageView.image = [UIImage imageNamed:@"WWeChat"];
     }
+    
 
     
 }
+
 #pragma mark -- tableView --
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -105,7 +113,7 @@
         if (_imageView ==nil) {
             UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(WGiveWidth(220), (cell.frame.size.height - WGiveHeight(64))/2.0, WGiveHeight(64), WGiveHeight(64))];
             _imageView = imageView;
-            
+            [self setCellData];
         }
         
        
