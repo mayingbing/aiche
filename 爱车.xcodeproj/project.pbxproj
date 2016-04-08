@@ -54,7 +54,6 @@
 		79C63BC01CB2467C0046D568 /* composer_close.wav in Resources */ = {isa = PBXBuildFile; fileRef = 79C63BBD1CB2467C0046D568 /* composer_close.wav */; };
 		79C63BC11CB2467C0046D568 /* composer_open.wav in Resources */ = {isa = PBXBuildFile; fileRef = 79C63BBE1CB2467C0046D568 /* composer_open.wav */; };
 		79C63BC21CB2467C0046D568 /* composer_select.wav in Resources */ = {isa = PBXBuildFile; fileRef = 79C63BBF1CB2467C0046D568 /* composer_select.wav */; };
-		79C63BCF1CB278320046D568 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C63BC31CB26EED0046D568 /* SystemConfiguration.framework */; };
 		79C63BD21CB278E20046D568 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C63BD11CB278E20046D568 /* Reachability.m */; };
 		79D5D3011CAD198E00D32E35 /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3001CAD198E00D32E35 /* MANaviRoute.m */; };
 		79D5D3041CAD19D500D32E35 /* MANaviAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D5D3031CAD19D500D32E35 /* MANaviAnnotation.m */; };
@@ -65,7 +64,6 @@
 		79E689AA1CB4EAD200515DB3 /* MANameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E689A91CB4EAD200515DB3 /* MANameViewController.m */; };
 		79E689AD1CB4EBA600515DB3 /* MANameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E689AC1CB4EBA600515DB3 /* MANameModel.m */; };
 		79E689B31CB4F91C00515DB3 /* ChangeAvaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E689B21CB4F91C00515DB3 /* ChangeAvaterView.m */; };
-		79E8A9D41CB37A4A00D58B7A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E8A9D11CB376FB00D58B7A /* Photos.framework */; };
 		79FB9BC81CAA35A80076C9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FB9BC71CAA35A80076C9DB /* Assets.xcassets */; };
 		79FF64FD1CA2D7D700CB4FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF64FB1CA2D7D700CB4FB6 /* LaunchScreen.storyboard */; };
 		79FF65081CA2D7D700CB4FB6 /* aicheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FF65071CA2D7D700CB4FB6 /* aicheTests.m */; };
@@ -222,8 +220,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79E8A9D41CB37A4A00D58B7A /* Photos.framework in Frameworks */,
-				79C63BCF1CB278320046D568 /* SystemConfiguration.framework in Frameworks */,
 				1B06104B2ABCF5FEE7E64418 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +699,7 @@
 				TargetAttributes = {
 					79FF64E91CA2D7D700CB4FB6 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = JK7ZK758TA;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -937,8 +934,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 颖兵 马 (TZ5RP38PHZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 颖兵 马 (TZ5RP38PHZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -957,10 +953,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "a21d4836-475e-403e-bedb-da3db8d506c1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -983,8 +978,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 颖兵 马 (TZ5RP38PHZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 颖兵 马 (TZ5RP38PHZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -997,9 +991,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a21d4836-475e-403e-bedb-da3db8d506c1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1011,7 +1004,8 @@
 			baseConfigurationReference = ABB5289F71869BD849470EF4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 颖兵 马 (TZ5RP38PHZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1021,7 +1015,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.icar.aiche;
 				PRODUCT_NAME = "爱车";
-				PROVISIONING_PROFILE = "a21d4836-475e-403e-bedb-da3db8d506c1";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1031,7 +1025,8 @@
 			baseConfigurationReference = 7640220824F1D9B0B8AA67E3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 颖兵 马 (TZ5RP38PHZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1041,7 +1036,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.icar.aiche;
 				PRODUCT_NAME = "爱车";
-				PROVISIONING_PROFILE = "a21d4836-475e-403e-bedb-da3db8d506c1";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
