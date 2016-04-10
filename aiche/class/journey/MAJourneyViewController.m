@@ -117,11 +117,10 @@
     }
     
 }
-//滚动广告
+//滚动  广告
 -(void)setContentViews{
     
     NSArray *temp = @[[UIImage imageNamed:@"head1.jpg"],[UIImage imageNamed:@"head2.jpg"],[UIImage imageNamed:@"head3.jpg"],[UIImage imageNamed:@"head4.jpg"]];
-    
     [SYScrollerView initWithSourceArray:temp
                               addTarget:self
                                delegate:self

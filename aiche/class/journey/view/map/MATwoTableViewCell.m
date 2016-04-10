@@ -50,12 +50,12 @@ static NSString *twoID = @"twoCell";
    mapView.backgroundColor = [UIColor greenColor];
     [self addSubview:mapView];
     
-    [self setUpMapView];
+//    [self setUpMapView];
     
 }
--(void)setUpMapView{
-    
-    
-    
-}
+//-(void)setUpMapView{
+//    
+//    
+//    
+//}
 @end
