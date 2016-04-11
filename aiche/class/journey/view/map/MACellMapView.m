@@ -91,9 +91,7 @@ updatingLocation:(BOOL)updatingLocation
             
         }
         _result = result;
-//        if ([self.delegate respondsToSelector:@selector(MACellMapViewWithLocationData:)]) {
-//            [self.delegate MACellMapViewWithLocationData:result];
-//        }
+
     }
 }
 
